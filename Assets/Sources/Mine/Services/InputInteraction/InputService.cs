@@ -1,5 +1,6 @@
 
 using System;
+using UnityEngine;
 
 public class InputService : IInputService
 {
@@ -9,43 +10,55 @@ public class InputService : IInputService
         _contexts = contexts;
     }
 
-    public bool IsHeldDown(int eid)
+    public bool IsHeld(int eid, HeldState state)
     {
-        InputEntity entity = GetEntityWithEID(eid);
-        bool heldDown = false;
-
-
-        return heldDown;
+        InputEntity entity = GetInputEntity(eid);
+        return entity.interactionInput.InputData.HeldState == state;
     }
 
-    public bool IsHeldUp(int eid)
+    public bool IsHover(int eid, HoverState state)
     {
-        throw new System.NotImplementedException();
+        InputEntity entity = GetInputEntity(eid);
+        return entity.interactionInput.InputData.HoverState == state;
     }
 
-    public bool IsHovered(int eid)
+    public bool IsClicked(int eid)
     {
-        throw new System.NotImplementedException();
+        InputEntity entity = GetInputEntity(eid);
+        return entity.interactionInput.InputData.Clicked == true;
     }
 
-    public bool IsPressed(int eid)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void SetHovered(int eid, bool hover)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void SetPressed(int eid, bool press)
+    public void SetHovered(int eid, HoverState state)
     {
         var entity = GetOrCreateInputEntity(eid);
+        entity.interactionInput.InputData.HoverState = state;
+    }
+
+    public void SetPressed(int eid, HeldState state)
+    {
+        var entity = GetOrCreateInputEntity(eid);
+
+        var inputData = entity.interactionInput.InputData;
+        float dt = Time.deltaTime;
+
+        //Was 'clicked'?
+        if (state == HeldState.Up)
+        {
+            if (inputData.HeldState == HeldState.Down)
+            {
+                var dtDifference = dt - inputData.PressTime;
+                inputData.Clicked = dtDifference <= inputData.ClickThreshold;
+            }
+        }
+
+        inputData.HeldState = state;
+        inputData.PressTime = dt;
+        entity.ReplaceInteractionInput(eid, inputData);
     }
 
     private InputEntity GetOrCreateInputEntity(int eid)
     {
-        InputEntity entity = _contexts.input.GetEntityWithInteractionInput(eid);
+        InputEntity entity = GetInputEntity(eid);
 
         if (entity != null)
         {
@@ -53,11 +66,21 @@ public class InputService : IInputService
         }
 
         entity = _contexts.input.CreateEntity();
+        float dt = Time.deltaTime;
+
+        var inputData = new InputData()
+        {
+            ClickThreshold = 0.25f
+        };
+
+        entity.AddInteractionInput(eid, inputData);
         return entity;
     }
 
-    private InputEntity GetEntityWithEID(int eid)
+    private InputEntity GetInputEntity(int eid)
     {
-        return _contexts.input.GetEntityWithInteractionInput(eid);
+        InputEntity entity = _contexts.input.GetEntityWithInteractionInput(eid);
+        return entity;
     }
+
 }

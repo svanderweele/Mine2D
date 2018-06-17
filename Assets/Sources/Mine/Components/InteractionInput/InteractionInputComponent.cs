@@ -9,26 +9,17 @@ public class InteractionInputComponent : IComponent
     public int eId;
 
     public InputData InputData;
-    
+
 }
 
-public struct InputData
+public class InputData
 {
-    public PressState PressState;
-    public HoverState HoverState;
+    public HeldState HeldState = HeldState.None;
+    public HoverState HoverState = HoverState.None;
+
+    public float PressTime = 0;
+    public float HoverTime = 0;
+    public float ClickThreshold = 0.25f; //25ms to register as click
+    public bool Clicked = false;
 }
 
-
-public enum PressState
-{
-    None = 0, 
-    Down = 1,
-    Up = 2
-}
-
-public enum HoverState
-{
-    None = 0,
-    Over = 1,
-    Out = 2
-}

@@ -12,7 +12,7 @@ public class Main : MonoBehaviour
 
     void Awake()
     {
-        _services = new Services(new UnityViewService());
+        _services = new Services(new UnityViewService(), new InputService());
         _contexts = Contexts.sharedInstance;
         _contexts.SubscribeId();
         _systems = CreateSystems();
@@ -26,12 +26,10 @@ public class Main : MonoBehaviour
 
     private Systems CreateSystems()
     {
-        return new Feature().Add(
-            new RegisterServicesSystem(_contexts, _services)
-            ).Add(
-                new GameEventSystems(_contexts)
-            )
-
+        return new Systems()
+            .Add(new RegisterServicesSystem(_contexts, _services))
+            .Add(new GameEventSystems(_contexts))
+            .Add(new DestroySystems(_contexts))
             ;
     }
 

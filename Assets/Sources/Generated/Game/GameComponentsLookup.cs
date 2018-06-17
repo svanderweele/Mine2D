@@ -8,19 +8,21 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int EID = 0;
-    public const int Grid = 1;
-    public const int GridEntity = 2;
-    public const int GridTile = 3;
-    public const int GridTiles = 4;
-    public const int Position = 5;
-    public const int PositionListener = 6;
-    public const int Sprite = 7;
-    public const int SpriteListener = 8;
+    public const int Destroyed = 0;
+    public const int EID = 1;
+    public const int Grid = 2;
+    public const int GridEntity = 3;
+    public const int GridTile = 4;
+    public const int GridTiles = 5;
+    public const int Position = 6;
+    public const int PositionListener = 7;
+    public const int Sprite = 8;
+    public const int SpriteListener = 9;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
+        "Destroyed",
         "EID",
         "Grid",
         "GridEntity",
@@ -33,6 +35,7 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(DestroyedComponent),
         typeof(EIDComponent),
         typeof(GridComponent),
         typeof(GridEntityComponent),

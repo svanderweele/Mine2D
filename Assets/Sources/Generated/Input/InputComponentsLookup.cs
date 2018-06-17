@@ -8,15 +8,18 @@
 //------------------------------------------------------------------------------
 public static class InputComponentsLookup {
 
-    public const int InteractionInput = 0;
+    public const int Destroyed = 0;
+    public const int InteractionInput = 1;
 
-    public const int TotalComponents = 1;
+    public const int TotalComponents = 2;
 
     public static readonly string[] componentNames = {
+        "Destroyed",
         "InteractionInput"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(DestroyedComponent),
         typeof(InteractionInputComponent)
     };
 }
