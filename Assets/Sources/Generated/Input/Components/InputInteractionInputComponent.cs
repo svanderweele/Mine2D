@@ -11,17 +11,19 @@ public partial class InputEntity {
     public InteractionInputComponent interactionInput { get { return (InteractionInputComponent)GetComponent(InputComponentsLookup.InteractionInput); } }
     public bool hasInteractionInput { get { return HasComponent(InputComponentsLookup.InteractionInput); } }
 
-    public void AddInteractionInput(int newEId) {
+    public void AddInteractionInput(int newEId, InputData newInputData) {
         var index = InputComponentsLookup.InteractionInput;
         var component = CreateComponent<InteractionInputComponent>(index);
         component.eId = newEId;
+        component.InputData = newInputData;
         AddComponent(index, component);
     }
 
-    public void ReplaceInteractionInput(int newEId) {
+    public void ReplaceInteractionInput(int newEId, InputData newInputData) {
         var index = InputComponentsLookup.InteractionInput;
         var component = CreateComponent<InteractionInputComponent>(index);
         component.eId = newEId;
+        component.InputData = newInputData;
         ReplaceComponent(index, component);
     }
 

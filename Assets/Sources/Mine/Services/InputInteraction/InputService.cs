@@ -53,7 +53,6 @@ public class InputService : IInputService
         }
 
         entity = _contexts.input.CreateEntity();
-        entity.AddInteractionInput(null);
         return entity;
     }
 
