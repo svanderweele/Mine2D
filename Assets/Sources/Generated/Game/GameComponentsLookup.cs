@@ -8,24 +8,39 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int Grid = 0;
-    public const int GridEntities = 1;
-    public const int Position = 2;
-    public const int PositionListener = 3;
+    public const int EID = 0;
+    public const int Grid = 1;
+    public const int GridEntity = 2;
+    public const int GridTile = 3;
+    public const int GridTiles = 4;
+    public const int Position = 5;
+    public const int PositionListener = 6;
+    public const int Sprite = 7;
+    public const int SpriteListener = 8;
 
-    public const int TotalComponents = 4;
+    public const int TotalComponents = 9;
 
     public static readonly string[] componentNames = {
+        "EID",
         "Grid",
-        "GridEntities",
+        "GridEntity",
+        "GridTile",
+        "GridTiles",
         "Position",
-        "PositionListener"
+        "PositionListener",
+        "Sprite",
+        "SpriteListener"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(EIDComponent),
         typeof(GridComponent),
-        typeof(GridEntitiesComponent),
+        typeof(GridEntityComponent),
+        typeof(GridTileComponent),
+        typeof(GridTilesComponent),
         typeof(PositionComponent),
-        typeof(PositionListenerComponent)
+        typeof(PositionListenerComponent),
+        typeof(SpriteComponent),
+        typeof(SpriteListenerComponent)
     };
 }

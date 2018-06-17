@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public GridEntitiesComponent gridEntities { get { return (GridEntitiesComponent)GetComponent(GameComponentsLookup.GridEntities); } }
-    public bool hasGridEntities { get { return HasComponent(GameComponentsLookup.GridEntities); } }
+    public GridTileComponent gridTile { get { return (GridTileComponent)GetComponent(GameComponentsLookup.GridTile); } }
+    public bool hasGridTile { get { return HasComponent(GameComponentsLookup.GridTile); } }
 
-    public void AddGridEntities(int[][,] newEntities) {
-        var index = GameComponentsLookup.GridEntities;
-        var component = CreateComponent<GridEntitiesComponent>(index);
+    public void AddGridTile(int[] newEntities) {
+        var index = GameComponentsLookup.GridTile;
+        var component = CreateComponent<GridTileComponent>(index);
         component.Entities = newEntities;
         AddComponent(index, component);
     }
 
-    public void ReplaceGridEntities(int[][,] newEntities) {
-        var index = GameComponentsLookup.GridEntities;
-        var component = CreateComponent<GridEntitiesComponent>(index);
+    public void ReplaceGridTile(int[] newEntities) {
+        var index = GameComponentsLookup.GridTile;
+        var component = CreateComponent<GridTileComponent>(index);
         component.Entities = newEntities;
         ReplaceComponent(index, component);
     }
 
-    public void RemoveGridEntities() {
-        RemoveComponent(GameComponentsLookup.GridEntities);
+    public void RemoveGridTile() {
+        RemoveComponent(GameComponentsLookup.GridTile);
     }
 }
 
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherGridEntities;
+    static Entitas.IMatcher<GameEntity> _matcherGridTile;
 
-    public static Entitas.IMatcher<GameEntity> GridEntities {
+    public static Entitas.IMatcher<GameEntity> GridTile {
         get {
-            if (_matcherGridEntities == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.GridEntities);
+            if (_matcherGridTile == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.GridTile);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherGridEntities = matcher;
+                _matcherGridTile = matcher;
             }
 
-            return _matcherGridEntities;
+            return _matcherGridTile;
         }
     }
 }

@@ -11,23 +11,25 @@ public partial class GameEntity {
     public GridComponent grid { get { return (GridComponent)GetComponent(GameComponentsLookup.Grid); } }
     public bool hasGrid { get { return HasComponent(GameComponentsLookup.Grid); } }
 
-    public void AddGrid(int newWidth, int newHeight, int newTileWidth, int newTileHeight) {
+    public void AddGrid(int newColumns, int newRows, int newTileWidth, int newTileHeight, bool newShouldRefresh) {
         var index = GameComponentsLookup.Grid;
         var component = CreateComponent<GridComponent>(index);
-        component.Width = newWidth;
-        component.Height = newHeight;
+        component.Columns = newColumns;
+        component.Rows = newRows;
         component.TileWidth = newTileWidth;
         component.TileHeight = newTileHeight;
+        component.ShouldRefresh = newShouldRefresh;
         AddComponent(index, component);
     }
 
-    public void ReplaceGrid(int newWidth, int newHeight, int newTileWidth, int newTileHeight) {
+    public void ReplaceGrid(int newColumns, int newRows, int newTileWidth, int newTileHeight, bool newShouldRefresh) {
         var index = GameComponentsLookup.Grid;
         var component = CreateComponent<GridComponent>(index);
-        component.Width = newWidth;
-        component.Height = newHeight;
+        component.Columns = newColumns;
+        component.Rows = newRows;
         component.TileWidth = newTileWidth;
         component.TileHeight = newTileHeight;
+        component.ShouldRefresh = newShouldRefresh;
         ReplaceComponent(index, component);
     }
 

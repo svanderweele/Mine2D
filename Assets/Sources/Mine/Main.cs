@@ -14,6 +14,7 @@ public class Main : MonoBehaviour
     {
         _services = new Services(new UnityViewService());
         _contexts = Contexts.sharedInstance;
+        _contexts.SubscribeId();
         _systems = CreateSystems();
         _systems.Initialize();
 

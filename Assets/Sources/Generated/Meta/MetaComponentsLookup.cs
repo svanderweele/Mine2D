@@ -8,15 +8,21 @@
 //------------------------------------------------------------------------------
 public static class MetaComponentsLookup {
 
-    public const int ViewService = 0;
+    public const int EID = 0;
+    public const int GridService = 1;
+    public const int ViewService = 2;
 
-    public const int TotalComponents = 1;
+    public const int TotalComponents = 3;
 
     public static readonly string[] componentNames = {
+        "EID",
+        "GridService",
         "ViewService"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(EIDComponent),
+        typeof(GridServiceComponent),
         typeof(ViewServiceComponent)
     };
 }
