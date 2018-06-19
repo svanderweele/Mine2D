@@ -1,61 +1,126 @@
-
-using svanderweele.Mine.Core.Services.Input;
-using System.Collections.Generic;
+using svanderweele.Mine.Core.Services.Input.Binding;
+using svanderweele.Mine.Core.Services.Input.Controller;
+using svanderweele.Mine.Core.Services.Input.Service;
 
 namespace svanderweele.Mine.Game.Services
 {
     public class InputService : IInputService
     {
-        private Dictionary<string, InputBind> _inputBinds;
+        private InputBindConfiguration _bindConfig;
+        private MetaContext _metaContext;
+        private IInputController _inputController
+        {
+            get { return _metaContext.inputController.instance; }
+        }
 
         public InputService(Contexts contexts)
         {
-            throw new System.NotImplementedException();
+            _metaContext = contexts.meta;
+            _bindConfig = InputBindConfiguration.Default();
         }
 
-        public void IsKeyDown(KeyMap map)
+        private IInputController GetInputController()
         {
-            throw new System.NotImplementedException();
+            return _metaContext.inputController.instance;
         }
 
-        public void IsKeyPressed(KeyMap map)
+        public bool IsKeyBindDown(string action)
         {
-            throw new System.NotImplementedException();
+            var binds = _bindConfig.GetBinds(action);
+
+
+            foreach (var bind in binds)
+            {
+                if (IsKeyDown(bind.Key))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
-        public void IsKeyUp(KeyMap map)
+        public bool IsKeyBindUp(string action)
         {
-            throw new System.NotImplementedException();
+            var binds = _bindConfig.GetBinds(action);
+
+
+            foreach (var bind in binds)
+            {
+                if (IsKeyUp(bind.Key))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
-        public void RemoveBind(string action)
+        public bool IsKeyBindHeldDown(string action)
         {
-            throw new System.NotImplementedException();
+            var binds = _bindConfig.GetBinds(action);
+
+
+            foreach (var bind in binds)
+            {
+                if (IsKeyHeldDown(bind.Key))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
-        public void SetBind(string action, KeyMap key)
+
+        public bool IsKeyHeldDown(KeyId id)
         {
-            throw new System.NotImplementedException();
+            return _inputController.IsKeyHeldDown(id);
         }
 
-        public void SetHoverIn(int eid)
+        public bool IsKeyDown(KeyId id)
         {
-            throw new System.NotImplementedException();
+            return _inputController.IsKeyDown(id);
         }
 
-        public void SetHoverOut(int eid)
+        public bool IsKeyUp(KeyId id)
         {
-            throw new System.NotImplementedException();
+            return _inputController.IsKeyUp(id);
         }
 
-        public void SetPressDown(int eid)
+        public bool IsMouseUp()
         {
-            throw new System.NotImplementedException();
+            return _inputController.IsMouseUp();
         }
 
-        public void SetPressUp(int eid)
+        public bool IsMouseDown()
         {
-            throw new System.NotImplementedException();
+            return _inputController.IsMouseDown();
+        }
+
+        public System.Collections.Generic.List<InputBind> GetBinds(KeyId id)
+        {
+            return _bindConfig.GetBinds(id);
+        }
+
+        public System.Collections.Generic.List<InputBind> GetBinds(string action)
+        {
+            return _bindConfig.GetBinds(action);
+        }
+
+        public bool DoesBindExist(KeyId id, string action)
+        {
+            return _bindConfig.DoesBindExist(id, action);
+        }
+
+        public void RemoveBinds(KeyId id)
+        {
+            _bindConfig.RemoveBinds(id);
+        }
+
+        public void RemoveBind(KeyId id, string action)
+        {
+            _bindConfig.RemoveBind(id, action);
         }
     }
 }

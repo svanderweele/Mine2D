@@ -9,12 +9,12 @@
 public partial class MetaContext {
 
     public MetaEntity inputServiceEntity { get { return GetGroup(MetaMatcher.InputService).GetSingleEntity(); } }
-    public svanderweele.Mine.Core.Services.Input.InputServiceComponent inputService { get { return inputServiceEntity.inputService; } }
+    public svanderweele.Mine.Core.Services.Input.Service.InputServiceComponent inputService { get { return inputServiceEntity.inputService; } }
     public bool hasInputService { get { return inputServiceEntity != null; } }
 
-    public MetaEntity SetInputService(svanderweele.Mine.Core.Services.Input.IInputService newService) {
+    public MetaEntity SetInputService(svanderweele.Mine.Core.Services.Input.Service.IInputService newService) {
         if (hasInputService) {
-            throw new Entitas.EntitasException("Could not set InputService!\n" + this + " already has an entity with svanderweele.Mine.Core.Services.Input.InputServiceComponent!",
+            throw new Entitas.EntitasException("Could not set InputService!\n" + this + " already has an entity with svanderweele.Mine.Core.Services.Input.Service.InputServiceComponent!",
                 "You should check if the context already has a inputServiceEntity before setting it or use context.ReplaceInputService().");
         }
         var entity = CreateEntity();
@@ -22,7 +22,7 @@ public partial class MetaContext {
         return entity;
     }
 
-    public void ReplaceInputService(svanderweele.Mine.Core.Services.Input.IInputService newService) {
+    public void ReplaceInputService(svanderweele.Mine.Core.Services.Input.Service.IInputService newService) {
         var entity = inputServiceEntity;
         if (entity == null) {
             entity = SetInputService(newService);
@@ -46,19 +46,19 @@ public partial class MetaContext {
 //------------------------------------------------------------------------------
 public partial class MetaEntity {
 
-    public svanderweele.Mine.Core.Services.Input.InputServiceComponent inputService { get { return (svanderweele.Mine.Core.Services.Input.InputServiceComponent)GetComponent(MetaComponentsLookup.InputService); } }
+    public svanderweele.Mine.Core.Services.Input.Service.InputServiceComponent inputService { get { return (svanderweele.Mine.Core.Services.Input.Service.InputServiceComponent)GetComponent(MetaComponentsLookup.InputService); } }
     public bool hasInputService { get { return HasComponent(MetaComponentsLookup.InputService); } }
 
-    public void AddInputService(svanderweele.Mine.Core.Services.Input.IInputService newService) {
+    public void AddInputService(svanderweele.Mine.Core.Services.Input.Service.IInputService newService) {
         var index = MetaComponentsLookup.InputService;
-        var component = CreateComponent<svanderweele.Mine.Core.Services.Input.InputServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Services.Input.Service.InputServiceComponent>(index);
         component.service = newService;
         AddComponent(index, component);
     }
 
-    public void ReplaceInputService(svanderweele.Mine.Core.Services.Input.IInputService newService) {
+    public void ReplaceInputService(svanderweele.Mine.Core.Services.Input.Service.IInputService newService) {
         var index = MetaComponentsLookup.InputService;
-        var component = CreateComponent<svanderweele.Mine.Core.Services.Input.InputServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Services.Input.Service.InputServiceComponent>(index);
         component.service = newService;
         ReplaceComponent(index, component);
     }

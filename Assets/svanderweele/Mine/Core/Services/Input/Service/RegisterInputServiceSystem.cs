@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-namespace svanderweele.Mine.Core.Services.Input
+namespace svanderweele.Mine.Core.Services.Input.Service
 {
     public class RegisterInputServiceSystem : IInitializeSystem
     {

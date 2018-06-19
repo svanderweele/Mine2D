@@ -84,6 +84,7 @@
               <e p="Components" t="Include">
                 <e p="MetaActionServiceComponent.cs" t="Include" />
                 <e p="MetaIdComponent.cs" t="Include" />
+                <e p="MetaInputControllerComponent.cs" t="Include" />
                 <e p="MetaInputServiceComponent.cs" t="Include" />
                 <e p="MetaViewServiceComponent.cs" t="Include" />
               </e>
@@ -100,7 +101,6 @@
             <e p="Core" t="Include">
               <e p="Services" t="Include">
                 <e p="Actions" t="Include">
-                  <e p="ActionBind.cs" t="Include" />
                   <e p="ActionServiceComponent.cs" t="Include" />
                   <e p="IActionService.cs" t="Include" />
                   <e p="RegisterActionServiceSystem.cs" t="Include" />
@@ -110,11 +110,23 @@
                   <e p="IEventListener.cs" t="Include" />
                 </e>
                 <e p="Input" t="Include">
-                  <e p="IInputController.cs" t="Include" />
-                  <e p="IInputMapper.cs" t="Include" />
-                  <e p="IInputService.cs" t="Include" />
-                  <e p="InputServiceComponent.cs" t="Include" />
-                  <e p="RegisterInputServiceSystem.cs" t="Include" />
+                  <e p="Binding" t="Include">
+                    <e p="IInputBindConfiguration.cs" t="Include" />
+                    <e p="InputBind.cs" t="Include" />
+                    <e p="InputBindConfiguration.cs" t="Include" />
+                    <e p="InputMapper.cs" t="Include" />
+                  </e>
+                  <e p="Controller" t="Include">
+                    <e p="IInputController.cs" t="Include" />
+                    <e p="InputControllerComponent.cs" t="Include" />
+                    <e p="RegisterInputControllerSystem.cs" t="Include" />
+                  </e>
+                  <e p="Service" t="Include">
+                    <e p="IInputMapper.cs" t="Include" />
+                    <e p="IInputService.cs" t="Include" />
+                    <e p="InputServiceComponent.cs" t="Include" />
+                    <e p="RegisterInputServiceSystem.cs" t="Include" />
+                  </e>
                 </e>
                 <e p="RegisterServicesSystem.cs" t="Include" />
                 <e p="View" t="Include">
@@ -145,7 +157,6 @@
                 <e p="Actions" t="Include">
                   <e p="ActionComponent.cs" t="Include" />
                   <e p="ActionService.cs" t="Include" />
-                  <e p="GlobalActions.cs" t="Include" />
                   <e p="Systems" t="Include">
                     <e p="CallActionsSystem.cs" t="Include" />
                     <e p="RemoveActionsSystem.cs" t="Include" />
@@ -156,8 +167,18 @@
               </e>
               <e p="Unity" t="Include">
                 <e p="UnityGameView.cs" t="Include" />
+                <e p="UnityInputController.cs" t="Include" />
                 <e p="UnityInputMapper.cs" t="Include" />
                 <e p="UnityViewService.cs" t="Include" />
+              </e>
+              <e p="Utils" t="Include">
+                <e p="GlobalVariables.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Testing" t="Include">
+              <e p="InputBindTest" t="Include">
+                <e p="InputBindConfiguration.cs" t="Include" />
+                <e p="MainTest.cs" t="Include" />
               </e>
             </e>
           </e>

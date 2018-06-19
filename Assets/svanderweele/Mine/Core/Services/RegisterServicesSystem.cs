@@ -1,6 +1,8 @@
 using Entitas;
 using svanderweele.Mine.Core.Services.Actions;
 using svanderweele.Mine.Core.Services.Input;
+using svanderweele.Mine.Core.Services.Input.Controller;
+using svanderweele.Mine.Core.Services.Input.Service;
 using svanderweele.Mine.Core.Services.View;
 
 namespace svanderweele.Mine.Core.Services
@@ -12,7 +14,7 @@ namespace svanderweele.Mine.Core.Services
         {
             Add(new RegisterViewServiceSystem(contexts, services.View));
             Add(new RegisterInputServiceSystem(contexts, services.Input));
-            Add(new RegisterActionServiceSystem(contexts, services.Action));
+            Add(new RegisterInputControllerSystem(contexts, services.InputController));
         }
 
         public sealed override Systems Add(ISystem system)

@@ -4,23 +4,26 @@ using svanderweele.Mine.Game.Components.Id;
 using svanderweele.Mine.Game.Services;
 using svanderweele.Mine.Game.Services.Actions;
 using svanderweele.Mine.Game.Unity;
+using svanderweele.Mine.Game.Utils;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace svanderweele.Mine.Game
 {
     public class Main : MonoBehaviour
     {
-
         private Contexts _contexts;
         private Systems _systems;
         private CoreServices _services;
 
         void Awake()
         {
+
             _contexts = Contexts.sharedInstance;
             _contexts.SubscribeId();
 
-            _services = new CoreServices(new UnityViewService(), new InputService(_contexts), new ActionService(_contexts));
+            _services = new CoreServices(new UnityViewService(), new InputService(_contexts),
+                new UnityInputController(new UnityInputMapper()));
 
             _systems = CreateSystems();
             _systems.Initialize();
@@ -46,7 +49,5 @@ namespace svanderweele.Mine.Game
         {
             _systems.TearDown();
         }
-
     }
 }
-
