@@ -1,10 +1,6 @@
 ﻿using Entitas;
 using svanderweele.Mine.Core.Services;
 using svanderweele.Mine.Game.Components.Destroy;
-using svanderweele.Mine.Game.Components.Destroys;
-using svanderweele.Mine.Game.Services.Actions;
-using svanderweele.Mine.Game.Services.Actions.Systems;
-
 namespace svanderweele.Mine.Game
 {
     public class GameSystems : Feature
@@ -16,11 +12,8 @@ namespace svanderweele.Mine.Game
             Add(new RegisterServicesSystem(contexts, services));
 
             //Destroy
-            Add(new RemoveActionsSystem(contexts));
             
             //Update
-            Add(new UpdateActionsSystem(contexts));
-            Add(new CallActionsSystem(contexts));
 
             //View
 

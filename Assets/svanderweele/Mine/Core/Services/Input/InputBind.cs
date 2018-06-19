@@ -1,9 +1,9 @@
 
 using svanderweele.Mine.Core.Services.Input;
 
-namespace svanderweele.Mine.Core.Services.Actions
+namespace svanderweele.Mine.Core.Services.Input
 {
-    public class ActionBind
+    public class InputBind
     {
         public KeyMap Key;
         public string Action;

@@ -10,6 +10,9 @@ namespace svanderweele.Mine.Core.Services.Input
         void IsKeyDown(KeyMap map);
         void IsKeyUp(KeyMap map);
         void IsKeyPressed(KeyMap map);
+
+        void SetBind(string action, KeyMap key);
+        void RemoveBind(string action);
     }
 
     public enum KeyMap
