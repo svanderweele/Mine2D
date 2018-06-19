@@ -2,11 +2,9 @@ using Entitas;
 using svanderweele.Mine.Core.Services;
 using svanderweele.Mine.Game.Components.Id;
 using svanderweele.Mine.Game.Services;
-using svanderweele.Mine.Game.Services.Actions;
 using svanderweele.Mine.Game.Unity;
 using svanderweele.Mine.Game.Utils;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace svanderweele.Mine.Game
 {
@@ -31,6 +29,7 @@ namespace svanderweele.Mine.Game
             var e = _contexts.game.CreateEntity();
             _services.View.LoadAsset(_contexts, e, "Miner");
             e.AddPosition(5, 3);
+            e.AddVisible(true);
         }
 
         private Systems CreateSystems()
@@ -41,6 +40,18 @@ namespace svanderweele.Mine.Game
 
         void Update()
         {
+            if (_services.Input.IsKeyBindDown(GlobalVariables.ACTION_HIDE_ACTOR))
+            {
+                //TODO : Create ActionService to create actions
+                var action = _contexts.action.CreateEntity();
+                action.AddAction(0);
+                //----
+
+                var e = _contexts.game.GetEntityWithId(0);
+                action.AddHideEntityAction(0, !e.visible.isVisible);
+            }
+            
+            
             _systems.Execute();
             _systems.Cleanup();
         }

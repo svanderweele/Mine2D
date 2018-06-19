@@ -13,15 +13,19 @@ public static class GameComponentsLookup {
     public const int Destroyed = 2;
     public const int Id = 3;
     public const int Position = 4;
+    public const int Visible = 5;
+    public const int VisibleListener = 6;
 
-    public const int TotalComponents = 5;
+    public const int TotalComponents = 7;
 
     public static readonly string[] componentNames = {
         "GameDestroyedListener",
         "PositionListener",
         "Destroyed",
         "Id",
-        "Position"
+        "Position",
+        "Visible",
+        "VisibleListener"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -29,6 +33,8 @@ public static class GameComponentsLookup {
         typeof(PositionListenerComponent),
         typeof(svanderweele.Mine.Game.Components.Destroy.DestroyedComponent),
         typeof(svanderweele.Mine.Game.Components.Id.IdComponent),
-        typeof(svanderweele.Mine.Game.Components.Spatial.PositionComponent)
+        typeof(svanderweele.Mine.Game.Components.Spatial.PositionComponent),
+        typeof(svanderweele.Mine.Game.Components.Visible.VisibleComponent),
+        typeof(VisibleListenerComponent)
     };
 }

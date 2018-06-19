@@ -151,9 +151,8 @@ namespace svanderweele.Mine.Core.Services.Input.Binding
         public static InputBindConfiguration Default()
         {
             var config = new InputBindConfiguration();
-            config.AddBind(GlobalVariables.ACTION_EXIT_GAME, KeyId.Escape);
-            config.AddBind(GlobalVariables.ACTION_EXIT_GAME_01, KeyId.S);
-            config.AddBind(GlobalVariables.ACTION_EXIT_GAME, KeyId.A);
+            config.AddBind(GlobalVariables.ACTION_HIDE_ACTOR, KeyId.Space);
+            config.AddBind(GlobalVariables.ACTION_HIDE_ACTOR, KeyId.A);
             return config;
         }
     }

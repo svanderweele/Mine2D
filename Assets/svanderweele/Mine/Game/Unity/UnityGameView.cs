@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace svanderweele.Mine.Game.Unity
 {
-    public class UnityGameView : MonoBehaviour, IViewController, IEventListener, IPositionListener
+    public class UnityGameView : MonoBehaviour, IViewController, IEventListener, IPositionListener, IVisibleListener
     {
         private GameEntity _entity;
 
@@ -22,6 +22,12 @@ namespace svanderweele.Mine.Game.Unity
         public void RegisterEvents(Contexts contexts, IEntity entity)
         {
             _entity.AddPositionListener(this);
+            _entity.AddVisibleListener(this);
+        }
+
+        public void OnVisible(GameEntity entity, bool isVisible)
+        {
+            gameObject.SetActive(isVisible);
         }
     }
 }

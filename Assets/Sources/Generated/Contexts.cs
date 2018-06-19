@@ -22,14 +22,16 @@ public partial class Contexts : Entitas.IContexts {
     static Contexts _sharedInstance;
 
     public ActionContext action { get; set; }
+    public CommandContext command { get; set; }
     public GameContext game { get; set; }
     public InputContext input { get; set; }
     public MetaContext meta { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { action, game, input, meta }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { action, command, game, input, meta }; } }
 
     public Contexts() {
         action = new ActionContext();
+        command = new CommandContext();
         game = new GameContext();
         input = new InputContext();
         meta = new MetaContext();
@@ -62,16 +64,10 @@ public partial class Contexts : Entitas.IContexts {
 //------------------------------------------------------------------------------
 public partial class Contexts {
 
-    public const string Action = "Action";
     public const string Id = "Id";
 
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeEntityIndices() {
-        action.AddEntityIndex(new Entitas.EntityIndex<ActionEntity, string>(
-            Action,
-            action.GetGroup(ActionMatcher.Action),
-            (e, c) => ((svanderweele.Mine.Game.Services.Actions.ActionComponent)c).value));
-
         game.AddEntityIndex(new Entitas.PrimaryEntityIndex<GameEntity, int>(
             Id,
             game.GetGroup(GameMatcher.Id),
@@ -84,14 +80,18 @@ public partial class Contexts {
             Id,
             meta.GetGroup(MetaMatcher.Id),
             (e, c) => ((svanderweele.Mine.Game.Components.Id.IdComponent)c).value));
+        command.AddEntityIndex(new Entitas.PrimaryEntityIndex<CommandEntity, int>(
+            Id,
+            command.GetGroup(CommandMatcher.Id),
+            (e, c) => ((svanderweele.Mine.Game.Components.Id.IdComponent)c).value));
+        action.AddEntityIndex(new Entitas.PrimaryEntityIndex<ActionEntity, int>(
+            Id,
+            action.GetGroup(ActionMatcher.Id),
+            (e, c) => ((svanderweele.Mine.Game.Components.Id.IdComponent)c).value));
     }
 }
 
 public static class ContextsExtensions {
-
-    public static System.Collections.Generic.HashSet<ActionEntity> GetEntitiesWithAction(this ActionContext context, string value) {
-        return ((Entitas.EntityIndex<ActionEntity, string>)context.GetEntityIndex(Contexts.Action)).GetEntities(value);
-    }
 
     public static GameEntity GetEntityWithId(this GameContext context, int value) {
         return ((Entitas.PrimaryEntityIndex<GameEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);
@@ -103,6 +103,14 @@ public static class ContextsExtensions {
 
     public static MetaEntity GetEntityWithId(this MetaContext context, int value) {
         return ((Entitas.PrimaryEntityIndex<MetaEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);
+    }
+
+    public static CommandEntity GetEntityWithId(this CommandContext context, int value) {
+        return ((Entitas.PrimaryEntityIndex<CommandEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);
+    }
+
+    public static ActionEntity GetEntityWithId(this ActionContext context, int value) {
+        return ((Entitas.PrimaryEntityIndex<ActionEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);
     }
 }
 //------------------------------------------------------------------------------
@@ -121,6 +129,7 @@ public partial class Contexts {
     public void InitializeContexObservers() {
         try {
             CreateContextObserver(action);
+            CreateContextObserver(command);
             CreateContextObserver(game);
             CreateContextObserver(input);
             CreateContextObserver(meta);

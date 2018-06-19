@@ -8,21 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class ActionEntity {
 
-    public svanderweele.Mine.Game.Services.Actions.ActionComponent action { get { return (svanderweele.Mine.Game.Services.Actions.ActionComponent)GetComponent(ActionComponentsLookup.Action); } }
+    public svanderweele.Mine.Game.Actions.ActionComponent action { get { return (svanderweele.Mine.Game.Actions.ActionComponent)GetComponent(ActionComponentsLookup.Action); } }
     public bool hasAction { get { return HasComponent(ActionComponentsLookup.Action); } }
 
-    public void AddAction(string newValue, float newDelay) {
+    public void AddAction(float newDelay) {
         var index = ActionComponentsLookup.Action;
-        var component = CreateComponent<svanderweele.Mine.Game.Services.Actions.ActionComponent>(index);
-        component.value = newValue;
+        var component = CreateComponent<svanderweele.Mine.Game.Actions.ActionComponent>(index);
         component.delay = newDelay;
         AddComponent(index, component);
     }
 
-    public void ReplaceAction(string newValue, float newDelay) {
+    public void ReplaceAction(float newDelay) {
         var index = ActionComponentsLookup.Action;
-        var component = CreateComponent<svanderweele.Mine.Game.Services.Actions.ActionComponent>(index);
-        component.value = newValue;
+        var component = CreateComponent<svanderweele.Mine.Game.Actions.ActionComponent>(index);
         component.delay = newDelay;
         ReplaceComponent(index, component);
     }

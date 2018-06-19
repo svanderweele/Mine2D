@@ -135,7 +135,7 @@ namespace svanderweele.Mine.Testing.InputBindTest
         public static InputBindConfiguration Default()
         {
             var config = new InputBindConfiguration();
-            config.AddBind(GlobalVariables.ACTION_EXIT_GAME, KeyId.Escape);
+            config.AddBind(GlobalVariables.ACTION_HIDE_ACTOR, KeyId.Escape);
             return config;
         }
 
@@ -169,8 +169,7 @@ namespace svanderweele.Mine.Testing.InputBindTest
 
             var actions = new string[]
             {
-                GlobalVariables.ACTION_EXIT_GAME, GlobalVariables.ACTION_EXIT_GAME_01, GlobalVariables.ACTION_OPEN_GRID,
-                GlobalVariables.ACTION_OPEN_GRID_02
+                GlobalVariables.ACTION_HIDE_ACTOR, 
             };
 
             foreach (var action in actions)
@@ -181,14 +180,14 @@ namespace svanderweele.Mine.Testing.InputBindTest
                 }
             }
 
-            _test.RemoveBind(KeyId.A, GlobalVariables.ACTION_EXIT_GAME);
+            _test.RemoveBind(KeyId.A, actions[0]);
             Debug.Log("Remove Bind 'A' " + _test);
 
             _test.RemoveBinds(KeyId.D);
             Debug.Log("Remove Binds 'D' " + _test);
 
             Profiler.BeginSample("Get Binds");
-            var binds = _test.GetBinds(GlobalVariables.ACTION_EXIT_GAME);
+            var binds = _test.GetBinds(actions[0]);
             Profiler.EndSample();
 
             var bindString = "";
