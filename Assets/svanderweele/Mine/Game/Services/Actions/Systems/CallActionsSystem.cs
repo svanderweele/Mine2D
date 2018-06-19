@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using Entitas;
 using svanderweele.Mine.Core.Services.Actions;
-using UnityEngine;
 
-namespace svanderweele.Mine.Game.Services.Actions
+namespace svanderweele.Mine.Game.Services.Actions.Systems
 {
     public class CallActionsSystem : ReactiveSystem<ActionEntity>
     {

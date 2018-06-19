@@ -1,22 +1,21 @@
-﻿
-using Entitas;
+﻿using Entitas;
 
-namespace svanderweele.Mine.Core.Services.View
+namespace svanderweele.Mine.Core.Services.Actions
 {
-    public class RegisterViewServiceSystem : IInitializeSystem
+    public class RegisterActionServiceSystem : IInitializeSystem
     {
         private readonly Contexts contexts;
-        private readonly IViewService viewService;
+        private readonly IActionService actionService;
 
-        public RegisterViewServiceSystem(Contexts contexts, IViewService viewService)
+        public RegisterActionServiceSystem(Contexts contexts, IActionService actionService)
         {
             this.contexts = contexts;
-            this.viewService = viewService;
+            this.actionService = actionService;
         }
 
         public void Initialize()
         {
-            contexts.meta.ReplaceViewService(viewService);
+            contexts.meta.ReplaceActionService(actionService);
         }
     }
 }

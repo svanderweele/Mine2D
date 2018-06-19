@@ -1,4 +1,11 @@
-﻿$HEADER$namespace $NAMESPACE$
+﻿using Entitas;
+using Entitas.CodeGeneration.Attributes;
+
+namespace svanderweele.Mine.Core.Services.Actions
 {
-  public class $CLASS$ {$END$}
+    [Meta, Unique]
+    public class ActionServiceComponent : IComponent
+    {
+        public IActionService service;
+    }
 }

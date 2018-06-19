@@ -1,4 +1,9 @@
-﻿$HEADER$namespace $NAMESPACE$
+using Entitas;
+
+namespace svanderweele.Mine.Core.Services.View
 {
-  public interface $INTERFACE$ {$END$}
+    public interface IViewController
+    {
+        void Link(Contexts contexts, IEntity entity);    
+    }
 }

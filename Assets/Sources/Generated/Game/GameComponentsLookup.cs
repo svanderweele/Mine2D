@@ -8,42 +8,27 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int Destroyed = 0;
-    public const int EID = 1;
-    public const int Grid = 2;
-    public const int GridEntity = 3;
-    public const int GridTile = 4;
-    public const int GridTiles = 5;
-    public const int Position = 6;
-    public const int PositionListener = 7;
-    public const int Sprite = 8;
-    public const int SpriteListener = 9;
+    public const int GameDestroyedListener = 0;
+    public const int PositionListener = 1;
+    public const int Destroyed = 2;
+    public const int Id = 3;
+    public const int Position = 4;
 
-    public const int TotalComponents = 10;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
-        "Destroyed",
-        "EID",
-        "Grid",
-        "GridEntity",
-        "GridTile",
-        "GridTiles",
-        "Position",
+        "GameDestroyedListener",
         "PositionListener",
-        "Sprite",
-        "SpriteListener"
+        "Destroyed",
+        "Id",
+        "Position"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(DestroyedComponent),
-        typeof(EIDComponent),
-        typeof(GridComponent),
-        typeof(GridEntityComponent),
-        typeof(GridTileComponent),
-        typeof(GridTilesComponent),
-        typeof(PositionComponent),
+        typeof(GameDestroyedListenerComponent),
         typeof(PositionListenerComponent),
-        typeof(SpriteComponent),
-        typeof(SpriteListenerComponent)
+        typeof(svanderweele.Mine.Game.Components.Destroy.DestroyedComponent),
+        typeof(svanderweele.Mine.Game.Components.Id.IdComponent),
+        typeof(svanderweele.Mine.Game.Components.Spatial.PositionComponent)
     };
 }

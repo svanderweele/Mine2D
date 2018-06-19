@@ -8,12 +8,12 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public PositionComponent position { get { return (PositionComponent)GetComponent(GameComponentsLookup.Position); } }
+    public svanderweele.Mine.Game.Components.Spatial.PositionComponent position { get { return (svanderweele.Mine.Game.Components.Spatial.PositionComponent)GetComponent(GameComponentsLookup.Position); } }
     public bool hasPosition { get { return HasComponent(GameComponentsLookup.Position); } }
 
     public void AddPosition(float newX, float newY) {
         var index = GameComponentsLookup.Position;
-        var component = CreateComponent<PositionComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Game.Components.Spatial.PositionComponent>(index);
         component.x = newX;
         component.y = newY;
         AddComponent(index, component);
@@ -21,7 +21,7 @@ public partial class GameEntity {
 
     public void ReplacePosition(float newX, float newY) {
         var index = GameComponentsLookup.Position;
-        var component = CreateComponent<PositionComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Game.Components.Spatial.PositionComponent>(index);
         component.x = newX;
         component.y = newY;
         ReplaceComponent(index, component);

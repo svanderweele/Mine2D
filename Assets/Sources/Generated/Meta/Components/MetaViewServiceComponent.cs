@@ -9,12 +9,12 @@
 public partial class MetaContext {
 
     public MetaEntity viewServiceEntity { get { return GetGroup(MetaMatcher.ViewService).GetSingleEntity(); } }
-    public ViewServiceComponent viewService { get { return viewServiceEntity.viewService; } }
+    public svanderweele.Mine.Core.Services.View.ViewServiceComponent viewService { get { return viewServiceEntity.viewService; } }
     public bool hasViewService { get { return viewServiceEntity != null; } }
 
-    public MetaEntity SetViewService(IViewService newInstance) {
+    public MetaEntity SetViewService(svanderweele.Mine.Core.Services.View.IViewService newInstance) {
         if (hasViewService) {
-            throw new Entitas.EntitasException("Could not set ViewService!\n" + this + " already has an entity with ViewServiceComponent!",
+            throw new Entitas.EntitasException("Could not set ViewService!\n" + this + " already has an entity with svanderweele.Mine.Core.Services.View.ViewServiceComponent!",
                 "You should check if the context already has a viewServiceEntity before setting it or use context.ReplaceViewService().");
         }
         var entity = CreateEntity();
@@ -22,7 +22,7 @@ public partial class MetaContext {
         return entity;
     }
 
-    public void ReplaceViewService(IViewService newInstance) {
+    public void ReplaceViewService(svanderweele.Mine.Core.Services.View.IViewService newInstance) {
         var entity = viewServiceEntity;
         if (entity == null) {
             entity = SetViewService(newInstance);
@@ -46,19 +46,19 @@ public partial class MetaContext {
 //------------------------------------------------------------------------------
 public partial class MetaEntity {
 
-    public ViewServiceComponent viewService { get { return (ViewServiceComponent)GetComponent(MetaComponentsLookup.ViewService); } }
+    public svanderweele.Mine.Core.Services.View.ViewServiceComponent viewService { get { return (svanderweele.Mine.Core.Services.View.ViewServiceComponent)GetComponent(MetaComponentsLookup.ViewService); } }
     public bool hasViewService { get { return HasComponent(MetaComponentsLookup.ViewService); } }
 
-    public void AddViewService(IViewService newInstance) {
+    public void AddViewService(svanderweele.Mine.Core.Services.View.IViewService newInstance) {
         var index = MetaComponentsLookup.ViewService;
-        var component = CreateComponent<ViewServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Services.View.ViewServiceComponent>(index);
         component.instance = newInstance;
         AddComponent(index, component);
     }
 
-    public void ReplaceViewService(IViewService newInstance) {
+    public void ReplaceViewService(svanderweele.Mine.Core.Services.View.IViewService newInstance) {
         var index = MetaComponentsLookup.ViewService;
-        var component = CreateComponent<ViewServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Services.View.ViewServiceComponent>(index);
         component.instance = newInstance;
         ReplaceComponent(index, component);
     }

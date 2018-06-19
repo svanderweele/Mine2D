@@ -1,8 +1,11 @@
 ﻿using Entitas;
 using Entitas.CodeGeneration.Attributes;
 
-[Game, Input, Action, Event(true)]
-public class DestroyedComponent : IComponent
+namespace svanderweele.Mine.Game.Components.Destroy
 {
-    //flag
+    [Game, Input, Action, Event(true)]
+    public class DestroyedComponent : IComponent
+    {
+        //flag
+    }
 }

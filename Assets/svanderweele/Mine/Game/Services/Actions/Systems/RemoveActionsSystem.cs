@@ -1,17 +1,13 @@
 using System.Collections.Generic;
 using Entitas;
 using svanderweele.Mine.Core.Services.Actions;
-using UnityEngine;
 
-namespace svanderweele.Mine.Game.Services.Actions
+namespace svanderweele.Mine.Game.Services.Actions.Systems
 {
     public class RemoveActionsSystem : ReactiveSystem<ActionEntity>
     {
-        private IActionService _actionService;
-
         public RemoveActionsSystem(Contexts contexts) : base(contexts.action)
         {
-            _actionService = contexts.meta.actionService.service;
         }
 
 

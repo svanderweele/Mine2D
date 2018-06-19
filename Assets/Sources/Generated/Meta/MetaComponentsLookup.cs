@@ -8,21 +8,24 @@
 //------------------------------------------------------------------------------
 public static class MetaComponentsLookup {
 
-    public const int EID = 0;
-    public const int GridService = 1;
+    public const int ActionService = 0;
+    public const int InputService = 1;
     public const int ViewService = 2;
+    public const int Id = 3;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 4;
 
     public static readonly string[] componentNames = {
-        "EID",
-        "GridService",
-        "ViewService"
+        "ActionService",
+        "InputService",
+        "ViewService",
+        "Id"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(EIDComponent),
-        typeof(GridServiceComponent),
-        typeof(ViewServiceComponent)
+        typeof(svanderweele.Mine.Core.Services.Actions.ActionServiceComponent),
+        typeof(svanderweele.Mine.Core.Services.Input.InputServiceComponent),
+        typeof(svanderweele.Mine.Core.Services.View.ViewServiceComponent),
+        typeof(svanderweele.Mine.Game.Components.Id.IdComponent)
     };
 }

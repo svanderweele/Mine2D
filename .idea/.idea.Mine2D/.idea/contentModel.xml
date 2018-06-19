@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_Mine2D.1410504131.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Entitas" t="Include">
+          <e p="Compile.cs" t="Include" />
+        </e>
+        <e p="Sources" t="Include">
+          <e p="Generated" t="Include">
+            <e p="Action" t="Include">
+              <e p="ActionAttribute.cs" t="Include" />
+              <e p="ActionComponentsLookup.cs" t="Include" />
+              <e p="ActionContext.cs" t="Include" />
+              <e p="ActionEntity.cs" t="Include" />
+              <e p="ActionMatcher.cs" t="Include" />
+              <e p="Components" t="Include">
+                <e p="ActionActionComponent.cs" t="Include" />
+                <e p="ActionActionDestroyedListenerComponent.cs" t="Include" />
+                <e p="ActionDestroyedComponent.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Components" t="Include">
+              <e p="Interfaces" t="Include">
+                <e p="IDestroyedEntity.cs" t="Include" />
+                <e p="IIdEntity.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Contexts.cs" t="Include" />
+            <e p="Events" t="Include">
+              <e p="ActionEventSystems.cs" t="Include" />
+              <e p="Components" t="Include">
+                <e p="ActionDestroyedListenerComponent.cs" t="Include" />
+                <e p="GameDestroyedListenerComponent.cs" t="Include" />
+                <e p="InputDestroyedListenerComponent.cs" t="Include" />
+                <e p="PositionListenerComponent.cs" t="Include" />
+              </e>
+              <e p="GameEventSystems.cs" t="Include" />
+              <e p="InputEventSystems.cs" t="Include" />
+              <e p="Interfaces" t="Include">
+                <e p="IActionDestroyedListener.cs" t="Include" />
+                <e p="IGameDestroyedListener.cs" t="Include" />
+                <e p="IInputDestroyedListener.cs" t="Include" />
+                <e p="IPositionListener.cs" t="Include" />
+              </e>
+              <e p="Systems" t="Include">
+                <e p="ActionDestroyedEventSystem.cs" t="Include" />
+                <e p="GameDestroyedEventSystem.cs" t="Include" />
+                <e p="InputDestroyedEventSystem.cs" t="Include" />
+                <e p="PositionEventSystem.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Feature.cs" t="Include" />
+            <e p="Game" t="Include">
+              <e p="Components" t="Include">
+                <e p="GameDestroyedComponent.cs" t="Include" />
+                <e p="GameGameDestroyedListenerComponent.cs" t="Include" />
+                <e p="GameIdComponent.cs" t="Include" />
+                <e p="GamePositionComponent.cs" t="Include" />
+                <e p="GamePositionListenerComponent.cs" t="Include" />
+              </e>
+              <e p="GameAttribute.cs" t="Include" />
+              <e p="GameComponentsLookup.cs" t="Include" />
+              <e p="GameContext.cs" t="Include" />
+              <e p="GameEntity.cs" t="Include" />
+              <e p="GameMatcher.cs" t="Include" />
+            </e>
+            <e p="Input" t="Include">
+              <e p="Components" t="Include">
+                <e p="InputDestroyedComponent.cs" t="Include" />
+                <e p="InputIdComponent.cs" t="Include" />
+                <e p="InputInputDestroyedListenerComponent.cs" t="Include" />
+              </e>
+              <e p="InputAttribute.cs" t="Include" />
+              <e p="InputComponentsLookup.cs" t="Include" />
+              <e p="InputContext.cs" t="Include" />
+              <e p="InputEntity.cs" t="Include" />
+              <e p="InputMatcher.cs" t="Include" />
+            </e>
+            <e p="Meta" t="Include">
+              <e p="Components" t="Include">
+                <e p="MetaActionServiceComponent.cs" t="Include" />
+                <e p="MetaIdComponent.cs" t="Include" />
+                <e p="MetaInputServiceComponent.cs" t="Include" />
+                <e p="MetaViewServiceComponent.cs" t="Include" />
+              </e>
+              <e p="MetaAttribute.cs" t="Include" />
+              <e p="MetaComponentsLookup.cs" t="Include" />
+              <e p="MetaContext.cs" t="Include" />
+              <e p="MetaEntity.cs" t="Include" />
+              <e p="MetaMatcher.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="svanderweele" t="Include">
+          <e p="Mine" t="Include">
+            <e p="Core" t="Include">
+              <e p="Services" t="Include">
+                <e p="Actions" t="Include">
+                  <e p="ActionBind.cs" t="Include" />
+                  <e p="ActionServiceComponent.cs" t="Include" />
+                  <e p="IActionService.cs" t="Include" />
+                  <e p="RegisterActionServiceSystem.cs" t="Include" />
+                </e>
+                <e p="CoreServices.cs" t="Include" />
+                <e p="Events" t="Include">
+                  <e p="IEventListener.cs" t="Include" />
+                </e>
+                <e p="Input" t="Include">
+                  <e p="IInputController.cs" t="Include" />
+                  <e p="IInputMapper.cs" t="Include" />
+                  <e p="IInputService.cs" t="Include" />
+                  <e p="InputServiceComponent.cs" t="Include" />
+                  <e p="RegisterInputServiceSystem.cs" t="Include" />
+                </e>
+                <e p="RegisterServicesSystem.cs" t="Include" />
+                <e p="View" t="Include">
+                  <e p="IViewController.cs" t="Include" />
+                  <e p="IViewService.cs" t="Include" />
+                  <e p="RegisterViewServiceSystem.cs" t="Include" />
+                  <e p="ViewServiceComponent.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Game" t="Include">
+              <e p="Components" t="Include">
+                <e p="Destroy" t="Include">
+                  <e p="DestroyedComponent.cs" t="Include" />
+                  <e p="DestroyEntitiesSystem.cs" t="Include" />
+                </e>
+                <e p="Id" t="Include">
+                  <e p="ContextsIdExtensions.cs" t="Include" />
+                  <e p="IdComponent.cs" t="Include" />
+                </e>
+                <e p="Spatial" t="Include">
+                  <e p="PositionComponent.cs" t="Include" />
+                </e>
+              </e>
+              <e p="GameSystems.cs" t="Include" />
+              <e p="Main.cs" t="Include" />
+              <e p="Services" t="Include">
+                <e p="Actions" t="Include">
+                  <e p="ActionComponent.cs" t="Include" />
+                  <e p="ActionService.cs" t="Include" />
+                  <e p="GlobalActions.cs" t="Include" />
+                  <e p="Systems" t="Include">
+                    <e p="CallActionsSystem.cs" t="Include" />
+                    <e p="RemoveActionsSystem.cs" t="Include" />
+                    <e p="UpdateActionsSystem.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="InputService.cs" t="Include" />
+              </e>
+              <e p="Unity" t="Include">
+                <e p="UnityGameView.cs" t="Include" />
+                <e p="UnityInputMapper.cs" t="Include" />
+                <e p="UnityViewService.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="VSCode" t="Include">
+          <e p="Plugins" t="Include">
+            <e p="Editor" t="Include">
+              <e p="VSCode.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="Mine2D.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

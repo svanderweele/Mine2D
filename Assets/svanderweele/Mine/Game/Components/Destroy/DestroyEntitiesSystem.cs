@@ -5,7 +5,7 @@ public interface IDestroyEntity : IEntity, IDestroyedEntity { }
 public partial class GameEntity : IDestroyEntity{}
 public partial class InputEntity : IDestroyEntity{}
 
-namespace svanderweele.Mine.Game.Components.Destroys
+namespace svanderweele.Mine.Game.Components.Destroy
 {
 
     public class DestroyEntitiesSystem : MultiReactiveSystem<IDestroyEntity, Contexts>
@@ -29,12 +29,15 @@ namespace svanderweele.Mine.Game.Components.Destroys
 
         protected override bool Filter(IDestroyEntity entity)
         {
-            throw new System.NotImplementedException();
+            return entity.isDestroyed;
         }
 
         protected override void Execute(List<IDestroyEntity> entities)
         {
-            throw new System.NotImplementedException();
+            foreach (var destroyEntity in entities)
+            {
+                destroyEntity.Destroy();
+            }
         }
     }
 }

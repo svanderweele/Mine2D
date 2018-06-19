@@ -1,4 +1,9 @@
-﻿$HEADER$namespace $NAMESPACE$
+
+using Entitas;
+
+namespace svanderweele.Mine.Core.Services.View
 {
-  public class $CLASS$ {$END$}
+    public interface IViewService{
+        void LoadAsset(Contexts contexts, IEntity entity, string assetName);
+    }
 }

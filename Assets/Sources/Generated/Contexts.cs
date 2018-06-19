@@ -21,13 +21,15 @@ public partial class Contexts : Entitas.IContexts {
 
     static Contexts _sharedInstance;
 
+    public ActionContext action { get; set; }
     public GameContext game { get; set; }
     public InputContext input { get; set; }
     public MetaContext meta { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { game, input, meta }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { action, game, input, meta }; } }
 
     public Contexts() {
+        action = new ActionContext();
         game = new GameContext();
         input = new InputContext();
         meta = new MetaContext();
@@ -60,49 +62,47 @@ public partial class Contexts : Entitas.IContexts {
 //------------------------------------------------------------------------------
 public partial class Contexts {
 
-    public const string EID = "EID";
-    public const string GridEntity = "GridEntity";
-    public const string InteractionInput = "InteractionInput";
+    public const string Action = "Action";
+    public const string Id = "Id";
 
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeEntityIndices() {
+        action.AddEntityIndex(new Entitas.EntityIndex<ActionEntity, string>(
+            Action,
+            action.GetGroup(ActionMatcher.Action),
+            (e, c) => ((svanderweele.Mine.Game.Services.Actions.ActionComponent)c).value));
+
         game.AddEntityIndex(new Entitas.PrimaryEntityIndex<GameEntity, int>(
-            EID,
-            game.GetGroup(GameMatcher.EID),
-            (e, c) => ((EIDComponent)c).value));
-        meta.AddEntityIndex(new Entitas.PrimaryEntityIndex<MetaEntity, int>(
-            EID,
-            meta.GetGroup(MetaMatcher.EID),
-            (e, c) => ((EIDComponent)c).value));
-
-        game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, int>(
-            GridEntity,
-            game.GetGroup(GameMatcher.GridEntity),
-            (e, c) => ((GridEntityComponent)c).gridEID));
-
+            Id,
+            game.GetGroup(GameMatcher.Id),
+            (e, c) => ((svanderweele.Mine.Game.Components.Id.IdComponent)c).value));
         input.AddEntityIndex(new Entitas.PrimaryEntityIndex<InputEntity, int>(
-            InteractionInput,
-            input.GetGroup(InputMatcher.InteractionInput),
-            (e, c) => ((InteractionInputComponent)c).eId));
+            Id,
+            input.GetGroup(InputMatcher.Id),
+            (e, c) => ((svanderweele.Mine.Game.Components.Id.IdComponent)c).value));
+        meta.AddEntityIndex(new Entitas.PrimaryEntityIndex<MetaEntity, int>(
+            Id,
+            meta.GetGroup(MetaMatcher.Id),
+            (e, c) => ((svanderweele.Mine.Game.Components.Id.IdComponent)c).value));
     }
 }
 
 public static class ContextsExtensions {
 
-    public static GameEntity GetEntityWithEID(this GameContext context, int value) {
-        return ((Entitas.PrimaryEntityIndex<GameEntity, int>)context.GetEntityIndex(Contexts.EID)).GetEntity(value);
+    public static System.Collections.Generic.HashSet<ActionEntity> GetEntitiesWithAction(this ActionContext context, string value) {
+        return ((Entitas.EntityIndex<ActionEntity, string>)context.GetEntityIndex(Contexts.Action)).GetEntities(value);
     }
 
-    public static MetaEntity GetEntityWithEID(this MetaContext context, int value) {
-        return ((Entitas.PrimaryEntityIndex<MetaEntity, int>)context.GetEntityIndex(Contexts.EID)).GetEntity(value);
+    public static GameEntity GetEntityWithId(this GameContext context, int value) {
+        return ((Entitas.PrimaryEntityIndex<GameEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);
     }
 
-    public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithGridEntity(this GameContext context, int gridEID) {
-        return ((Entitas.EntityIndex<GameEntity, int>)context.GetEntityIndex(Contexts.GridEntity)).GetEntities(gridEID);
+    public static InputEntity GetEntityWithId(this InputContext context, int value) {
+        return ((Entitas.PrimaryEntityIndex<InputEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);
     }
 
-    public static InputEntity GetEntityWithInteractionInput(this InputContext context, int eId) {
-        return ((Entitas.PrimaryEntityIndex<InputEntity, int>)context.GetEntityIndex(Contexts.InteractionInput)).GetEntity(eId);
+    public static MetaEntity GetEntityWithId(this MetaContext context, int value) {
+        return ((Entitas.PrimaryEntityIndex<MetaEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);
     }
 }
 //------------------------------------------------------------------------------
@@ -120,6 +120,7 @@ public partial class Contexts {
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeContexObservers() {
         try {
+            CreateContextObserver(action);
             CreateContextObserver(game);
             CreateContextObserver(input);
             CreateContextObserver(meta);
