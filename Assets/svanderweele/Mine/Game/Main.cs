@@ -1,5 +1,7 @@
 using Entitas;
 using svanderweele.Mine.Core.Services;
+using svanderweele.Mine.Game.Actions;
+using svanderweele.Mine.Game.Commands;
 using svanderweele.Mine.Game.Components.Id;
 using svanderweele.Mine.Game.Services;
 using svanderweele.Mine.Game.Unity;
@@ -42,13 +44,9 @@ namespace svanderweele.Mine.Game
         {
             if (_services.Input.IsKeyBindDown(GlobalVariables.ACTION_HIDE_ACTOR))
             {
-                //TODO : Create ActionService to create actions
-                var action = _contexts.action.CreateEntity();
-                action.AddAction(0);
-                //----
-
+                var command = _contexts.command.CreateCommandRequest(5);
                 var e = _contexts.game.GetEntityWithId(0);
-                action.AddHideEntityAction(0, !e.visible.isVisible);
+                command.AddHideEntityRequest(0, !e.visible.isVisible);
             }
             
             

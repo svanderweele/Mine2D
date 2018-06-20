@@ -19,3 +19,10 @@ public enum KeyId
     None,
     Escape
 }
+
+public enum TileType
+{
+    Tile,
+    Object,
+    Wire
+}

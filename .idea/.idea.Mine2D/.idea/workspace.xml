@@ -2,79 +2,114 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f4b3fdc-141f-4a71-a251-b2593c1a1a95" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionHideEntityActionComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionIdComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/CommandAttribute.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/CommandComponentsLookup.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/CommandContext.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/CommandEntity.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/CommandMatcher.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/Components.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/Components/CommandCommandComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/Components/CommandCommandConsumedComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/Components/CommandHideEntityCommandComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/Components/CommandIdComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Components/VisibleListenerComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Interfaces/IVisibleListener.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Systems/VisibleEventSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameVisibleComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameVisibleListenerComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionConsumedComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionConsumedComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/RemoveActionsSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/RemoveActionsSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandConsumedComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandConsumedComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/RemoveCommandsSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Visible.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Visible/VisibleComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Visible/VisibleComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/Components/CommandCommandDelayComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/Components/CommandCommandRequestComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/Components/CommandHideEntityRequestComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Components/GridDestroyedListenerComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Events/GridEventSystems.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Interfaces/IGridDestroyedListener.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Systems/GridDestroyedEventSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/Components.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/Components/GridDestroyedComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/Components/GridGridComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/Components/GridGridDestroyedListenerComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/Components/GridGridSizeComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/Components/GridGridTileComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/Components/GridGridTileSizeComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/Components/GridGridTileTypeComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/Components/GridGridTilesComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/Components/GridIdComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/GridAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/GridComponentsLookup.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/GridContext.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/GridEntity.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Grid/GridMatcher.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandContextExtension.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandContextExtension.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandDelayComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandDelayComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandRequestComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandRequestComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/UpdateCommandDelaySystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/UpdateCommandDelaySystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridContextExtension.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridContextExtension.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridSizeComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridSizeComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileSizeComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileSizeComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileTypeComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileTypeComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTilesComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTilesComponent.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mine2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mine2D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mine2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mine2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/ActionComponentsLookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Action/ActionComponentsLookup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionActionComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionActionComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionActionComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionActionComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/ActionAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/ActionAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/ActionComponentsLookup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/ActionComponentsLookup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/ActionContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/ActionContext.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/ActionEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/ActionEntity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/ActionMatcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/ActionMatcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionActionComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionActionComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionActionConsumedComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionActionConsumedComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionActionDestroyedListenerComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionActionDestroyedListenerComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionDestroyedComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionDestroyedComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionHideEntityActionComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionHideEntityActionComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionIdComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Action/Components/ActionIdComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Command/CommandComponentsLookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/CommandComponentsLookup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Command/Components/CommandCommandComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Command/Components/CommandCommandComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Contexts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Contexts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Events/GameEventSystems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Events/GameEventSystems.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Game/GameComponentsLookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Game/GameComponentsLookup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Binding/InputBindConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Binding/InputBindConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Events/ActionEventSystems.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Events/ActionEventSystems.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Components/ActionDestroyedListenerComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Components/ActionDestroyedListenerComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Interfaces/IActionDestroyedListener.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Interfaces/IActionDestroyedListener.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Systems/ActionDestroyedEventSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Systems/ActionDestroyedEventSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Systems/VisibleEventSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Events/Systems/VisibleEventSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/IInputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/IInputService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionConsumedComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionConsumedComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests/HideActor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests/HideActor/HideEntityRequestComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests/HideActor/HideEntityRequestComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests/HideActor/HideEntityRequestSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests/HideActor/HideEntityRequestSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/RemoveActionsSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/RemoveActionsSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/RemoveCommandsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/RemoveCommandSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/RemoveCommandsSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/RemoveCommandSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy/DestroyEntitiesSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy/DestroyEntitiesSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy/DestroyedComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy/DestroyedComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Id/IdComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Id/IdComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/GameSystems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/GameSystems.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/ActionComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/ActionComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/ActionService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/ActionService.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/Systems.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/Systems/CallActionsSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/Systems/CallActionsSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/Systems/RemoveActionsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/RemoveCommandsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/Systems/RemoveActionsSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/Systems/UpdateActionsSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/Systems/UpdateActionsSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Unity/UnityGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Unity/UnityGameView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Utils/GlobalVariables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Utils/GlobalVariables.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/svanderweele/Mine/Testing/InputBindTest/InputBindConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/svanderweele/Mine/Testing/InputBindTest/InputBindConfiguration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Preferences.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Preferences.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -88,35 +123,150 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UnityGameView.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Unity/UnityGameView.cs">
+      <file leaf-file-name="Main.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Main.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+            <state relative-caret-position="311">
+              <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
               <folding>
-                <marker date="1529426995994" expanded="false" signature="6:123" ph="..." />
-                <marker date="1529426995994" expanded="true" signature="385:448" ph="{...}" />
-                <marker date="1529426995994" expanded="true" signature="517:589" ph="{...}" />
-                <marker date="1529426995994" expanded="true" signature="839:904" ph="{...}" />
+                <marker date="1529480528681" expanded="false" signature="6:304" ph="..." />
+                <marker date="1529480528681" expanded="true" signature="338:1727" ph="{...}" />
+                <marker date="1529480528681" expanded="true" signature="378:1725" ph="{...}" />
+                <marker date="1529480528681" expanded="true" signature="516:1039" ph="{...}" />
+                <marker date="1529480528681" expanded="true" signature="1080:1194" ph="{...}" />
+                <marker date="1529480528681" expanded="true" signature="1217:1640" ph="{...}" />
+                <marker date="1529480528681" expanded="true" signature="1309:1540" ph="{...}" />
+                <marker date="1529480528681" expanded="true" signature="1666:1719" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Main.cs">
+      <file leaf-file-name="HideEntityRequestSystem.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests/HideActor/HideEntityRequestSystem.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="44" column="63" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
+            <state relative-caret-position="161">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <marker date="1529426989393" expanded="false" signature="6:227" ph="..." />
-                <marker date="1529426989393" expanded="true" signature="261:1762" ph="{...}" />
-                <marker date="1529426989393" expanded="true" signature="301:1760" ph="{...}" />
-                <marker date="1529426989393" expanded="true" signature="439:962" ph="{...}" />
-                <marker date="1529426989393" expanded="true" signature="1003:1117" ph="{...}" />
-                <marker date="1529426989393" expanded="true" signature="1140:1675" ph="{...}" />
-                <marker date="1529426989393" expanded="true" signature="1232:1575" ph="{...}" />
-                <marker date="1529426989393" expanded="true" signature="1701:1754" ph="{...}" />
+                <marker date="1529480697549" expanded="false" signature="6:48" ph="..." />
+                <marker date="1529480697549" expanded="true" signature="110:1451" ph="{...}" />
+                <marker date="1529480697549" expanded="true" signature="185:1448" ph="{...}" />
+                <marker date="1529480697549" expanded="true" signature="311:365" ph="{...}" />
+                <marker date="1529480697549" expanded="true" signature="463:619" ph="{...}" />
+                <marker date="1529480697549" expanded="true" signature="681:821" ph="{...}" />
+                <marker date="1529480697549" expanded="true" signature="892:1442" ph="{...}" />
+                <marker date="1529480697549" expanded="true" signature="953:1432" ph="{...}" />
+                <marker date="1529480697549" expanded="true" signature="1109:1362" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandComponent.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandComponent.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <marker date="1529480723758" expanded="false" signature="6:55" ph="..." />
+                <marker date="1529480723758" expanded="true" signature="98:175" ph="{...}" />
+                <marker date="1529480723758" expanded="true" signature="161:173" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HideEntityCommandComponent.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandComponent.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <folding>
+                <marker date="1529425557113" expanded="true" signature="57:202" ph="{...}" />
+                <marker date="1529425557113" expanded="true" signature="130:200" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandContextExtension.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandContextExtension.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <marker date="1529480515781" expanded="true" signature="41:628" ph="{...}" />
+                <marker date="1529480515781" expanded="true" signature="91:626" ph="{...}" />
+                <marker date="1529480515781" expanded="true" signature="190:370" ph="{...}" />
+                <marker date="1529480515781" expanded="true" signature="470:620" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HideEntityCommandSystem.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandSystem.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="16" selection-start-line="16" selection-end-line="17" />
+              <folding>
+                <marker date="1529480689129" expanded="false" signature="6:48" ph="..." />
+                <marker date="1529480689129" expanded="true" signature="101:1264" ph="{...}" />
+                <marker date="1529480689129" expanded="true" signature="176:1262" ph="{...}" />
+                <marker date="1529480689129" expanded="true" signature="311:365" ph="{...}" />
+                <marker date="1529480689129" expanded="true" signature="463:619" ph="{...}" />
+                <marker date="1529480689129" expanded="true" signature="681:834" ph="{...}" />
+                <marker date="1529480689129" expanded="true" signature="905:1256" ph="{...}" />
+                <marker date="1529480689129" expanded="true" signature="967:1246" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameSystems.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/GameSystems.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <marker date="1529480466707" expanded="true" signature="6:248" ph="..." />
+                <marker date="1529480466707" expanded="true" signature="282:1186" ph="{...}" />
+                <marker date="1529480466707" expanded="true" signature="323:1184" ph="{...}" />
+                <marker date="1529480466707" expanded="true" signature="398:1061" ph="{...}" />
+                <marker date="1529480466707" expanded="true" signature="1121:1178" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateCommandDelaySystem.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/UpdateCommandDelaySystem.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+              <folding>
+                <marker date="1529480644817" expanded="false" signature="6:67" ph="..." />
+                <marker date="1529480644817" expanded="true" signature="110:1191" ph="{...}" />
+                <marker date="1529480644817" expanded="true" signature="186:1189" ph="{...}" />
+                <marker date="1529480644817" expanded="true" signature="322:376" ph="{...}" />
+                <marker date="1529480644817" expanded="true" signature="474:567" ph="{...}" />
+                <marker date="1529480644817" expanded="true" signature="629:692" ph="{...}" />
+                <marker date="1529480644817" expanded="true" signature="763:1183" ph="{...}" />
+                <marker date="1529480644817" expanded="true" signature="825:1173" ph="{...}" />
+                <marker date="1529480644817" expanded="true" signature="1067:1159" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HideEntityRequestComponent.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests/HideActor/HideEntityRequestComponent.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+              <folding>
+                <marker date="1529480092956" expanded="true" signature="66:211" ph="{...}" />
+                <marker date="1529480092956" expanded="true" signature="139:209" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -144,12 +294,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Unity/UnityInputMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Unity/UnityViewService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionConsumedComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Controller/InputControllerComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/RegisterServicesSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Controller/IInputController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandConsumedComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandContextExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests/HideActor/HideEntityRequestComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Actions/RegisterActionServiceSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Actions/IActionService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy/DestroyEntitiesSystem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -159,12 +309,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Actions/ActionServiceComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Utils/GlobalVariables.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/InputService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/UpdateCommandDelaySystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandRequestComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/CoreServices.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Main.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Testing/InputBindTest/InputBindConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Controller/RegisterInputControllerSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Id/IdComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/RegisterInputServiceSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/IInputService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/InputServiceComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Testing/InputBindTest/MainTest.cs" root0="FORCE_HIGHLIGHTING" />
@@ -172,45 +325,29 @@
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Unity/UnityInputController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/View/IViewController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTilesComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Unity/UnityGameView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests/HideActor/HideEntityRequestSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/View/ViewServiceComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Spatial/PositionComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/IInputMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy/DestroyedComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileTypeComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Visible/VisibleComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/RemoveActionsSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileSizeComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/View/IViewService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/RemoveCommandsSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridSizeComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/RemoveCommandSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Binding/InputBind.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridContextExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandDelayComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/View/RegisterViewServiceSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/GameSystems.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/InputBindConfiguration.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Interfaces/IInputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/InputControllerComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Controller/RegisterInputControllerSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/RegisterServicesSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/CoreServices.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Testing/BindTest.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Testing/InputBindConfiguration.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Binding/InputBind.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Testing/InputBindConfigurationTest.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Testing/MainTest.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Testing/InputBindTest/MainTest.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Binding/IInputBindConfiguration.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Controller/InputControllerComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/IInputMapper.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Binding/InputMapper.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Unity/UnityInputMapper.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Controller/IInputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Unity/UnityInputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/IInputService.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/InputService.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActorActionComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideEntityActionComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideEntityCommandComponent.cs" />
@@ -218,29 +355,50 @@
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideEntityActionSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionConsumedComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/RemoveActionsSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy/DestroyedComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy/DestroyEntitiesSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/ActionConsumedComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandConsumedComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Id/IdComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Visible/ApplyVisibleSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Visible/ApplyInvisibleSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Utils/GlobalVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Testing/InputBindTest/InputBindConfiguration.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Binding/InputBindConfiguration.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/CommandComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Visible/InvisibleComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/RemoveCommandsSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/GameSystems.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Visible/VisibleComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Main.cs" />
         <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Unity/UnityGameView.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Utils/GlobalVariables.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/IInputService.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTypeComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTilesComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileSizeComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileTypeComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridSizeComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridContextExtension.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandDelayedComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionDelayedComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/UpdateCommanDelaySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandDelayComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionDelayComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionContextExtension.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandRequestComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/RemoveCommandsSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/RemoveCommandSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests/HideActor/HideEntityRequestComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Id/IdComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy/DestroyedComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy/DestroyEntitiesSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/GameSystems.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandContextExtension.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Main.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/UpdateCommandDelaySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests/HideActor/HideEntityRequestSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandComponent.cs" />
       </list>
     </option>
   </component>
@@ -266,45 +424,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="UnityExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D" type="483dac07:UnityExplorerNode$Root" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-hidden-items" value="false" />
-      </pane>
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -345,48 +464,6 @@
               <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="svanderweele" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Core" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="svanderweele" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Core" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="svanderweele" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Core" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Input" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="svanderweele" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Core" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Input" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Binding" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="svanderweele" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Game" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
@@ -397,7 +474,7 @@
               <item name="svanderweele" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Game" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Actions" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Commands" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
@@ -407,7 +484,7 @@
               <item name="svanderweele" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Game" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Actions" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Commands" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="HideActor" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
@@ -419,6 +496,7 @@
               <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Game" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Commands" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Requests" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
@@ -429,6 +507,7 @@
               <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Game" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Commands" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Requests" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="HideActor" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
@@ -463,72 +542,51 @@
               <item name="Components" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Id" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="svanderweele" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Game" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Components" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Visible" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="svanderweele" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Game" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Services" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="svanderweele" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Game" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Unity" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="svanderweele" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Game" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Utils" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="svanderweele" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Testing" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Mine2D (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="svanderweele" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Mine" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Testing" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="InputBindTest" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
+      <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Mine2D" type="483dac07:UnityExplorerNode$Root" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Mine2D" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Mine2D" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Mine2D" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Mine2D" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-hidden-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -536,7 +594,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/simon/Projects/Unity/Mine2D/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandSystem.cs" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -586,12 +644,13 @@
       <workItem from="1529396686622" duration="3245000" />
       <workItem from="1529402785603" duration="7147000" />
       <workItem from="1529417700348" duration="2218000" />
-      <workItem from="1529420519450" duration="5482000" />
+      <workItem from="1529420519450" duration="5551000" />
+      <workItem from="1529475523821" duration="2579000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26990000" />
+    <option name="totallyTimeSpent" value="29638000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -606,21 +665,22 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32923076" />
       <window_info anchor="right" id="Errors In Solution" order="3" weight="0.32967034" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Unit Tests" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32923076" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32923076" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32923076" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32923076" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49847096" visible="true" weight="0.2032967" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49847096" visible="true" weight="0.20573871" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unity" order="7" weight="0.32923076" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.50152904" side_tool="true" weight="0.18559219" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -629,7 +689,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="8" visible="true" weight="0.32923076" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -640,149 +699,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/GlobalActions.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/View/RegisterViewServiceSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="9" lean-forward="true" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Actions/ActionServiceComponent.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/RegisterInputServiceSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Actions/RegisterActionServiceSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Actions/ActionBind.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/RemoveActionsSystem - Copy.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/Systems/RemoveActionsSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Sources/Generated/Components/Interfaces/IDestroyedEntity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/Systems/UpdateActionsSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/Systems/CallActionsSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/CoreServices.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="84" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/RegisterServicesSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="84" selection-start-line="16" selection-start-column="84" selection-end-line="16" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/InputServiceComponent.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Testing/InputBindTest/MainTest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <marker date="1529420653228" expanded="true" signature="69:281" ph="{...}" />
-            <marker date="1529420653228" expanded="true" signature="113:279" ph="{...}" />
-            <marker date="1529420653228" expanded="true" signature="199:273" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Controller/RegisterInputControllerSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
-          <folding>
-            <marker date="1529415071518" expanded="true" signature="74:598" ph="{...}" />
-            <marker date="1529415071518" expanded="true" signature="143:596" ph="{...}" />
-            <marker date="1529415071518" expanded="true" signature="359:469" ph="{...}" />
-            <marker date="1529415071518" expanded="true" signature="503:590" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Controller/InputControllerComponent.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
-          <folding>
-            <marker date="1529422340161" expanded="false" signature="6:55" ph="..." />
-            <marker date="1529422340161" expanded="true" signature="115:318" ph="{...}" />
-            <marker date="1529422340161" expanded="true" signature="262:316" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/IInputMapper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <marker date="1529422586978" expanded="true" signature="55:173" ph="{...}" />
-            <marker date="1529422586978" expanded="true" signature="94:171" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Unity/UnityInputController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding>
-            <marker date="1529423290965" expanded="false" signature="6:127" ph="..." />
-            <marker date="1529423290965" expanded="true" signature="167:998" ph="{...}" />
-            <marker date="1529423290965" expanded="true" signature="226:996" ph="{...}" />
-            <marker date="1529423290965" expanded="true" signature="355:414" ph="{...}" />
-            <marker date="1529423290965" expanded="true" signature="459:540" ph="{...}" />
-            <marker date="1529423290965" expanded="true" signature="581:666" ph="{...}" />
-            <marker date="1529423290965" expanded="true" signature="705:788" ph="{...}" />
-            <marker date="1529423290965" expanded="true" signature="821:887" ph="{...}" />
-            <marker date="1529423290965" expanded="true" signature="922:990" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,10 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="26" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="26" />
-          <folding>
-            <marker date="1529423267947" expanded="true" signature="58:270" ph="{...}" />
-            <marker date="1529423267947" expanded="true" signature="98:268" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -801,25 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <marker date="1529416775900" expanded="true" signature="55:407" ph="{...}" />
-            <marker date="1529416775900" expanded="true" signature="85:405" ph="{...}" />
-            <marker date="1529416775900" expanded="true" signature="198:269" ph="{...}" />
-            <marker date="1529416775900" expanded="true" signature="312:399" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/IInputService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-          <folding>
-            <marker date="1529423334129" expanded="false" signature="6:124" ph="..." />
-            <marker date="1529423334129" expanded="true" signature="181:553" ph="{...}" />
-            <marker date="1529423334129" expanded="true" signature="262:550" ph="{...}" />
-            <marker date="1529423334129" expanded="true" signature="409:544" ph="/* TODO : Update gameplay input binds (open_grid, pan camera etc) ... */" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -827,12 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding>
-            <marker date="1529423156057" expanded="false" signature="6:169" ph="..." />
-            <marker date="1529423156057" expanded="true" signature="209:620" ph="{...}" />
-            <marker date="1529423156057" expanded="true" signature="268:618" ph="{...}" />
-            <marker date="1529423156057" expanded="true" signature="316:612" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -840,15 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-          <folding>
-            <marker date="1529423127338" expanded="true" signature="6:154" ph="..." />
-            <marker date="1529423127338" expanded="true" signature="211:1063" ph="{...}" />
-            <marker date="1529423127338" expanded="true" signature="272:1061" ph="{...}" />
-            <marker date="1529423127338" expanded="true" signature="410:539" ph="{...}" />
-            <marker date="1529423127338" expanded="true" signature="579:632" ph="{...}" />
-            <marker date="1529423127338" expanded="true" signature="662:893" ph="{...}" />
-            <marker date="1529423127338" expanded="true" signature="995:1055" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -856,10 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <marker date="1529422258037" expanded="true" signature="90:383" ph="{...}" />
-            <marker date="1529422258037" expanded="true" signature="137:381" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -870,32 +748,272 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy/DestroyedComponent.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Visible/ApplyInvisibleSystem.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Testing/InputBindTest/InputBindConfiguration.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="137" column="60" selection-start-line="137" selection-start-column="60" selection-end-line="137" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Binding/InputBindConfiguration.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="154" column="69" selection-start-line="154" selection-start-column="69" selection-end-line="154" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionConsumedComponent.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/ActionService.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/InputService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Visible/VisibleComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Spatial/PositionComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Unity/UnityGameView.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
           <folding>
-            <marker date="1529424252344" expanded="false" signature="6:55" ph="..." />
-            <marker date="1529424252344" expanded="true" signature="108:235" ph="{...}" />
-            <marker date="1529424252344" expanded="true" signature="206:233" ph="{...}" />
+            <marker date="1529426995994" expanded="false" signature="6:123" ph="..." />
+            <marker date="1529426995994" expanded="true" signature="282:910" ph="{...}" />
+            <marker date="1529426995994" expanded="true" signature="385:448" ph="{...}" />
+            <marker date="1529426995994" expanded="true" signature="517:589" ph="{...}" />
+            <marker date="1529426995994" expanded="true" signature="660:773" ph="{...}" />
+            <marker date="1529426995994" expanded="true" signature="839:904" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Utils/GlobalVariables.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding>
+            <marker date="1529478688837" expanded="true" signature="39:173" ph="{...}" />
+            <marker date="1529478688837" expanded="true" signature="81:171" ph="{...}" />
+            <marker date="1529478688837" expanded="true" signature="196:260" ph="{...}" />
+            <marker date="1529478688837" expanded="true" signature="282:317" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Service/IInputService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding>
+            <marker date="1529478833961" expanded="false" signature="6:124" ph="..." />
+            <marker date="1529478833961" expanded="true" signature="181:554" ph="{...}" />
+            <marker date="1529478833961" expanded="true" signature="262:551" ph="{...}" />
+            <marker date="1529478833961" expanded="true" signature="409:545" ph="/* TODO : Toggle gameplay input binds (open_grid, pan camera etc) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTypeComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy.meta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridComponent.cs.meta">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTilesComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          <folding>
+            <marker date="1529479196665" expanded="true" signature="64:169" ph="{...}" />
+            <marker date="1529479196665" expanded="true" signature="126:167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <marker date="1529479072695" expanded="true" signature="64:161" ph="{...}" />
+            <marker date="1529479072695" expanded="true" signature="125:159" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileSizeComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          <folding>
+            <marker date="1529479357434" expanded="true" signature="64:208" ph="{...}" />
+            <marker date="1529479357434" expanded="true" signature="129:206" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridTileTypeComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding>
+            <marker date="1529479387106" expanded="true" signature="64:180" ph="{...}" />
+            <marker date="1529479387106" expanded="true" signature="129:178" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridSizeComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          <folding>
+            <marker date="1529479402191" expanded="true" signature="64:192" ph="{...}" />
+            <marker date="1529479402191" expanded="true" signature="125:190" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding>
+            <marker date="1529479407132" expanded="true" signature="64:144" ph="{...}" />
+            <marker date="1529479407132" expanded="true" signature="121:142" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionDelayedComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionDelayComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandDelayComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <marker date="1529479861554" expanded="true" signature="57:167" ph="{...}" />
+            <marker date="1529479861554" expanded="true" signature="125:165" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionContextExtension.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/RemoveActionsSystem.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandRequestComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <marker date="1529479999018" expanded="true" signature="57:150" ph="{...}" />
+            <marker date="1529479999018" expanded="true" signature="127:148" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy/DestroyEntitiesSystem.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+        <state relative-caret-position="105">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
-            <marker date="1529424281134" expanded="false" signature="6:48" ph="..." />
-            <marker date="1529424281134" expanded="true" signature="376:1435" ph="{...}" />
-            <marker date="1529424281134" expanded="true" signature="466:1433" ph="{...}" />
-            <marker date="1529424281134" expanded="true" signature="591:645" ph="{...}" />
-            <marker date="1529424281134" expanded="true" signature="716:1092" ph="{...}" />
-            <marker date="1529424281134" expanded="true" signature="775:1081" ph="{...}" />
-            <marker date="1529424281134" expanded="true" signature="1155:1214" ph="{...}" />
-            <marker date="1529424281134" expanded="true" signature="1286:1427" ph="{...}" />
-            <marker date="1529424281134" expanded="true" signature="1348:1417" ph="{...}" />
+            <marker date="1529480232707" expanded="false" signature="6:48" ph="..." />
+            <marker date="1529480232707" expanded="true" signature="374:1429" ph="{...}" />
+            <marker date="1529480232707" expanded="true" signature="464:1427" ph="{...}" />
+            <marker date="1529480232707" expanded="true" signature="589:643" ph="{...}" />
+            <marker date="1529480232707" expanded="true" signature="714:1086" ph="{...}" />
+            <marker date="1529480232707" expanded="true" signature="773:1075" ph="{...}" />
+            <marker date="1529480232707" expanded="true" signature="1149:1208" ph="{...}" />
+            <marker date="1529480232707" expanded="true" signature="1280:1421" ph="{...}" />
+            <marker date="1529480232707" expanded="true" signature="1342:1411" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Destroy/DestroyedComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding>
+            <marker date="1529480215306" expanded="false" signature="6:55" ph="..." />
+            <marker date="1529480215306" expanded="true" signature="108:233" ph="{...}" />
+            <marker date="1529480215306" expanded="true" signature="204:231" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Id/IdComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <marker date="1529480208104" expanded="false" signature="6:55" ph="..." />
+            <marker date="1529480208104" expanded="true" signature="103:255" ph="{...}" />
+            <marker date="1529480208104" expanded="true" signature="186:253" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -911,124 +1029,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Id/IdComponent.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/RemoveCommandSystem.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        <state relative-caret-position="270">
+          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
           <folding>
-            <marker date="1529425244216" expanded="false" signature="6:55" ph="..." />
-            <marker date="1529425244216" expanded="true" signature="103:257" ph="{...}" />
-            <marker date="1529425244216" expanded="true" signature="188:255" ph="{...}" />
+            <marker date="1529480025379" expanded="false" signature="6:48" ph="..." />
+            <marker date="1529480025379" expanded="true" signature="91:989" ph="{...}" />
+            <marker date="1529480025379" expanded="true" signature="162:987" ph="{...}" />
+            <marker date="1529480025379" expanded="true" signature="305:372" ph="{...}" />
+            <marker date="1529480025379" expanded="true" signature="470:612" ph="{...}" />
+            <marker date="1529480025379" expanded="true" signature="674:759" ph="{...}" />
+            <marker date="1529480025379" expanded="true" signature="830:980" ph="{...}" />
+            <marker date="1529480025379" expanded="true" signature="892:970" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Visible/ApplyInvisibleSystem.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Grid/GridContextExtension.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        <state relative-caret-position="195">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <marker date="1529479445305" expanded="true" signature="48:535" ph="{...}" />
+            <marker date="1529479445305" expanded="true" signature="95:533" ph="{...}" />
+            <marker date="1529479445305" expanded="true" signature="247:527" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionComponent.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests/HideActor/HideEntityRequestComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding>
+            <marker date="1529480092956" expanded="true" signature="66:211" ph="{...}" />
+            <marker date="1529480092956" expanded="true" signature="139:209" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/GameSystems.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <marker date="1529480466707" expanded="true" signature="6:248" ph="..." />
+            <marker date="1529480466707" expanded="true" signature="282:1186" ph="{...}" />
+            <marker date="1529480466707" expanded="true" signature="323:1184" ph="{...}" />
+            <marker date="1529480466707" expanded="true" signature="398:1061" ph="{...}" />
+            <marker date="1529480466707" expanded="true" signature="1121:1178" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandContextExtension.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
-            <marker date="1529425561197" expanded="true" signature="56:199" ph="{...}" />
-            <marker date="1529425561197" expanded="true" signature="127:197" ph="{...}" />
+            <marker date="1529480515781" expanded="true" signature="41:628" ph="{...}" />
+            <marker date="1529480515781" expanded="true" signature="91:626" ph="{...}" />
+            <marker date="1529480515781" expanded="true" signature="190:370" ph="{...}" />
+            <marker date="1529480515781" expanded="true" signature="470:620" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Testing/InputBindTest/InputBindConfiguration.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Main.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="137" column="60" selection-start-line="137" selection-start-column="60" selection-end-line="137" selection-end-column="60" />
+        <state relative-caret-position="311">
+          <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
           <folding>
-            <marker date="1529425675714" expanded="false" signature="6:184" ph="..." />
-            <marker date="1529425675714" expanded="true" signature="235:5174" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="277:4065" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="478:615" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="669:1232" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="749:824" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="878:1066" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="1083:1184" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="1289:1884" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="1368:1420" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="1529:1686" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="1591:1672" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="1735:1874" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="1927:2123" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="2007:2059" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="2191:2249" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="2309:2678" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="2527:2641" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="2729:2897" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="2793:2850" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="2954:3350" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="3063:3313" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="3131:3299" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="3196:3281" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="3407:3586" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="3629:4059" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="3709:4026" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="3847:3946" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="4111:5172" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="4208:5166" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="4321:4388" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="4434:4625" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="4517:4611" ph="{...}" />
-            <marker date="1529425675714" expanded="true" signature="5035:5111" ph="{...}" />
+            <marker date="1529480528681" expanded="false" signature="6:304" ph="..." />
+            <marker date="1529480528681" expanded="true" signature="338:1727" ph="{...}" />
+            <marker date="1529480528681" expanded="true" signature="378:1725" ph="{...}" />
+            <marker date="1529480528681" expanded="true" signature="516:1039" ph="{...}" />
+            <marker date="1529480528681" expanded="true" signature="1080:1194" ph="{...}" />
+            <marker date="1529480528681" expanded="true" signature="1217:1640" ph="{...}" />
+            <marker date="1529480528681" expanded="true" signature="1309:1540" ph="{...}" />
+            <marker date="1529480528681" expanded="true" signature="1666:1719" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Core/Services/Input/Binding/InputBindConfiguration.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandDelayedComponent.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="154" column="69" selection-start-line="154" selection-start-column="69" selection-end-line="154" selection-end-column="69" />
-          <folding>
-            <marker date="1529425694970" expanded="false" signature="6:88" ph="..." />
-            <marker date="1529425694970" expanded="true" signature="145:4075" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="213:4073" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="414:551" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="605:1168" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="685:760" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="814:1002" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="1019:1120" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="1225:1820" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="1304:1356" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="1465:1622" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="1527:1608" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="1671:1810" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="1863:2059" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="1943:1995" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="2127:2185" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="2245:2614" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="2463:2577" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="2665:2833" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="2729:2786" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="2890:3286" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="2999:3249" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="3067:3235" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="3132:3217" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="3330:3760" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="3410:3727" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="3548:3647" ph="{...}" />
-            <marker date="1529425694970" expanded="true" signature="3817:4067" ph="{...}" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Utils/GlobalVariables.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/UpdateCommandDelaySystem.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
+        <state relative-caret-position="465">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
           <folding>
-            <marker date="1529425646344" expanded="true" signature="39:173" ph="{...}" />
-            <marker date="1529425646344" expanded="true" signature="81:171" ph="{...}" />
-            <marker date="1529425646344" expanded="true" signature="196:260" ph="{...}" />
+            <marker date="1529480644817" expanded="false" signature="6:67" ph="..." />
+            <marker date="1529480644817" expanded="true" signature="110:1191" ph="{...}" />
+            <marker date="1529480644817" expanded="true" signature="186:1189" ph="{...}" />
+            <marker date="1529480644817" expanded="true" signature="322:376" ph="{...}" />
+            <marker date="1529480644817" expanded="true" signature="474:567" ph="{...}" />
+            <marker date="1529480644817" expanded="true" signature="629:692" ph="{...}" />
+            <marker date="1529480644817" expanded="true" signature="763:1183" ph="{...}" />
+            <marker date="1529480644817" expanded="true" signature="825:1173" ph="{...}" />
+            <marker date="1529480644817" expanded="true" signature="1067:1159" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1036,7 +1141,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandComponent.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding>
             <marker date="1529425557113" expanded="true" signature="57:202" ph="{...}" />
             <marker date="1529425557113" expanded="true" signature="130:200" ph="{...}" />
@@ -1044,222 +1149,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionConsumedComponent.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandSystem.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        <state relative-caret-position="225">
+          <caret line="16" selection-start-line="16" selection-end-line="17" />
           <folding>
-            <marker date="1529424220224" expanded="true" signature="56:154" ph="{...}" />
-            <marker date="1529424220224" expanded="true" signature="125:152" ph="{...}" />
+            <marker date="1529480689129" expanded="false" signature="6:48" ph="..." />
+            <marker date="1529480689129" expanded="true" signature="101:1264" ph="{...}" />
+            <marker date="1529480689129" expanded="true" signature="176:1262" ph="{...}" />
+            <marker date="1529480689129" expanded="true" signature="311:365" ph="{...}" />
+            <marker date="1529480689129" expanded="true" signature="463:619" ph="{...}" />
+            <marker date="1529480689129" expanded="true" signature="681:834" ph="{...}" />
+            <marker date="1529480689129" expanded="true" signature="905:1256" ph="{...}" />
+            <marker date="1529480689129" expanded="true" signature="967:1246" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionComponent.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/Requests/HideActor/HideEntityRequestSystem.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/Actions/ActionService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+        <state relative-caret-position="161">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <marker date="1529480697549" expanded="false" signature="6:48" ph="..." />
+            <marker date="1529480697549" expanded="true" signature="110:1451" ph="{...}" />
+            <marker date="1529480697549" expanded="true" signature="185:1448" ph="{...}" />
+            <marker date="1529480697549" expanded="true" signature="311:365" ph="{...}" />
+            <marker date="1529480697549" expanded="true" signature="463:619" ph="{...}" />
+            <marker date="1529480697549" expanded="true" signature="681:821" ph="{...}" />
+            <marker date="1529480697549" expanded="true" signature="892:1442" ph="{...}" />
+            <marker date="1529480697549" expanded="true" signature="953:1432" ph="{...}" />
+            <marker date="1529480697549" expanded="true" signature="1109:1362" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/CommandComponent.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <marker date="1529425916062" expanded="false" signature="6:55" ph="..." />
-            <marker date="1529425916062" expanded="true" signature="98:255" ph="{...}" />
-            <marker date="1529425916062" expanded="true" signature="213:253" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Services/InputService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
-          <folding>
-            <marker date="1529423364338" expanded="false" signature="6:161" ph="..." />
-            <marker date="1529423364338" expanded="true" signature="204:3007" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="252:3005" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="402:488" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="536:658" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="713:791" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="841:1122" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="947:1085" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="1002:1071" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="1170:1449" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="1276:1412" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="1329:1398" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="1503:1788" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="1609:1751" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="1668:1737" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="1834:1909" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="1950:2021" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="2060:2129" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="2162:2231" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="2266:2337" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="2415:2480" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="2563:2632" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="2692:2770" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="2813:2874" ph="{...}" />
-            <marker date="1529423364338" expanded="true" signature="2931:2999" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/RemoveActionsSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="83" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="83" />
-          <folding>
-            <marker date="1529424240596" expanded="false" signature="6:48" ph="..." />
-            <marker date="1529424240596" expanded="true" signature="90:972" ph="{...}" />
-            <marker date="1529424240596" expanded="true" signature="160:970" ph="{...}" />
-            <marker date="1529424240596" expanded="true" signature="301:367" ph="{...}" />
-            <marker date="1529424240596" expanded="true" signature="463:600" ph="{...}" />
-            <marker date="1529424240596" expanded="true" signature="661:745" ph="{...}" />
-            <marker date="1529424240596" expanded="true" signature="815:963" ph="{...}" />
-            <marker date="1529424240596" expanded="true" signature="876:953" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/RemoveCommandsSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <marker date="1529426384248" expanded="false" signature="6:48" ph="..." />
-            <marker date="1529426384248" expanded="true" signature="109:1010" ph="{...}" />
-            <marker date="1529426384248" expanded="true" signature="181:1008" ph="{...}" />
-            <marker date="1529426384248" expanded="true" signature="325:392" ph="{...}" />
-            <marker date="1529426384248" expanded="true" signature="490:632" ph="{...}" />
-            <marker date="1529426384248" expanded="true" signature="694:780" ph="{...}" />
-            <marker date="1529426384248" expanded="true" signature="851:1001" ph="{...}" />
-            <marker date="1529426384248" expanded="true" signature="913:991" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/ActionComponent.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <marker date="1529425912805" expanded="false" signature="6:55" ph="..." />
-            <marker date="1529425912805" expanded="true" signature="97:250" ph="{...}" />
-            <marker date="1529425912805" expanded="true" signature="208:248" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Commands/HideActor/HideEntityCommandSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
-          <folding>
-            <marker date="1529426697425" expanded="false" signature="6:48" ph="..." />
-            <marker date="1529426697425" expanded="true" signature="101:1158" ph="{...}" />
-            <marker date="1529426697425" expanded="true" signature="176:1156" ph="{...}" />
-            <marker date="1529426697425" expanded="true" signature="311:365" ph="{...}" />
-            <marker date="1529426697425" expanded="true" signature="463:561" ph="{...}" />
-            <marker date="1529426697425" expanded="true" signature="623:728" ph="{...}" />
-            <marker date="1529426697425" expanded="true" signature="799:1150" ph="{...}" />
-            <marker date="1529426697425" expanded="true" signature="861:1140" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Actions/HideActor/HideEntityActionSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="32" selection-start-line="32" selection-end-line="33" />
-          <folding>
-            <marker date="1529426605764" expanded="false" signature="6:48" ph="..." />
-            <marker date="1529426605764" expanded="true" signature="90:1458" ph="{...}" />
-            <marker date="1529426605764" expanded="true" signature="163:1455" ph="{...}" />
-            <marker date="1529426605764" expanded="true" signature="287:341" ph="{...}" />
-            <marker date="1529426605764" expanded="true" signature="437:533" ph="{...}" />
-            <marker date="1529426605764" expanded="true" signature="594:697" ph="{...}" />
-            <marker date="1529426605764" expanded="true" signature="767:1449" ph="{...}" />
-            <marker date="1529426605764" expanded="true" signature="828:1439" ph="{...}" />
-            <marker date="1529426605764" expanded="true" signature="983:1370" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/GameSystems.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-          <folding>
-            <marker date="1529426803807" expanded="true" signature="6:269" ph="..." />
-            <marker date="1529426803807" expanded="true" signature="303:1264" ph="{...}" />
-            <marker date="1529426803807" expanded="true" signature="344:1262" ph="{...}" />
-            <marker date="1529426803807" expanded="true" signature="419:1139" ph="{...}" />
-            <marker date="1529426803807" expanded="true" signature="1199:1256" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Visible/VisibleComponent.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding>
-            <marker date="1529426915185" expanded="false" signature="6:55" ph="..." />
-            <marker date="1529426915185" expanded="true" signature="108:228" ph="{...}" />
-            <marker date="1529426915185" expanded="true" signature="182:226" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Components/Spatial/PositionComponent.cs">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="10" selection-end-column="5" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
-            <marker date="1529396879180" expanded="false" signature="6:55" ph="..." />
-            <marker date="1529396879180" expanded="true" signature="108:244" ph="{...}" />
-            <marker date="1529396879180" expanded="true" signature="182:242" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Main.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="44" column="63" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
-          <folding>
-            <marker date="1529426989393" expanded="false" signature="6:227" ph="..." />
-            <marker date="1529426989393" expanded="true" signature="261:1762" ph="{...}" />
-            <marker date="1529426989393" expanded="true" signature="301:1760" ph="{...}" />
-            <marker date="1529426989393" expanded="true" signature="439:962" ph="{...}" />
-            <marker date="1529426989393" expanded="true" signature="1003:1117" ph="{...}" />
-            <marker date="1529426989393" expanded="true" signature="1140:1675" ph="{...}" />
-            <marker date="1529426989393" expanded="true" signature="1232:1575" ph="{...}" />
-            <marker date="1529426989393" expanded="true" signature="1701:1754" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/svanderweele/Mine/Game/Unity/UnityGameView.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-          <folding>
-            <marker date="1529426995994" expanded="false" signature="6:123" ph="..." />
-            <marker date="1529426995994" expanded="true" signature="385:448" ph="{...}" />
-            <marker date="1529426995994" expanded="true" signature="517:589" ph="{...}" />
-            <marker date="1529426995994" expanded="true" signature="839:904" ph="{...}" />
+            <marker date="1529480723758" expanded="false" signature="6:55" ph="..." />
+            <marker date="1529480723758" expanded="true" signature="98:175" ph="{...}" />
+            <marker date="1529480723758" expanded="true" signature="161:173" ph="{...}" />
           </folding>
         </state>
       </provider>

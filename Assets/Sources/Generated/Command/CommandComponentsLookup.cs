@@ -9,18 +9,24 @@
 public static class CommandComponentsLookup {
 
     public const int CommandDestroyedListener = 0;
-    public const int Command = 1;
-    public const int CommandConsumed = 2;
-    public const int HideEntityCommand = 3;
-    public const int Destroyed = 4;
-    public const int Id = 5;
+    public const int HideEntityRequest = 1;
+    public const int Command = 2;
+    public const int CommandConsumed = 3;
+    public const int CommandDelay = 4;
+    public const int CommandRequest = 5;
+    public const int HideEntityCommand = 6;
+    public const int Destroyed = 7;
+    public const int Id = 8;
 
-    public const int TotalComponents = 6;
+    public const int TotalComponents = 9;
 
     public static readonly string[] componentNames = {
         "CommandDestroyedListener",
+        "HideEntityRequest",
         "Command",
         "CommandConsumed",
+        "CommandDelay",
+        "CommandRequest",
         "HideEntityCommand",
         "Destroyed",
         "Id"
@@ -28,8 +34,11 @@ public static class CommandComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(CommandDestroyedListenerComponent),
+        typeof(svanderweele.Mine.Game.Actions.HideActor.HideEntityRequestComponent),
         typeof(svanderweele.Mine.Game.Commands.CommandComponent),
         typeof(svanderweele.Mine.Game.Commands.CommandConsumedComponent),
+        typeof(svanderweele.Mine.Game.Commands.CommandDelayComponent),
+        typeof(svanderweele.Mine.Game.Commands.CommandRequestComponent),
         typeof(svanderweele.Mine.Game.Commands.HideEntityCommandComponent),
         typeof(svanderweele.Mine.Game.Components.Destroy.DestroyedComponent),
         typeof(svanderweele.Mine.Game.Components.Id.IdComponent)

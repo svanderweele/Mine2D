@@ -10,8 +10,8 @@ namespace svanderweele.Mine.Core.Services.Input.Service
         bool IsKeyBindUp(string action);
         bool IsKeyBindHeldDown(string action);
 
-        //TODO : Update gameplay input binds (open_grid, pan camera etc)
-        //TODO : Udate cutscene input binds (skip_cutscene, pause etc)
+        //TODO : Toggle gameplay input binds (open_grid, pan camera etc)
+        //TODO : Toggle cutscene input binds (skip_cutscene, pause etc)
     }
 
 }

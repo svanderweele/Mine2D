@@ -4,7 +4,7 @@ using Entitas;
 public interface IDestroyEntity : IEntity, IDestroyedEntity { }
 public partial class GameEntity : IDestroyEntity{}
 public partial class InputEntity : IDestroyEntity{}
-public partial class ActionEntity : IDestroyEntity{}
+public partial class GridEntity : IDestroyEntity{}
 public partial class CommandEntity : IDestroyEntity{}
 
 namespace svanderweele.Mine.Game.Components.Destroy
@@ -25,7 +25,7 @@ namespace svanderweele.Mine.Game.Components.Destroy
             {
                 contexts.game.CreateCollector(GameMatcher.Destroyed),
                 contexts.input.CreateCollector(InputMatcher.Destroyed),
-                contexts.action.CreateCollector(ActionMatcher.Destroyed),
+                contexts.grid.CreateCollector(GridMatcher.Destroyed),
                 contexts.command.CreateCollector(CommandMatcher.Destroyed)
             };
         }

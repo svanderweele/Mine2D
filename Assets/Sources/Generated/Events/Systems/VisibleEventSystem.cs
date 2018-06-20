@@ -8,10 +8,7 @@
 //------------------------------------------------------------------------------
 public sealed class VisibleEventSystem : Entitas.ReactiveSystem<GameEntity> {
 
-    readonly Entitas.IGroup<GameEntity> _listeners;
-
     public VisibleEventSystem(Contexts contexts) : base(contexts.game) {
-        _listeners = contexts.game.GetGroup(GameMatcher.VisibleListener);
     }
 
     protected override Entitas.ICollector<GameEntity> GetTrigger(Entitas.IContext<GameEntity> context) {
@@ -21,16 +18,14 @@ public sealed class VisibleEventSystem : Entitas.ReactiveSystem<GameEntity> {
     }
 
     protected override bool Filter(GameEntity entity) {
-        return entity.hasVisible;
+        return entity.hasVisible && entity.hasVisibleListener;
     }
 
     protected override void Execute(System.Collections.Generic.List<GameEntity> entities) {
         foreach (var e in entities) {
             var component = e.visible;
-            foreach (var listenerEntity in _listeners) {
-                foreach (var listener in listenerEntity.visibleListener.value) {
-                    listener.OnVisible(e, component.isVisible);
-                }
+            foreach (var listener in e.visibleListener.value) {
+                listener.OnVisible(e, component.isVisible);
             }
         }
     }

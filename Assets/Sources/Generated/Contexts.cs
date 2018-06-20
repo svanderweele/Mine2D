@@ -21,18 +21,18 @@ public partial class Contexts : Entitas.IContexts {
 
     static Contexts _sharedInstance;
 
-    public ActionContext action { get; set; }
     public CommandContext command { get; set; }
     public GameContext game { get; set; }
+    public GridContext grid { get; set; }
     public InputContext input { get; set; }
     public MetaContext meta { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { action, command, game, input, meta }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { command, game, grid, input, meta }; } }
 
     public Contexts() {
-        action = new ActionContext();
         command = new CommandContext();
         game = new GameContext();
+        grid = new GridContext();
         input = new InputContext();
         meta = new MetaContext();
 
@@ -84,9 +84,9 @@ public partial class Contexts {
             Id,
             command.GetGroup(CommandMatcher.Id),
             (e, c) => ((svanderweele.Mine.Game.Components.Id.IdComponent)c).value));
-        action.AddEntityIndex(new Entitas.PrimaryEntityIndex<ActionEntity, int>(
+        grid.AddEntityIndex(new Entitas.PrimaryEntityIndex<GridEntity, int>(
             Id,
-            action.GetGroup(ActionMatcher.Id),
+            grid.GetGroup(GridMatcher.Id),
             (e, c) => ((svanderweele.Mine.Game.Components.Id.IdComponent)c).value));
     }
 }
@@ -109,8 +109,8 @@ public static class ContextsExtensions {
         return ((Entitas.PrimaryEntityIndex<CommandEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);
     }
 
-    public static ActionEntity GetEntityWithId(this ActionContext context, int value) {
-        return ((Entitas.PrimaryEntityIndex<ActionEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);
+    public static GridEntity GetEntityWithId(this GridContext context, int value) {
+        return ((Entitas.PrimaryEntityIndex<GridEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);
     }
 }
 //------------------------------------------------------------------------------
@@ -128,9 +128,9 @@ public partial class Contexts {
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeContexObservers() {
         try {
-            CreateContextObserver(action);
             CreateContextObserver(command);
             CreateContextObserver(game);
+            CreateContextObserver(grid);
             CreateContextObserver(input);
             CreateContextObserver(meta);
         } catch(System.Exception) {

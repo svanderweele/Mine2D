@@ -3,7 +3,7 @@ using Entitas.CodeGeneration.Attributes;
 
 namespace svanderweele.Mine.Game.Components.Id
 {
-    [Game, Input, Meta, Command, Action]
+    [Game, Input, Meta, Command, Grid]
     public class IdComponent : IComponent
     {
         [PrimaryEntityIndex]

@@ -11,21 +11,6 @@
         </e>
         <e p="Sources" t="Include">
           <e p="Generated" t="Include">
-            <e p="Action" t="Include">
-              <e p="ActionAttribute.cs" t="Include" />
-              <e p="ActionComponentsLookup.cs" t="Include" />
-              <e p="ActionContext.cs" t="Include" />
-              <e p="ActionEntity.cs" t="Include" />
-              <e p="ActionMatcher.cs" t="Include" />
-              <e p="Components" t="Include">
-                <e p="ActionActionComponent.cs" t="Include" />
-                <e p="ActionActionConsumedComponent.cs" t="Include" />
-                <e p="ActionActionDestroyedListenerComponent.cs" t="Include" />
-                <e p="ActionDestroyedComponent.cs" t="Include" />
-                <e p="ActionHideEntityActionComponent.cs" t="Include" />
-                <e p="ActionIdComponent.cs" t="Include" />
-              </e>
-            </e>
             <e p="Command" t="Include">
               <e p="CommandAttribute.cs" t="Include" />
               <e p="CommandComponentsLookup.cs" t="Include" />
@@ -35,9 +20,12 @@
               <e p="Components" t="Include">
                 <e p="CommandCommandComponent.cs" t="Include" />
                 <e p="CommandCommandConsumedComponent.cs" t="Include" />
+                <e p="CommandCommandDelayComponent.cs" t="Include" />
                 <e p="CommandCommandDestroyedListenerComponent.cs" t="Include" />
+                <e p="CommandCommandRequestComponent.cs" t="Include" />
                 <e p="CommandDestroyedComponent.cs" t="Include" />
                 <e p="CommandHideEntityCommandComponent.cs" t="Include" />
+                <e p="CommandHideEntityRequestComponent.cs" t="Include" />
                 <e p="CommandIdComponent.cs" t="Include" />
               </e>
             </e>
@@ -49,30 +37,30 @@
             </e>
             <e p="Contexts.cs" t="Include" />
             <e p="Events" t="Include">
-              <e p="ActionEventSystems.cs" t="Include" />
               <e p="CommandEventSystems.cs" t="Include" />
               <e p="Components" t="Include">
-                <e p="ActionDestroyedListenerComponent.cs" t="Include" />
                 <e p="CommandDestroyedListenerComponent.cs" t="Include" />
                 <e p="GameDestroyedListenerComponent.cs" t="Include" />
+                <e p="GridDestroyedListenerComponent.cs" t="Include" />
                 <e p="InputDestroyedListenerComponent.cs" t="Include" />
                 <e p="PositionListenerComponent.cs" t="Include" />
                 <e p="VisibleListenerComponent.cs" t="Include" />
               </e>
               <e p="GameEventSystems.cs" t="Include" />
+              <e p="GridEventSystems.cs" t="Include" />
               <e p="InputEventSystems.cs" t="Include" />
               <e p="Interfaces" t="Include">
-                <e p="IActionDestroyedListener.cs" t="Include" />
                 <e p="ICommandDestroyedListener.cs" t="Include" />
                 <e p="IGameDestroyedListener.cs" t="Include" />
+                <e p="IGridDestroyedListener.cs" t="Include" />
                 <e p="IInputDestroyedListener.cs" t="Include" />
                 <e p="IPositionListener.cs" t="Include" />
                 <e p="IVisibleListener.cs" t="Include" />
               </e>
               <e p="Systems" t="Include">
-                <e p="ActionDestroyedEventSystem.cs" t="Include" />
                 <e p="CommandDestroyedEventSystem.cs" t="Include" />
                 <e p="GameDestroyedEventSystem.cs" t="Include" />
+                <e p="GridDestroyedEventSystem.cs" t="Include" />
                 <e p="InputDestroyedEventSystem.cs" t="Include" />
                 <e p="PositionEventSystem.cs" t="Include" />
                 <e p="VisibleEventSystem.cs" t="Include" />
@@ -94,6 +82,24 @@
               <e p="GameContext.cs" t="Include" />
               <e p="GameEntity.cs" t="Include" />
               <e p="GameMatcher.cs" t="Include" />
+            </e>
+            <e p="Grid" t="Include">
+              <e p="Components" t="Include">
+                <e p="GridDestroyedComponent.cs" t="Include" />
+                <e p="GridGridComponent.cs" t="Include" />
+                <e p="GridGridDestroyedListenerComponent.cs" t="Include" />
+                <e p="GridGridSizeComponent.cs" t="Include" />
+                <e p="GridGridTileComponent.cs" t="Include" />
+                <e p="GridGridTilesComponent.cs" t="Include" />
+                <e p="GridGridTileSizeComponent.cs" t="Include" />
+                <e p="GridGridTileTypeComponent.cs" t="Include" />
+                <e p="GridIdComponent.cs" t="Include" />
+              </e>
+              <e p="GridAttribute.cs" t="Include" />
+              <e p="GridComponentsLookup.cs" t="Include" />
+              <e p="GridContext.cs" t="Include" />
+              <e p="GridEntity.cs" t="Include" />
+              <e p="GridMatcher.cs" t="Include" />
             </e>
             <e p="Input" t="Include">
               <e p="Components" t="Include">
@@ -165,28 +171,38 @@
               </e>
             </e>
             <e p="Game" t="Include">
-              <e p="Actions" t="Include">
-                <e p="ActionComponent.cs" t="Include" />
-                <e p="ActionConsumedComponent.cs" t="Include" />
-                <e p="HideActor" t="Include">
-                  <e p="HideEntityActionComponent.cs" t="Include" />
-                  <e p="HideEntityActionSystem.cs" t="Include" />
-                </e>
-                <e p="RemoveActionsSystem.cs" t="Include" />
-              </e>
               <e p="Commands" t="Include">
                 <e p="CommandComponent.cs" t="Include" />
                 <e p="CommandConsumedComponent.cs" t="Include" />
+                <e p="CommandContextExtension.cs" t="Include" />
+                <e p="CommandDelayComponent.cs" t="Include" />
+                <e p="CommandRequestComponent.cs" t="Include" />
                 <e p="HideActor" t="Include">
                   <e p="HideEntityCommandComponent.cs" t="Include" />
                   <e p="HideEntityCommandSystem.cs" t="Include" />
                 </e>
-                <e p="RemoveCommandsSystem.cs" t="Include" />
+                <e p="RemoveCommandSystem.cs" t="Include" />
+                <e p="Requests" t="Include">
+                  <e p="HideActor" t="Include">
+                    <e p="HideEntityRequestComponent.cs" t="Include" />
+                    <e p="HideEntityRequestSystem.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="UpdateCommandDelaySystem.cs" t="Include" />
               </e>
               <e p="Components" t="Include">
                 <e p="Destroy" t="Include">
                   <e p="DestroyedComponent.cs" t="Include" />
                   <e p="DestroyEntitiesSystem.cs" t="Include" />
+                </e>
+                <e p="Grid" t="Include">
+                  <e p="GridComponent.cs" t="Include" />
+                  <e p="GridContextExtension.cs" t="Include" />
+                  <e p="GridSizeComponent.cs" t="Include" />
+                  <e p="GridTileComponent.cs" t="Include" />
+                  <e p="GridTilesComponent.cs" t="Include" />
+                  <e p="GridTileSizeComponent.cs" t="Include" />
+                  <e p="GridTileTypeComponent.cs" t="Include" />
                 </e>
                 <e p="Id" t="Include">
                   <e p="ContextsIdExtensions.cs" t="Include" />

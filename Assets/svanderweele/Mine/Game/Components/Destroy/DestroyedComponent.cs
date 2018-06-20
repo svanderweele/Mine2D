@@ -3,7 +3,7 @@ using Entitas.CodeGeneration.Attributes;
 
 namespace svanderweele.Mine.Game.Components.Destroy
 {
-    [Game, Input, Action,Command, Event(true)]
+    [Game, Input,Command, Event(true), Grid]
     public class DestroyedComponent : IComponent
     {
         //flag

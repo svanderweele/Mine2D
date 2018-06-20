@@ -14,12 +14,13 @@ namespace svanderweele.Mine.Game.Commands.HideActor
 
         protected override ICollector<CommandEntity> GetTrigger(IContext<CommandEntity> context)
         {
-            return context.CreateCollector(CommandMatcher.HideEntityCommand);
+            return context.CreateCollector(CommandMatcher.AllOf(CommandMatcher.HideEntityCommand).NoneOf(CommandMatcher.CommandDelay));
         }
 
         protected override bool Filter(CommandEntity entity)
         {
-            return entity.hasHideEntityCommand && entity.isCommandConsumed == false;
+            return entity.hasHideEntityCommand && entity.isCommandConsumed == false && entity.hasCommandDelay == false;
+            
         }
 
         protected override void Execute(List<CommandEntity> entities)
