@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-namespace svanderweele.Mine.Game.Actions.HideActor
+namespace svanderweele.Mine.Game.Commands.Requests.HideActor
 {
     [Command]
     public class HideEntityRequestComponent : IComponent

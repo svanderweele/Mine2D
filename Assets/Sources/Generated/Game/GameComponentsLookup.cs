@@ -31,10 +31,10 @@ public static class GameComponentsLookup {
     public static readonly System.Type[] componentTypes = {
         typeof(GameDestroyedListenerComponent),
         typeof(PositionListenerComponent),
-        typeof(svanderweele.Mine.Game.Components.Destroy.DestroyedComponent),
-        typeof(svanderweele.Mine.Game.Components.Id.IdComponent),
-        typeof(svanderweele.Mine.Game.Components.Spatial.PositionComponent),
-        typeof(svanderweele.Mine.Game.Components.Visible.VisibleComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Destroy.DestroyedComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Id.IdComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Spatial.PositionComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Visible.VisibleComponent),
         typeof(VisibleListenerComponent)
     };
 }

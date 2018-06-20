@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 public partial interface IIdEntity {
 
-    svanderweele.Mine.Game.Components.Id.IdComponent id { get; }
+    svanderweele.Mine.Game.Pieces.Id.IdComponent id { get; }
     bool hasId { get; }
 
     void AddId(int newValue);

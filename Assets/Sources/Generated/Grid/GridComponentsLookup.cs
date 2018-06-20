@@ -11,36 +11,42 @@ public static class GridComponentsLookup {
     public const int GridDestroyedListener = 0;
     public const int Destroyed = 1;
     public const int Grid = 2;
-    public const int GridSize = 3;
-    public const int GridTile = 4;
-    public const int GridTiles = 5;
-    public const int GridTileSize = 6;
-    public const int GridTileType = 7;
-    public const int Id = 8;
+    public const int GridInitialized = 3;
+    public const int GridSize = 4;
+    public const int GridTile = 5;
+    public const int GridTiles = 6;
+    public const int GridTileSize = 7;
+    public const int GridTileType = 8;
+    public const int NewGrid = 9;
+    public const int Id = 10;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 11;
 
     public static readonly string[] componentNames = {
         "GridDestroyedListener",
         "Destroyed",
         "Grid",
+        "GridInitialized",
         "GridSize",
         "GridTile",
         "GridTiles",
         "GridTileSize",
         "GridTileType",
+        "NewGrid",
         "Id"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(GridDestroyedListenerComponent),
-        typeof(svanderweele.Mine.Game.Components.Destroy.DestroyedComponent),
-        typeof(svanderweele.Mine.Game.Components.Grid.GridComponent),
-        typeof(svanderweele.Mine.Game.Components.Grid.GridSizeComponent),
-        typeof(svanderweele.Mine.Game.Components.Grid.GridTileComponent),
-        typeof(svanderweele.Mine.Game.Components.Grid.GridTilesComponent),
-        typeof(svanderweele.Mine.Game.Components.Grid.GridTileSizeComponent),
-        typeof(svanderweele.Mine.Game.Components.Grid.GridTileTypeComponent),
-        typeof(svanderweele.Mine.Game.Components.Id.IdComponent)
+        typeof(svanderweele.Mine.Game.Pieces.Destroy.DestroyedComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridInitializedComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridSizeComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridTileComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridTilesComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridTileSizeComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.NewGridComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Id.IdComponent)
     };
 }

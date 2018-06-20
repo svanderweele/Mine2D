@@ -3,7 +3,7 @@ using svanderweele.Mine.Core.Services;
 using svanderweele.Mine.Game.Commands;
 using svanderweele.Mine.Game.Commands.HideActor;
 using svanderweele.Mine.Game.Commands.Requests.HideActor;
-using svanderweele.Mine.Game.Components.Destroy;
+using svanderweele.Mine.Game.Pieces.Destroy;
 
 namespace svanderweele.Mine.Game
 {

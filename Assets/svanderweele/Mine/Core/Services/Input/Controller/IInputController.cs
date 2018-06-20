@@ -1,4 +1,6 @@
-﻿namespace svanderweele.Mine.Core.Services.Input.Controller
+﻿using svanderweele.Mine.Game.Utils;
+
+namespace svanderweele.Mine.Core.Services.Input.Controller
 {
     public interface IInputController
     {

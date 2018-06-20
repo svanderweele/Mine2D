@@ -8,12 +8,12 @@
 //------------------------------------------------------------------------------
 public partial class GridEntity {
 
-    public svanderweele.Mine.Game.Components.Grid.GridTileSizeComponent gridTileSize { get { return (svanderweele.Mine.Game.Components.Grid.GridTileSizeComponent)GetComponent(GridComponentsLookup.GridTileSize); } }
+    public svanderweele.Mine.Game.Pieces.Grid.Components.GridTileSizeComponent gridTileSize { get { return (svanderweele.Mine.Game.Pieces.Grid.Components.GridTileSizeComponent)GetComponent(GridComponentsLookup.GridTileSize); } }
     public bool hasGridTileSize { get { return HasComponent(GridComponentsLookup.GridTileSize); } }
 
     public void AddGridTileSize(float newTileWidth, float newTileHeight) {
         var index = GridComponentsLookup.GridTileSize;
-        var component = CreateComponent<svanderweele.Mine.Game.Components.Grid.GridTileSizeComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridTileSizeComponent>(index);
         component.tileWidth = newTileWidth;
         component.tileHeight = newTileHeight;
         AddComponent(index, component);
@@ -21,7 +21,7 @@ public partial class GridEntity {
 
     public void ReplaceGridTileSize(float newTileWidth, float newTileHeight) {
         var index = GridComponentsLookup.GridTileSize;
-        var component = CreateComponent<svanderweele.Mine.Game.Components.Grid.GridTileSizeComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridTileSizeComponent>(index);
         component.tileWidth = newTileWidth;
         component.tileHeight = newTileHeight;
         ReplaceComponent(index, component);

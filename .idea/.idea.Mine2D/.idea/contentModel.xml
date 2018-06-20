@@ -88,12 +88,14 @@
                 <e p="GridDestroyedComponent.cs" t="Include" />
                 <e p="GridGridComponent.cs" t="Include" />
                 <e p="GridGridDestroyedListenerComponent.cs" t="Include" />
+                <e p="GridGridInitializedComponent.cs" t="Include" />
                 <e p="GridGridSizeComponent.cs" t="Include" />
                 <e p="GridGridTileComponent.cs" t="Include" />
                 <e p="GridGridTilesComponent.cs" t="Include" />
                 <e p="GridGridTileSizeComponent.cs" t="Include" />
                 <e p="GridGridTileTypeComponent.cs" t="Include" />
                 <e p="GridIdComponent.cs" t="Include" />
+                <e p="GridNewGridComponent.cs" t="Include" />
               </e>
               <e p="GridAttribute.cs" t="Include" />
               <e p="GridComponentsLookup.cs" t="Include" />
@@ -115,7 +117,6 @@
             </e>
             <e p="Meta" t="Include">
               <e p="Components" t="Include">
-                <e p="MetaActionServiceComponent.cs" t="Include" />
                 <e p="MetaIdComponent.cs" t="Include" />
                 <e p="MetaInputControllerComponent.cs" t="Include" />
                 <e p="MetaInputServiceComponent.cs" t="Include" />
@@ -133,11 +134,6 @@
           <e p="Mine" t="Include">
             <e p="Core" t="Include">
               <e p="Services" t="Include">
-                <e p="Actions" t="Include">
-                  <e p="ActionServiceComponent.cs" t="Include" />
-                  <e p="IActionService.cs" t="Include" />
-                  <e p="RegisterActionServiceSystem.cs" t="Include" />
-                </e>
                 <e p="CoreServices.cs" t="Include" />
                 <e p="Events" t="Include">
                   <e p="IEventListener.cs" t="Include" />
@@ -190,19 +186,28 @@
                 </e>
                 <e p="UpdateCommandDelaySystem.cs" t="Include" />
               </e>
-              <e p="Components" t="Include">
+              <e p="GameSystems.cs" t="Include" />
+              <e p="Main.cs" t="Include" />
+              <e p="Pieces" t="Include">
                 <e p="Destroy" t="Include">
                   <e p="DestroyedComponent.cs" t="Include" />
                   <e p="DestroyEntitiesSystem.cs" t="Include" />
                 </e>
                 <e p="Grid" t="Include">
-                  <e p="GridComponent.cs" t="Include" />
+                  <e p="Components" t="Include">
+                    <e p="GridComponent.cs" t="Include" />
+                    <e p="GridInitializedComponent.cs" t="Include" />
+                    <e p="GridSizeComponent.cs" t="Include" />
+                    <e p="GridTileComponent.cs" t="Include" />
+                    <e p="GridTilesComponent.cs" t="Include" />
+                    <e p="GridTileSizeComponent.cs" t="Include" />
+                    <e p="GridTileTypeComponent.cs" t="Include" />
+                    <e p="NewGridComponent.cs" t="Include" />
+                  </e>
                   <e p="GridContextExtension.cs" t="Include" />
-                  <e p="GridSizeComponent.cs" t="Include" />
-                  <e p="GridTileComponent.cs" t="Include" />
-                  <e p="GridTilesComponent.cs" t="Include" />
-                  <e p="GridTileSizeComponent.cs" t="Include" />
-                  <e p="GridTileTypeComponent.cs" t="Include" />
+                  <e p="Systems" t="Include">
+                    <e p="GenerateGridSystem.cs" t="Include" />
+                  </e>
                 </e>
                 <e p="Id" t="Include">
                   <e p="ContextsIdExtensions.cs" t="Include" />
@@ -211,12 +216,11 @@
                 <e p="Spatial" t="Include">
                   <e p="PositionComponent.cs" t="Include" />
                 </e>
+                <e p="Tile" t="Include" />
                 <e p="Visible" t="Include">
                   <e p="VisibleComponent.cs" t="Include" />
                 </e>
               </e>
-              <e p="GameSystems.cs" t="Include" />
-              <e p="Main.cs" t="Include" />
               <e p="Services" t="Include">
                 <e p="InputService.cs" t="Include" />
               </e>
@@ -227,6 +231,7 @@
                 <e p="UnityViewService.cs" t="Include" />
               </e>
               <e p="Utils" t="Include">
+                <e p="AssetPaths.cs" t="Include" />
                 <e p="GlobalVariables.cs" t="Include" />
               </e>
             </e>

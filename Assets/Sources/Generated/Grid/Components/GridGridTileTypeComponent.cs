@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GridEntity {
 
-    public svanderweele.Mine.Game.Components.Grid.GridTileTypeComponent gridTileType { get { return (svanderweele.Mine.Game.Components.Grid.GridTileTypeComponent)GetComponent(GridComponentsLookup.GridTileType); } }
+    public svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent gridTileType { get { return (svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent)GetComponent(GridComponentsLookup.GridTileType); } }
     public bool hasGridTileType { get { return HasComponent(GridComponentsLookup.GridTileType); } }
 
-    public void AddGridTileType(TileType[] newTileTypes) {
+    public void AddGridTileType(svanderweele.Mine.Game.Utils.TileType[] newTileTypes) {
         var index = GridComponentsLookup.GridTileType;
-        var component = CreateComponent<svanderweele.Mine.Game.Components.Grid.GridTileTypeComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent>(index);
         component.tileTypes = newTileTypes;
         AddComponent(index, component);
     }
 
-    public void ReplaceGridTileType(TileType[] newTileTypes) {
+    public void ReplaceGridTileType(svanderweele.Mine.Game.Utils.TileType[] newTileTypes) {
         var index = GridComponentsLookup.GridTileType;
-        var component = CreateComponent<svanderweele.Mine.Game.Components.Grid.GridTileTypeComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent>(index);
         component.tileTypes = newTileTypes;
         ReplaceComponent(index, component);
     }

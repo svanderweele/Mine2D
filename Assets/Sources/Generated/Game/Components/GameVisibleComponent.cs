@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public svanderweele.Mine.Game.Components.Visible.VisibleComponent visible { get { return (svanderweele.Mine.Game.Components.Visible.VisibleComponent)GetComponent(GameComponentsLookup.Visible); } }
+    public svanderweele.Mine.Game.Pieces.Visible.VisibleComponent visible { get { return (svanderweele.Mine.Game.Pieces.Visible.VisibleComponent)GetComponent(GameComponentsLookup.Visible); } }
     public bool hasVisible { get { return HasComponent(GameComponentsLookup.Visible); } }
 
     public void AddVisible(bool newIsVisible) {
         var index = GameComponentsLookup.Visible;
-        var component = CreateComponent<svanderweele.Mine.Game.Components.Visible.VisibleComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Visible.VisibleComponent>(index);
         component.isVisible = newIsVisible;
         AddComponent(index, component);
     }
 
     public void ReplaceVisible(bool newIsVisible) {
         var index = GameComponentsLookup.Visible;
-        var component = CreateComponent<svanderweele.Mine.Game.Components.Visible.VisibleComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Visible.VisibleComponent>(index);
         component.isVisible = newIsVisible;
         ReplaceComponent(index, component);
     }

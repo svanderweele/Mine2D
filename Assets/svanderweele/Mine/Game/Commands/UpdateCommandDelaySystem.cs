@@ -31,7 +31,6 @@ namespace svanderweele.Mine.Game.Commands
 
                 delay -= Time.deltaTime;
                 commandEntity.ReplaceCommandDelay(delay);
-                Debug.Log(delay);
                 if (delay <= 0)
                 {
                     commandEntity.RemoveCommandDelay();

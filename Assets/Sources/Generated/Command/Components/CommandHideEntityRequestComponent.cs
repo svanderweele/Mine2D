@@ -8,12 +8,12 @@
 //------------------------------------------------------------------------------
 public partial class CommandEntity {
 
-    public svanderweele.Mine.Game.Actions.HideActor.HideEntityRequestComponent hideEntityRequest { get { return (svanderweele.Mine.Game.Actions.HideActor.HideEntityRequestComponent)GetComponent(CommandComponentsLookup.HideEntityRequest); } }
+    public svanderweele.Mine.Game.Commands.Requests.HideActor.HideEntityRequestComponent hideEntityRequest { get { return (svanderweele.Mine.Game.Commands.Requests.HideActor.HideEntityRequestComponent)GetComponent(CommandComponentsLookup.HideEntityRequest); } }
     public bool hasHideEntityRequest { get { return HasComponent(CommandComponentsLookup.HideEntityRequest); } }
 
     public void AddHideEntityRequest(int newEntityId, bool newVisible) {
         var index = CommandComponentsLookup.HideEntityRequest;
-        var component = CreateComponent<svanderweele.Mine.Game.Actions.HideActor.HideEntityRequestComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Game.Commands.Requests.HideActor.HideEntityRequestComponent>(index);
         component.entityId = newEntityId;
         component.visible = newVisible;
         AddComponent(index, component);
@@ -21,7 +21,7 @@ public partial class CommandEntity {
 
     public void ReplaceHideEntityRequest(int newEntityId, bool newVisible) {
         var index = CommandComponentsLookup.HideEntityRequest;
-        var component = CreateComponent<svanderweele.Mine.Game.Actions.HideActor.HideEntityRequestComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Game.Commands.Requests.HideActor.HideEntityRequestComponent>(index);
         component.entityId = newEntityId;
         component.visible = newVisible;
         ReplaceComponent(index, component);

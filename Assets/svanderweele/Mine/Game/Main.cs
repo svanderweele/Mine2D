@@ -1,8 +1,7 @@
 using Entitas;
 using svanderweele.Mine.Core.Services;
-using svanderweele.Mine.Game.Actions;
 using svanderweele.Mine.Game.Commands;
-using svanderweele.Mine.Game.Components.Id;
+using svanderweele.Mine.Game.Pieces.Id;
 using svanderweele.Mine.Game.Services;
 using svanderweele.Mine.Game.Unity;
 using svanderweele.Mine.Game.Utils;

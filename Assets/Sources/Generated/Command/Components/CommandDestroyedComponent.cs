@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 public partial class CommandEntity {
 
-    static readonly svanderweele.Mine.Game.Components.Destroy.DestroyedComponent destroyedComponent = new svanderweele.Mine.Game.Components.Destroy.DestroyedComponent();
+    static readonly svanderweele.Mine.Game.Pieces.Destroy.DestroyedComponent destroyedComponent = new svanderweele.Mine.Game.Pieces.Destroy.DestroyedComponent();
 
     public bool isDestroyed {
         get { return HasComponent(CommandComponentsLookup.Destroyed); }

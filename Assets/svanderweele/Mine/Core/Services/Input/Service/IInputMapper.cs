@@ -1,3 +1,5 @@
+using svanderweele.Mine.Game.Utils;
+
 namespace svanderweele.Mine.Core.Services.Input.Service
 {
     public interface IInputMapper<T>

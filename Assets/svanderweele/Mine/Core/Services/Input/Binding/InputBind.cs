@@ -1,3 +1,5 @@
+using svanderweele.Mine.Game.Utils;
+
 namespace svanderweele.Mine.Core.Services.Input.Binding
 {
     public struct InputBind
