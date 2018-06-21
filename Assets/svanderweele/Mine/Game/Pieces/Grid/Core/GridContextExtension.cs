@@ -13,11 +13,8 @@ namespace svanderweele.Mine.Game.Pieces.Grid
             grid.isNewGrid = true;
             grid.AddGridSize(rows, columns);
             grid.AddGridTileSize(tileWidth, tileHeight);
-            //TODO : Consider tile type when adding entities to grid, disallow different types, allows multiple types of grids
-            //TODO : Add layers to grids for multiple entities?
             grid.AddGridTileType(type);
             grid.AddGridTiles(new TileEntities[,] { });
-            grid.isGridDebug = true;
             grid.isGridChanged = true;
             return grid;
         }

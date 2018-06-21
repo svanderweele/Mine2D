@@ -5,24 +5,24 @@ using UnityEngine;
 
 namespace svanderweele.Mine.Game.Pieces.Grid.Systems
 {
-    public class DrawGridDebugSystem : ReactiveSystem<GridEntity>
+    public class GenerateGridDebugSystem : ReactiveSystem<GridEntity>
     {
         private readonly Contexts _contexts;
 
-        public DrawGridDebugSystem(Contexts contexts) : base(contexts.grid)
+        public GenerateGridDebugSystem(Contexts contexts) : base(contexts.grid)
         {
             _contexts = contexts;
         }
 
         protected override ICollector<GridEntity> GetTrigger(IContext<GridEntity> context)
         {
-            return context.CreateCollector(GridMatcher.AllOf(GridMatcher.Grid, GridMatcher.GridDebug,
+            return context.CreateCollector(GridMatcher.AllOf(GridMatcher.Grid,
                 GridMatcher.GridChanged));
         }
 
         protected override bool Filter(GridEntity entity)
         {
-            return entity.isDestroyed == false && entity.isGrid && entity.isGridDebug && entity.isGridChanged;
+            return entity.isDestroyed == false && entity.isGrid && entity.isGridChanged;
         }
 
         protected override void Execute(List<GridEntity> entities)
@@ -37,11 +37,13 @@ namespace svanderweele.Mine.Game.Pieces.Grid.Systems
 
                 var tiles = gridEntity.gridTiles.tiles;
 
+                var debugTilesType = GlobalVariables.ObjectType.JoinTypes(new string[]
+                    {ObjectType.OBJECT_CATEGORY_DEBUG, ObjectType.OBJECT_CATEGORY_TILE});
 
-                var debugTiles = _contexts.game.GetEntitiesWithGridTileType(
-                    GlobalVariables.ObjectType.JoinTypes(new string[]
-                        {ObjectType.OBJECT_CATEGORY_DEBUG, ObjectType.OBJECT_CATEGORY_TILE}));
-                Debug.Log("Debug tiles " + debugTiles.Count);
+                debugTilesType += "-grid-tile-editor";
+                
+                
+                var debugTiles = _contexts.game.GetEntitiesWithGridTileType(debugTilesType);
 
                 for (var x = 0; x < gridColumns; x++)
                 {

@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class CommandEntity {
 
-    public svanderweele.Mine.Game.Commands.CommandDelayComponent commandDelay { get { return (svanderweele.Mine.Game.Commands.CommandDelayComponent)GetComponent(CommandComponentsLookup.CommandDelay); } }
+    public svanderweele.Mine.Game.Pieces.Commands.Components.CommandDelayComponent commandDelay { get { return (svanderweele.Mine.Game.Pieces.Commands.Components.CommandDelayComponent)GetComponent(CommandComponentsLookup.CommandDelay); } }
     public bool hasCommandDelay { get { return HasComponent(CommandComponentsLookup.CommandDelay); } }
 
     public void AddCommandDelay(float newDelay) {
         var index = CommandComponentsLookup.CommandDelay;
-        var component = CreateComponent<svanderweele.Mine.Game.Commands.CommandDelayComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Commands.Components.CommandDelayComponent>(index);
         component.delay = newDelay;
         AddComponent(index, component);
     }
 
     public void ReplaceCommandDelay(float newDelay) {
         var index = CommandComponentsLookup.CommandDelay;
-        var component = CreateComponent<svanderweele.Mine.Game.Commands.CommandDelayComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Commands.Components.CommandDelayComponent>(index);
         component.delay = newDelay;
         ReplaceComponent(index, component);
     }

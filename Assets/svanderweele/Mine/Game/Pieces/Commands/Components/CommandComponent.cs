@@ -1,7 +1,6 @@
 using Entitas;
-using Entitas.CodeGeneration.Attributes;
 
-namespace svanderweele.Mine.Game.Commands
+namespace svanderweele.Mine.Game.Pieces.Commands.Components
 {
     [Command]
     public class CommandComponent : IComponent

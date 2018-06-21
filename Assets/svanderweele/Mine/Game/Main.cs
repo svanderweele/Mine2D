@@ -1,13 +1,15 @@
 using Entitas;
 using svanderweele.Mine.Core.Services;
-using svanderweele.Mine.Game.Commands;
+using svanderweele.Mine.Game.Pieces.Commands;
 using svanderweele.Mine.Game.Pieces.Grid;
 using svanderweele.Mine.Game.Pieces.Grid.Service;
 using svanderweele.Mine.Game.Pieces.Id;
 using svanderweele.Mine.Game.Services;
 using svanderweele.Mine.Game.Unity;
 using svanderweele.Mine.Game.Utils;
+using svanderweele.Mine.Game.Utils.Containers;
 using UnityEngine;
+using Color = svanderweele.Mine.Game.Utils.Containers.Color;
 using Vector2 = svanderweele.Mine.Game.Utils.Math.Vector2;
 
 namespace svanderweele.Mine.Game
@@ -40,6 +42,9 @@ namespace svanderweele.Mine.Game
             _coreServices.View.LoadAsset(_contexts, e, "Miner");
             e.AddPosition(-3, 3);
             e.AddVisible(true);
+            e.AddSelectionColor(newSelectionDown: new Color(0.0f, 1.0f, 0.0f, 1.0f), newSelectionHeld: new Color(),
+                newSelectionHoverIn: new Color(), newSelectionHoverOut: new Color(),
+                newSelectionHoverSelect: new Color(), newSelectionUp: new Color());
         }
 
         private Systems CreateSystems()

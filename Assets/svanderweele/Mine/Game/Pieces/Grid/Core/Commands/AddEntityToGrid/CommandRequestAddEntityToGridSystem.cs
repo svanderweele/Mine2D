@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Entitas;
-using svanderweele.Mine.Game.Commands;
+using svanderweele.Mine.Game.Pieces.Commands;
 using svanderweele.Mine.Game.Utils;
 using UnityEngine;
 

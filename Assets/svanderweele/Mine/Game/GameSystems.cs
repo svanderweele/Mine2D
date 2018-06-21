@@ -1,8 +1,9 @@
 ﻿using Entitas;
 using svanderweele.Mine.Core.Services;
-using svanderweele.Mine.Game.Commands;
+using svanderweele.Mine.Game.Pieces.Commands.Systems;
 using svanderweele.Mine.Game.Pieces.Destroy;
 using svanderweele.Mine.Game.Pieces.Grid.Commands.AddEntityToGrid;
+using svanderweele.Mine.Game.Pieces.Selection.Systems;
 using svanderweele.Mine.Game.Services;
 using UnityEngine;
 
@@ -28,6 +29,7 @@ namespace svanderweele.Mine.Game
 //            Add(new DrawGridDebugSystem(contexts));
 //            Add(new GenerateGridSystem(contexts));
             Add(new UpdateCommandDelaySystem(contexts));
+            Add(new UpdateSelectionColorSystem(contexts));
 
             //Events
             Add(new CommandEventSystems(contexts));

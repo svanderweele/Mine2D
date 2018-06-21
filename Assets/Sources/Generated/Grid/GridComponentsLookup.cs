@@ -12,23 +12,21 @@ public static class GridComponentsLookup {
     public const int Destroyed = 1;
     public const int GridChanged = 2;
     public const int Grid = 3;
-    public const int GridDebug = 4;
-    public const int GridInitialized = 5;
-    public const int GridSize = 6;
-    public const int GridTiles = 7;
-    public const int GridTileSize = 8;
-    public const int GridTileType = 9;
-    public const int NewGrid = 10;
-    public const int Id = 11;
+    public const int GridInitialized = 4;
+    public const int GridSize = 5;
+    public const int GridTiles = 6;
+    public const int GridTileSize = 7;
+    public const int GridTileType = 8;
+    public const int NewGrid = 9;
+    public const int Id = 10;
 
-    public const int TotalComponents = 12;
+    public const int TotalComponents = 11;
 
     public static readonly string[] componentNames = {
         "GridDestroyedListener",
         "Destroyed",
         "GridChanged",
         "Grid",
-        "GridDebug",
         "GridInitialized",
         "GridSize",
         "GridTiles",
@@ -43,7 +41,6 @@ public static class GridComponentsLookup {
         typeof(svanderweele.Mine.Game.Pieces.Destroy.DestroyedComponent),
         typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridChangedComponent),
         typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridDebugComponent),
         typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridInitializedComponent),
         typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridSizeComponent),
         typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridTilesComponent),

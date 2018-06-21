@@ -1,4 +1,4 @@
-﻿namespace svanderweele.Mine.Game.Commands
+﻿namespace svanderweele.Mine.Game.Pieces.Commands
 {
     public static class CommandContextExtension
     {

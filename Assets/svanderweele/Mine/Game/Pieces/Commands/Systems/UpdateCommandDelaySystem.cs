@@ -2,7 +2,7 @@
 using Entitas;
 using UnityEngine;
 
-namespace svanderweele.Mine.Game.Commands
+namespace svanderweele.Mine.Game.Pieces.Commands.Systems
 {
     public class UpdateCommandDelaySystem : ReactiveSystem<CommandEntity>
     {
