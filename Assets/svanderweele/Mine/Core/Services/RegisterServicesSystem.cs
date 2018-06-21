@@ -1,7 +1,9 @@
 using Entitas;
+using svanderweele.Mine.Core.Services.Collision;
 using svanderweele.Mine.Core.Services.Input.Controller;
 using svanderweele.Mine.Core.Services.Input.Service;
 using svanderweele.Mine.Core.Services.View;
+using svanderweele.Mine.Game.Pieces.Grid.Service;
 
 namespace svanderweele.Mine.Core.Services
 {
@@ -10,6 +12,8 @@ namespace svanderweele.Mine.Core.Services
 
         public RegisterServicesSystem(Contexts contexts, CoreServices services)
         {
+            Add(new RegisterGridServiceSystem(contexts, services.Grid));
+            Add(new RegisterCollisionServiceSystem(contexts, services.Collision));
             Add(new RegisterViewServiceSystem(contexts, services.View));
             Add(new RegisterInputServiceSystem(contexts, services.Input));
             Add(new RegisterInputControllerSystem(contexts, services.InputController));

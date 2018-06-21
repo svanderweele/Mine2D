@@ -10,20 +10,30 @@ public static class GameComponentsLookup {
 
     public const int GameDestroyedListener = 0;
     public const int PositionListener = 1;
-    public const int Destroyed = 2;
-    public const int Id = 3;
-    public const int Position = 4;
-    public const int Visible = 5;
-    public const int VisibleListener = 6;
+    public const int SpriteListener = 2;
+    public const int Collision = 3;
+    public const int Destroyed = 4;
+    public const int GridLayer = 5;
+    public const int GridTileType = 6;
+    public const int Id = 7;
+    public const int Position = 8;
+    public const int Sprite = 9;
+    public const int Visible = 10;
+    public const int VisibleListener = 11;
 
-    public const int TotalComponents = 7;
+    public const int TotalComponents = 12;
 
     public static readonly string[] componentNames = {
         "GameDestroyedListener",
         "PositionListener",
+        "SpriteListener",
+        "Collision",
         "Destroyed",
+        "GridLayer",
+        "GridTileType",
         "Id",
         "Position",
+        "Sprite",
         "Visible",
         "VisibleListener"
     };
@@ -31,9 +41,14 @@ public static class GameComponentsLookup {
     public static readonly System.Type[] componentTypes = {
         typeof(GameDestroyedListenerComponent),
         typeof(PositionListenerComponent),
+        typeof(SpriteListenerComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Collision.CollisionComponent),
         typeof(svanderweele.Mine.Game.Pieces.Destroy.DestroyedComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridLayerComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent),
         typeof(svanderweele.Mine.Game.Pieces.Id.IdComponent),
         typeof(svanderweele.Mine.Game.Pieces.Spatial.PositionComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Sprite.SpriteComponent),
         typeof(svanderweele.Mine.Game.Pieces.Visible.VisibleComponent),
         typeof(VisibleListenerComponent)
     };

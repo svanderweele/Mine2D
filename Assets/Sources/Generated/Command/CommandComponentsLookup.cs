@@ -16,9 +16,11 @@ public static class CommandComponentsLookup {
     public const int HideEntityCommand = 5;
     public const int HideEntityRequest = 6;
     public const int Destroyed = 7;
-    public const int Id = 8;
+    public const int CommandAddEntityToGrid = 8;
+    public const int CommandRequestAddEntityToGrid = 9;
+    public const int Id = 10;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 11;
 
     public static readonly string[] componentNames = {
         "CommandDestroyedListener",
@@ -29,6 +31,8 @@ public static class CommandComponentsLookup {
         "HideEntityCommand",
         "HideEntityRequest",
         "Destroyed",
+        "CommandAddEntityToGrid",
+        "CommandRequestAddEntityToGrid",
         "Id"
     };
 
@@ -41,6 +45,8 @@ public static class CommandComponentsLookup {
         typeof(svanderweele.Mine.Game.Commands.HideActor.HideEntityCommandComponent),
         typeof(svanderweele.Mine.Game.Commands.Requests.HideActor.HideEntityRequestComponent),
         typeof(svanderweele.Mine.Game.Pieces.Destroy.DestroyedComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Grid.Commands.CommandAddEntityToGridComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Grid.Commands.CommandRequestAddEntityToGridComponent),
         typeof(svanderweele.Mine.Game.Pieces.Id.IdComponent)
     };
 }

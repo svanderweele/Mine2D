@@ -3,8 +3,8 @@
 namespace svanderweele.Mine.Game.Pieces.Grid.Components
 {
     [Grid]
-    public class GridTileComponent : IComponent
+    public class GridChangedComponent : IComponent
     {
-        int[,] tiles;
+        
     }
 }

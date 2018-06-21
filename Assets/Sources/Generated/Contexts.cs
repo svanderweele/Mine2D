@@ -64,10 +64,26 @@ public partial class Contexts : Entitas.IContexts {
 //------------------------------------------------------------------------------
 public partial class Contexts {
 
+    public const string GridLayer = "GridLayer";
+    public const string GridTileType = "GridTileType";
     public const string Id = "Id";
 
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeEntityIndices() {
+        game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, int>(
+            GridLayer,
+            game.GetGroup(GameMatcher.GridLayer),
+            (e, c) => ((svanderweele.Mine.Game.Pieces.Grid.Components.GridLayerComponent)c).layer));
+
+        grid.AddEntityIndex(new Entitas.EntityIndex<GridEntity, string>(
+            GridTileType,
+            grid.GetGroup(GridMatcher.GridTileType),
+            (e, c) => ((svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent)c).type));
+        game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, string>(
+            GridTileType,
+            game.GetGroup(GameMatcher.GridTileType),
+            (e, c) => ((svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent)c).type));
+
         game.AddEntityIndex(new Entitas.PrimaryEntityIndex<GameEntity, int>(
             Id,
             game.GetGroup(GameMatcher.Id),
@@ -92,6 +108,18 @@ public partial class Contexts {
 }
 
 public static class ContextsExtensions {
+
+    public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithGridLayer(this GameContext context, int layer) {
+        return ((Entitas.EntityIndex<GameEntity, int>)context.GetEntityIndex(Contexts.GridLayer)).GetEntities(layer);
+    }
+
+    public static System.Collections.Generic.HashSet<GridEntity> GetEntitiesWithGridTileType(this GridContext context, string type) {
+        return ((Entitas.EntityIndex<GridEntity, string>)context.GetEntityIndex(Contexts.GridTileType)).GetEntities(type);
+    }
+
+    public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithGridTileType(this GameContext context, string type) {
+        return ((Entitas.EntityIndex<GameEntity, string>)context.GetEntityIndex(Contexts.GridTileType)).GetEntities(type);
+    }
 
     public static GameEntity GetEntityWithId(this GameContext context, int value) {
         return ((Entitas.PrimaryEntityIndex<GameEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);

@@ -11,14 +11,14 @@ public partial class GridEntity {
     public svanderweele.Mine.Game.Pieces.Grid.Components.GridTilesComponent gridTiles { get { return (svanderweele.Mine.Game.Pieces.Grid.Components.GridTilesComponent)GetComponent(GridComponentsLookup.GridTiles); } }
     public bool hasGridTiles { get { return HasComponent(GridComponentsLookup.GridTiles); } }
 
-    public void AddGridTiles(int[,] newTiles) {
+    public void AddGridTiles(svanderweele.Mine.Game.Pieces.Grid.Components.TileEntities[,] newTiles) {
         var index = GridComponentsLookup.GridTiles;
         var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridTilesComponent>(index);
         component.tiles = newTiles;
         AddComponent(index, component);
     }
 
-    public void ReplaceGridTiles(int[,] newTiles) {
+    public void ReplaceGridTiles(svanderweele.Mine.Game.Pieces.Grid.Components.TileEntities[,] newTiles) {
         var index = GridComponentsLookup.GridTiles;
         var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridTilesComponent>(index);
         component.tiles = newTiles;

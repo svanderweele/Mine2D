@@ -8,18 +8,18 @@
 //------------------------------------------------------------------------------
 public partial class GridEntity {
 
-    static readonly svanderweele.Mine.Game.Pieces.Grid.Components.GridTileComponent gridTileComponent = new svanderweele.Mine.Game.Pieces.Grid.Components.GridTileComponent();
+    static readonly svanderweele.Mine.Game.Pieces.Grid.Components.GridDebugComponent gridDebugComponent = new svanderweele.Mine.Game.Pieces.Grid.Components.GridDebugComponent();
 
-    public bool isGridTile {
-        get { return HasComponent(GridComponentsLookup.GridTile); }
+    public bool isGridDebug {
+        get { return HasComponent(GridComponentsLookup.GridDebug); }
         set {
-            if (value != isGridTile) {
-                var index = GridComponentsLookup.GridTile;
+            if (value != isGridDebug) {
+                var index = GridComponentsLookup.GridDebug;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : gridTileComponent;
+                            : gridDebugComponent;
 
                     AddComponent(index, component);
                 } else {
@@ -40,17 +40,17 @@ public partial class GridEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GridMatcher {
 
-    static Entitas.IMatcher<GridEntity> _matcherGridTile;
+    static Entitas.IMatcher<GridEntity> _matcherGridDebug;
 
-    public static Entitas.IMatcher<GridEntity> GridTile {
+    public static Entitas.IMatcher<GridEntity> GridDebug {
         get {
-            if (_matcherGridTile == null) {
-                var matcher = (Entitas.Matcher<GridEntity>)Entitas.Matcher<GridEntity>.AllOf(GridComponentsLookup.GridTile);
+            if (_matcherGridDebug == null) {
+                var matcher = (Entitas.Matcher<GridEntity>)Entitas.Matcher<GridEntity>.AllOf(GridComponentsLookup.GridDebug);
                 matcher.componentNames = GridComponentsLookup.componentNames;
-                _matcherGridTile = matcher;
+                _matcherGridDebug = matcher;
             }
 
-            return _matcherGridTile;
+            return _matcherGridDebug;
         }
     }
 }
