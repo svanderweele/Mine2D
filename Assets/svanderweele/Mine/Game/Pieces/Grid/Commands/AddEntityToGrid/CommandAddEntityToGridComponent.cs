@@ -7,5 +7,6 @@ namespace svanderweele.Mine.Game.Pieces.Grid.Commands
     {
         public int entityId;
         public int gridId;
+        public int layer;
     }
 }

@@ -62,7 +62,7 @@ namespace svanderweele.Mine.Game.Pieces.Grid.Systems
                                 tile.AddGridLayer((int) GlobalVariables.Layer.Background);
 
                                 var typeString =
-                                    GlobalVariables.ObjectType.GetType(new[] {ObjectType.OBJECT_CATEGORY_TILE});
+                                    GlobalVariables.ObjectType.JoinTypes(new[] {ObjectType.OBJECT_CATEGORY_TILE});
 
                                 tile.AddGridTileType(typeString);
 

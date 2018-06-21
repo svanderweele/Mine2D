@@ -10,29 +10,43 @@ public static class GameComponentsLookup {
 
     public const int GameDestroyedListener = 0;
     public const int PositionListener = 1;
-    public const int SpriteListener = 2;
-    public const int Collision = 3;
-    public const int Destroyed = 4;
-    public const int GridLayer = 5;
-    public const int GridTileType = 6;
-    public const int Id = 7;
-    public const int Position = 8;
-    public const int Sprite = 9;
-    public const int Visible = 10;
-    public const int VisibleListener = 11;
+    public const int SpriteColorListener = 2;
+    public const int SpriteListener = 3;
+    public const int Collision = 4;
+    public const int Destroyed = 5;
+    public const int GridLayer = 6;
+    public const int GridPosition = 7;
+    public const int GridTileType = 8;
+    public const int Id = 9;
+    public const int SelectionDown = 10;
+    public const int SelectionOut = 11;
+    public const int SelectionOver = 12;
+    public const int SelectionUp = 13;
+    public const int Position = 14;
+    public const int SpriteColor = 15;
+    public const int Sprite = 16;
+    public const int Visible = 17;
+    public const int VisibleListener = 18;
 
-    public const int TotalComponents = 12;
+    public const int TotalComponents = 19;
 
     public static readonly string[] componentNames = {
         "GameDestroyedListener",
         "PositionListener",
+        "SpriteColorListener",
         "SpriteListener",
         "Collision",
         "Destroyed",
         "GridLayer",
+        "GridPosition",
         "GridTileType",
         "Id",
+        "SelectionDown",
+        "SelectionOut",
+        "SelectionOver",
+        "SelectionUp",
         "Position",
+        "SpriteColor",
         "Sprite",
         "Visible",
         "VisibleListener"
@@ -41,13 +55,20 @@ public static class GameComponentsLookup {
     public static readonly System.Type[] componentTypes = {
         typeof(GameDestroyedListenerComponent),
         typeof(PositionListenerComponent),
+        typeof(SpriteColorListenerComponent),
         typeof(SpriteListenerComponent),
         typeof(svanderweele.Mine.Game.Pieces.Collision.CollisionComponent),
         typeof(svanderweele.Mine.Game.Pieces.Destroy.DestroyedComponent),
         typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridLayerComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridPositionComponent),
         typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent),
         typeof(svanderweele.Mine.Game.Pieces.Id.IdComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Selection.Components.SelectionDownComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Selection.SelectionOutComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Selection.SelectionOverComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Selection.SelectionUpComponent),
         typeof(svanderweele.Mine.Game.Pieces.Spatial.PositionComponent),
+        typeof(svanderweele.Mine.Game.Pieces.Sprite.SpriteColorComponent),
         typeof(svanderweele.Mine.Game.Pieces.Sprite.SpriteComponent),
         typeof(svanderweele.Mine.Game.Pieces.Visible.VisibleComponent),
         typeof(VisibleListenerComponent)

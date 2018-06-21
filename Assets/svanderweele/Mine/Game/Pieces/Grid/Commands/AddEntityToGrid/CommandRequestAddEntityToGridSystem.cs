@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using Entitas;
+using svanderweele.Mine.Game.Commands;
+using svanderweele.Mine.Game.Utils;
 using UnityEngine;
 
 namespace svanderweele.Mine.Game.Pieces.Grid.Commands.AddEntityToGrid
@@ -33,10 +35,23 @@ namespace svanderweele.Mine.Game.Pieces.Grid.Commands.AddEntityToGrid
             {
                 var entityId = commandEntity.commandRequestAddEntityToGrid.entityId;
                 var entity = _contexts.game.GetEntityWithId(entityId);
-                var grid = _contexts.grid.GetEntityWithId(commandEntity.commandRequestAddEntityToGrid.gridId);
-                int layer = entity.gridLayer.layer;
+
+                //Is entity of right type
+                var gridId = commandEntity.commandRequestAddEntityToGrid.gridId;
+                var grid = _contexts.grid.GetEntityWithId(gridId);
+
+                var entityType = entity.gridTileType.type;
+                var gridType = grid.gridTileType.type;
+
+                if (GlobalVariables.ObjectType.Matches(entityType, gridType) == false)
+                {
+                    Debug.Log("Can't place tile on grid - Wrong Category " + entityType);
+                    commandEntity.isCommandConsumed = true;
+                    return;
+                }
 
                 //Check if tile is vacant on layer
+                int layer = commandEntity.commandRequestAddEntityToGrid.layer;
                 var entitiesOnSameLayer = _contexts.game.GetEntitiesWithGridLayer(layer);
                 var entitiesOnSameLayerIds = new List<int>();
 
@@ -50,14 +65,15 @@ namespace svanderweele.Mine.Game.Pieces.Grid.Commands.AddEntityToGrid
 
                 if (collision == false)
                 {
-                    Debug.Log("Can place Entity");
+                    var cmd = _contexts.command.CreateCommand(0);
+                    cmd.AddCommandAddEntityToGrid(entityId, gridId, layer);
+                    commandEntity.isCommandConsumed = true;
                 }
                 else
                 {
-                    Debug.Log("Can't place Entity");                    
+                    Debug.Log("Can't place Entity");
+                    commandEntity.isCommandConsumed = true;
                 }
-
-                commandEntity.isCommandConsumed = true;
             }
         }
     }

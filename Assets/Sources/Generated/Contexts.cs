@@ -65,6 +65,7 @@ public partial class Contexts : Entitas.IContexts {
 public partial class Contexts {
 
     public const string GridLayer = "GridLayer";
+    public const string GridPosition = "GridPosition";
     public const string GridTileType = "GridTileType";
     public const string Id = "Id";
 
@@ -74,6 +75,11 @@ public partial class Contexts {
             GridLayer,
             game.GetGroup(GameMatcher.GridLayer),
             (e, c) => ((svanderweele.Mine.Game.Pieces.Grid.Components.GridLayerComponent)c).layer));
+
+        game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, svanderweele.Mine.Game.Utils.Math.Vector2>(
+            GridPosition,
+            game.GetGroup(GameMatcher.GridPosition),
+            (e, c) => ((svanderweele.Mine.Game.Pieces.Grid.Components.GridPositionComponent)c).position));
 
         grid.AddEntityIndex(new Entitas.EntityIndex<GridEntity, string>(
             GridTileType,
@@ -111,6 +117,10 @@ public static class ContextsExtensions {
 
     public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithGridLayer(this GameContext context, int layer) {
         return ((Entitas.EntityIndex<GameEntity, int>)context.GetEntityIndex(Contexts.GridLayer)).GetEntities(layer);
+    }
+
+    public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithGridPosition(this GameContext context, svanderweele.Mine.Game.Utils.Math.Vector2 position) {
+        return ((Entitas.EntityIndex<GameEntity, svanderweele.Mine.Game.Utils.Math.Vector2>)context.GetEntityIndex(Contexts.GridPosition)).GetEntities(position);
     }
 
     public static System.Collections.Generic.HashSet<GridEntity> GetEntitiesWithGridTileType(this GridContext context, string type) {

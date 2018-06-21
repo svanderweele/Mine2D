@@ -26,8 +26,6 @@
                 <e p="CommandCommandRequestAddEntityToGridComponent.cs" t="Include" />
                 <e p="CommandCommandRequestComponent.cs" t="Include" />
                 <e p="CommandDestroyedComponent.cs" t="Include" />
-                <e p="CommandHideEntityCommandComponent.cs" t="Include" />
-                <e p="CommandHideEntityRequestComponent.cs" t="Include" />
                 <e p="CommandIdComponent.cs" t="Include" />
               </e>
             </e>
@@ -47,6 +45,7 @@
                 <e p="GridDestroyedListenerComponent.cs" t="Include" />
                 <e p="InputDestroyedListenerComponent.cs" t="Include" />
                 <e p="PositionListenerComponent.cs" t="Include" />
+                <e p="SpriteColorListenerComponent.cs" t="Include" />
                 <e p="SpriteListenerComponent.cs" t="Include" />
                 <e p="VisibleListenerComponent.cs" t="Include" />
               </e>
@@ -59,6 +58,7 @@
                 <e p="IGridDestroyedListener.cs" t="Include" />
                 <e p="IInputDestroyedListener.cs" t="Include" />
                 <e p="IPositionListener.cs" t="Include" />
+                <e p="ISpriteColorListener.cs" t="Include" />
                 <e p="ISpriteListener.cs" t="Include" />
                 <e p="IVisibleListener.cs" t="Include" />
               </e>
@@ -68,6 +68,7 @@
                 <e p="GridDestroyedEventSystem.cs" t="Include" />
                 <e p="InputDestroyedEventSystem.cs" t="Include" />
                 <e p="PositionEventSystem.cs" t="Include" />
+                <e p="SpriteColorEventSystem.cs" t="Include" />
                 <e p="SpriteEventSystem.cs" t="Include" />
                 <e p="VisibleEventSystem.cs" t="Include" />
               </e>
@@ -79,10 +80,17 @@
                 <e p="GameDestroyedComponent.cs" t="Include" />
                 <e p="GameGameDestroyedListenerComponent.cs" t="Include" />
                 <e p="GameGridLayerComponent.cs" t="Include" />
+                <e p="GameGridPositionComponent.cs" t="Include" />
                 <e p="GameGridTileTypeComponent.cs" t="Include" />
                 <e p="GameIdComponent.cs" t="Include" />
                 <e p="GamePositionComponent.cs" t="Include" />
                 <e p="GamePositionListenerComponent.cs" t="Include" />
+                <e p="GameSelectionDownComponent.cs" t="Include" />
+                <e p="GameSelectionOutComponent.cs" t="Include" />
+                <e p="GameSelectionOverComponent.cs" t="Include" />
+                <e p="GameSelectionUpComponent.cs" t="Include" />
+                <e p="GameSpriteColorComponent.cs" t="Include" />
+                <e p="GameSpriteColorListenerComponent.cs" t="Include" />
                 <e p="GameSpriteComponent.cs" t="Include" />
                 <e p="GameSpriteListenerComponent.cs" t="Include" />
                 <e p="GameVisibleComponent.cs" t="Include" />
@@ -134,6 +142,8 @@
                 <e p="MetaIdComponent.cs" t="Include" />
                 <e p="MetaInputControllerComponent.cs" t="Include" />
                 <e p="MetaInputServiceComponent.cs" t="Include" />
+                <e p="MetaSelectionServiceComponent.cs" t="Include" />
+                <e p="MetaTimeServiceComponent.cs" t="Include" />
                 <e p="MetaViewServiceComponent.cs" t="Include" />
               </e>
               <e p="MetaAttribute.cs" t="Include" />
@@ -154,6 +164,7 @@
                   <e p="ICollisionService.cs" t="Include" />
                   <e p="RegisterCollisionServiceSystem.cs" t="Include" />
                 </e>
+                <e p="CoreServiceCleanupSystems.cs" t="Include" />
                 <e p="CoreServices.cs" t="Include" />
                 <e p="Events" t="Include">
                   <e p="IEventListener.cs" t="Include" />
@@ -178,6 +189,18 @@
                   </e>
                 </e>
                 <e p="RegisterServicesSystem.cs" t="Include" />
+                <e p="Selection" t="Include">
+                  <e p="ISelectionController.cs" t="Include" />
+                  <e p="ISelectionService.cs" t="Include" />
+                  <e p="RegisterSelectionServiceSystem.cs" t="Include" />
+                  <e p="SelectionCleanupSystem.cs" t="Include" />
+                  <e p="SelectionServiceComponent.cs" t="Include" />
+                </e>
+                <e p="Time" t="Include">
+                  <e p="ITimeService.cs" t="Include" />
+                  <e p="RegisterTimeServiceSystem.cs" t="Include" />
+                  <e p="TimeServiceComponent.cs" t="Include" />
+                </e>
                 <e p="View" t="Include">
                   <e p="IViewController.cs" t="Include" />
                   <e p="IViewService.cs" t="Include" />
@@ -195,21 +218,14 @@
                   <e p="CommandDelayComponent.cs" t="Include" />
                   <e p="CommandRequestComponent.cs" t="Include" />
                 </e>
-                <e p="HideActor" t="Include">
-                  <e p="HideEntityCommandComponent.cs" t="Include" />
-                  <e p="HideEntityCommandSystem.cs" t="Include" />
-                </e>
-                <e p="Requests" t="Include">
-                  <e p="HideActor" t="Include">
-                    <e p="HideEntityRequestComponent.cs" t="Include" />
-                    <e p="HideEntityRequestSystem.cs" t="Include" />
-                  </e>
-                </e>
                 <e p="Systems" t="Include">
+                  <e p="CommandRequestSystems.cs" t="Include" />
+                  <e p="CommandSystems.cs" t="Include" />
                   <e p="RemoveCommandSystem.cs" t="Include" />
                   <e p="UpdateCommandDelaySystem.cs" t="Include" />
                 </e>
               </e>
+              <e p="DebugSystems.cs" t="Include" />
               <e p="GameSystems.cs" t="Include" />
               <e p="Main.cs" t="Include" />
               <e p="Pieces" t="Include">
@@ -224,6 +240,7 @@
                   <e p="Commands" t="Include">
                     <e p="AddEntityToGrid" t="Include">
                       <e p="CommandAddEntityToGridComponent.cs" t="Include" />
+                      <e p="CommandAddEntityToGridSystem.cs" t="Include" />
                       <e p="CommandRequestAddEntityToGridComponent.cs" t="Include" />
                       <e p="CommandRequestAddEntityToGridSystem.cs" t="Include" />
                     </e>
@@ -234,6 +251,7 @@
                     <e p="GridDebugComponent.cs" t="Include" />
                     <e p="GridInitializedComponent.cs" t="Include" />
                     <e p="GridLayerComponent.cs" t="Include" />
+                    <e p="GridPositionComponent.cs" t="Include" />
                     <e p="GridSizeComponent.cs" t="Include" />
                     <e p="GridTilesComponent.cs" t="Include" />
                     <e p="GridTileSizeComponent.cs" t="Include" />
@@ -257,10 +275,22 @@
                   <e p="ContextsIdExtensions.cs" t="Include" />
                   <e p="IdComponent.cs" t="Include" />
                 </e>
+                <e p="Selection" t="Include">
+                  <e p="Components" t="Include">
+                    <e p="SelectionDownComponent.cs" t="Include" />
+                    <e p="SelectionOutComponent.cs" t="Include" />
+                    <e p="SelectionOverComponent.cs" t="Include" />
+                    <e p="SelectionUpComponent.cs" t="Include" />
+                  </e>
+                  <e p="Systems" t="Include">
+                    <e p="DebugSelectionSystem.cs" t="Include" />
+                  </e>
+                </e>
                 <e p="Spatial" t="Include">
                   <e p="PositionComponent.cs" t="Include" />
                 </e>
                 <e p="Sprite" t="Include">
+                  <e p="SpriteColorComponent.cs" t="Include" />
                   <e p="SpriteComponent.cs" t="Include" />
                 </e>
                 <e p="Visible" t="Include">
@@ -269,13 +299,17 @@
               </e>
               <e p="Services" t="Include">
                 <e p="CollisionService.cs" t="Include" />
+                <e p="GameServices.cs" t="Include" />
                 <e p="InputService.cs" t="Include" />
+                <e p="SelectionService.cs" t="Include" />
               </e>
               <e p="Unity" t="Include">
                 <e p="UnityCollisionController.cs" t="Include" />
                 <e p="UnityGameView.cs" t="Include" />
                 <e p="UnityInputController.cs" t="Include" />
                 <e p="UnityInputMapper.cs" t="Include" />
+                <e p="UnitySelectionController.cs" t="Include" />
+                <e p="UnityTimeService.cs" t="Include" />
                 <e p="UnityViewService.cs" t="Include" />
               </e>
               <e p="Utils" t="Include">

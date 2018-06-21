@@ -1,6 +1,7 @@
 using Entitas;
 using svanderweele.Mine.Core.Services.Collision;
 using svanderweele.Mine.Core.Services.Events;
+using svanderweele.Mine.Core.Services.Selection;
 using svanderweele.Mine.Core.Services.View;
 using UnityEngine;
 
@@ -32,6 +33,13 @@ namespace svanderweele.Mine.Game.Unity
             foreach (var collisionController in collisionListeners)
             {
                 collisionController.Initialize(contexts, entity);
+            }
+
+            var selectionController = go.GetComponents<ISelectionController>();
+            
+            foreach (var controller in selectionController)
+            {
+                controller.Initialize(contexts, entity);    
             }
         }
     }

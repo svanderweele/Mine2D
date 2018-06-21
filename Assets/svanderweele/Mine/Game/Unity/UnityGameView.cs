@@ -6,7 +6,7 @@ using UnityEngine;
 namespace svanderweele.Mine.Game.Unity
 {
     public class UnityGameView : MonoBehaviour, IViewController, IEventListener, IPositionListener, IVisibleListener,
-        ISpriteListener
+        ISpriteListener, ISpriteColorListener, IGameDestroyedListener
     {
         private Contexts _contexts;
         private GameEntity _entity;
@@ -19,7 +19,7 @@ namespace svanderweele.Mine.Game.Unity
 
         public Utils.Math.Vector2 GetPosition()
         {
-            var vec = new Utils.Math.Vector2() {x = transform.position.x, y = transform.position.y};
+            var vec = new Utils.Math.Vector2(transform.position.x, transform.position.y);
             return vec;
         }
 
@@ -43,6 +43,8 @@ namespace svanderweele.Mine.Game.Unity
             _entity.AddPositionListener(this);
             _entity.AddVisibleListener(this);
             _entity.AddSpriteListener(this);
+            _entity.AddSpriteColorListener(this);
+            _entity.AddGameDestroyedListener(this);
         }
 
         public void OnVisible(GameEntity entity, bool isVisible)
@@ -56,6 +58,21 @@ namespace svanderweele.Mine.Game.Unity
             {
                 _spriteRenderer.sprite = Resources.Load<Sprite>(name);
             }
+        }
+
+        public void OnSpriteColor(GameEntity entity, float r, float g, float b, float a)
+        {
+            var renderes = gameObject.GetComponentsInChildren<SpriteRenderer>();
+            foreach (var spriteRenderer in renderes)
+            {
+                var color = new Color(r, g, b, a);
+                spriteRenderer.color = color;
+            }
+        }
+
+        public void OnDestroyed(GameEntity entity)
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -19,7 +20,6 @@ namespace svanderweele.Mine.Game.Utils
     }
 
 
-
     public enum KeyId
     {
         W,
@@ -38,10 +38,12 @@ namespace svanderweele.Mine.Game.Utils
         Wire,
         Debug
     }
-    
-    
+
+
     public class ObjectType
     {
+        private const char DELIMITER = '-';
+
         private List<string> _indexDictionary;
 
         public const string OBJECT_CATEGORY_TILE = "OBJECT_CATEGORY_TILE";
@@ -61,7 +63,7 @@ namespace svanderweele.Mine.Game.Utils
             _indexDictionary.Add(category);
         }
 
-        public string GetType(string[] types)
+        public string JoinTypes(params string[] types)
         {
             var unorderedTypes = types.ToList();
             var orderedTypes = new List<string>();
@@ -71,6 +73,11 @@ namespace svanderweele.Mine.Game.Utils
             for (var i = 0; i < unorderedTypes.Count; i++)
             {
                 var type = unorderedTypes[i];
+                
+                if(orderedTypes.IndexOf(type) > -1){
+                    continue;
+                }
+
                 var index = _indexDictionary.IndexOf(type);
                 if (index < lowestIndex)
                 {
@@ -81,19 +88,23 @@ namespace svanderweele.Mine.Game.Utils
                 if (orderedTypes.Count == 0 || i == unorderedTypes.Count - 1)
                 {
                     orderedTypes.Add(lowestSelection);
-                    unorderedTypes.RemoveAt(i);
                     lowestIndex = int.MaxValue;
                 }
             }
 
-            var stringFormat = "";
 
-            foreach (var orderedType in orderedTypes)
-            {
-                stringFormat += orderedType;
-            }
-
+            var stringFormat = string.Join(DELIMITER.ToString(), orderedTypes.ToArray());
             return stringFormat;
+        }
+
+        public string[] SplitTypes(string types)
+        {
+            return types.Split(DELIMITER);
+        }
+
+        public bool Matches(string aTypes, string bTypes)
+        {
+            return aTypes.IndexOf(bTypes) > -1 || bTypes.IndexOf(aTypes) > -1;
         }
     }
 }

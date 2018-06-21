@@ -7,14 +7,12 @@ namespace svanderweele.Mine.Game.Unity
 {
     public class UnityCollisionController : MonoBehaviour, ICollisionController
     {
-        private Contexts _contexts;
         private GameEntity _entity;
         private ICollisionService _collisionService;
 
         public void Initialize(Contexts contexts, IEntity entity)
         {
-            _contexts = contexts;
-            _collisionService = _contexts.meta.collisionService.service;
+            _collisionService = contexts.meta.collisionService.service;
             _entity = (GameEntity) entity;
         }
 

@@ -11,16 +11,20 @@ public static class MetaComponentsLookup {
     public const int CollisionService = 0;
     public const int InputController = 1;
     public const int InputService = 2;
-    public const int ViewService = 3;
-    public const int GridService = 4;
-    public const int Id = 5;
+    public const int SelectionService = 3;
+    public const int TimeService = 4;
+    public const int ViewService = 5;
+    public const int GridService = 6;
+    public const int Id = 7;
 
-    public const int TotalComponents = 6;
+    public const int TotalComponents = 8;
 
     public static readonly string[] componentNames = {
         "CollisionService",
         "InputController",
         "InputService",
+        "SelectionService",
+        "TimeService",
         "ViewService",
         "GridService",
         "Id"
@@ -30,6 +34,8 @@ public static class MetaComponentsLookup {
         typeof(svanderweele.Mine.Core.Services.Collision.CollisionServiceComponent),
         typeof(svanderweele.Mine.Core.Services.Input.Controller.InputControllerComponent),
         typeof(svanderweele.Mine.Core.Services.Input.Service.InputServiceComponent),
+        typeof(svanderweele.Mine.Core.Services.Selection.SelectionServiceComponent),
+        typeof(svanderweele.Mine.Core.Services.Time.TimeServiceComponent),
         typeof(svanderweele.Mine.Core.Services.View.ViewServiceComponent),
         typeof(svanderweele.Mine.Game.Pieces.Grid.Service.GridServiceComponent),
         typeof(svanderweele.Mine.Game.Pieces.Id.IdComponent)

@@ -39,7 +39,7 @@ namespace svanderweele.Mine.Game.Pieces.Grid.Systems
 
 
                 var debugTiles = _contexts.game.GetEntitiesWithGridTileType(
-                    GlobalVariables.ObjectType.GetType(new string[]
+                    GlobalVariables.ObjectType.JoinTypes(new string[]
                         {ObjectType.OBJECT_CATEGORY_DEBUG, ObjectType.OBJECT_CATEGORY_TILE}));
                 Debug.Log("Debug tiles " + debugTiles.Count);
 
@@ -50,7 +50,7 @@ namespace svanderweele.Mine.Game.Pieces.Grid.Systems
                         var tileDebug = _contexts.game.CreateEntity();
                         _contexts.meta.viewService.instance.LoadAsset(_contexts, tileDebug, "Grid_Tile_Debug");
                         tileDebug.AddPosition(x * tileWidth, y * tileHeight);
-                        tileDebug.AddGridTileType(GlobalVariables.ObjectType.GetType(new string[]
+                        tileDebug.AddGridTileType(GlobalVariables.ObjectType.JoinTypes(new string[]
                             {ObjectType.OBJECT_CATEGORY_DEBUG, ObjectType.OBJECT_CATEGORY_TILE}));
                     }
                 }

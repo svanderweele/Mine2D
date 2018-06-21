@@ -11,19 +11,21 @@ public partial class CommandEntity {
     public svanderweele.Mine.Game.Pieces.Grid.Commands.CommandAddEntityToGridComponent commandAddEntityToGrid { get { return (svanderweele.Mine.Game.Pieces.Grid.Commands.CommandAddEntityToGridComponent)GetComponent(CommandComponentsLookup.CommandAddEntityToGrid); } }
     public bool hasCommandAddEntityToGrid { get { return HasComponent(CommandComponentsLookup.CommandAddEntityToGrid); } }
 
-    public void AddCommandAddEntityToGrid(int newEntityId, int newGridId) {
+    public void AddCommandAddEntityToGrid(int newEntityId, int newGridId, int newLayer) {
         var index = CommandComponentsLookup.CommandAddEntityToGrid;
         var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Commands.CommandAddEntityToGridComponent>(index);
         component.entityId = newEntityId;
         component.gridId = newGridId;
+        component.layer = newLayer;
         AddComponent(index, component);
     }
 
-    public void ReplaceCommandAddEntityToGrid(int newEntityId, int newGridId) {
+    public void ReplaceCommandAddEntityToGrid(int newEntityId, int newGridId, int newLayer) {
         var index = CommandComponentsLookup.CommandAddEntityToGrid;
         var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Commands.CommandAddEntityToGridComponent>(index);
         component.entityId = newEntityId;
         component.gridId = newGridId;
+        component.layer = newLayer;
         ReplaceComponent(index, component);
     }
 
