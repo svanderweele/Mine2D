@@ -21,10 +21,12 @@
                 <e p="CommandCommandAddEntityToGridComponent.cs" t="Include" />
                 <e p="CommandCommandComponent.cs" t="Include" />
                 <e p="CommandCommandConsumedComponent.cs" t="Include" />
+                <e p="CommandCommandCreateMapEditorComponent.cs" t="Include" />
                 <e p="CommandCommandDelayComponent.cs" t="Include" />
                 <e p="CommandCommandDestroyedListenerComponent.cs" t="Include" />
                 <e p="CommandCommandRequestAddEntityToGridComponent.cs" t="Include" />
                 <e p="CommandCommandRequestComponent.cs" t="Include" />
+                <e p="CommandCommandRequestCreateMapEditorComponent.cs" t="Include" />
                 <e p="CommandDestroyedComponent.cs" t="Include" />
                 <e p="CommandIdComponent.cs" t="Include" />
               </e>
@@ -40,6 +42,8 @@
             <e p="Events" t="Include">
               <e p="CommandEventSystems.cs" t="Include" />
               <e p="Components" t="Include">
+                <e p="AssetBayAssetsListenerComponent.cs" t="Include" />
+                <e p="AssetDataListenerComponent.cs" t="Include" />
                 <e p="CommandDestroyedListenerComponent.cs" t="Include" />
                 <e p="GameDestroyedListenerComponent.cs" t="Include" />
                 <e p="GridDestroyedListenerComponent.cs" t="Include" />
@@ -53,6 +57,8 @@
               <e p="GridEventSystems.cs" t="Include" />
               <e p="InputEventSystems.cs" t="Include" />
               <e p="Interfaces" t="Include">
+                <e p="IAssetBayAssetsListener.cs" t="Include" />
+                <e p="IAssetDataListener.cs" t="Include" />
                 <e p="ICommandDestroyedListener.cs" t="Include" />
                 <e p="IGameDestroyedListener.cs" t="Include" />
                 <e p="IGridDestroyedListener.cs" t="Include" />
@@ -62,7 +68,10 @@
                 <e p="ISpriteListener.cs" t="Include" />
                 <e p="IVisibleListener.cs" t="Include" />
               </e>
+              <e p="MapEditorEventSystems.cs" t="Include" />
               <e p="Systems" t="Include">
+                <e p="AssetBayAssetsEventSystem.cs" t="Include" />
+                <e p="AssetDataEventSystem.cs" t="Include" />
                 <e p="CommandDestroyedEventSystem.cs" t="Include" />
                 <e p="GameDestroyedEventSystem.cs" t="Include" />
                 <e p="GridDestroyedEventSystem.cs" t="Include" />
@@ -135,6 +144,22 @@
               <e p="InputContext.cs" t="Include" />
               <e p="InputEntity.cs" t="Include" />
               <e p="InputMatcher.cs" t="Include" />
+            </e>
+            <e p="MapEditor" t="Include">
+              <e p="Components" t="Include">
+                <e p="MapEditorAssetBayAssetsComponent.cs" t="Include" />
+                <e p="MapEditorAssetBayAssetsListenerComponent.cs" t="Include" />
+                <e p="MapEditorAssetBayComponent.cs" t="Include" />
+                <e p="MapEditorAssetDataComponent.cs" t="Include" />
+                <e p="MapEditorAssetDataListenerComponent.cs" t="Include" />
+                <e p="MapEditorIdComponent.cs" t="Include" />
+                <e p="MapEditorMapEditorComponent.cs" t="Include" />
+              </e>
+              <e p="MapEditorAttribute.cs" t="Include" />
+              <e p="MapEditorComponentsLookup.cs" t="Include" />
+              <e p="MapEditorContext.cs" t="Include" />
+              <e p="MapEditorEntity.cs" t="Include" />
+              <e p="MapEditorMatcher.cs" t="Include" />
             </e>
             <e p="Meta" t="Include">
               <e p="Components" t="Include">
@@ -234,9 +259,6 @@
                   <e p="Components" t="Include">
                     <e p="GridTileEditorComponent.cs" t="Include" />
                   </e>
-                  <e p="Data" t="Include">
-                    <e p="GridEditorAssetData.cs" t="Include" />
-                  </e>
                   <e p="Interfaces" t="Include">
                     <e p="IGridEditorAssetBay.cs" t="Include" />
                     <e p="IGridEditorAssetLoader.cs" t="Include" />
@@ -252,10 +274,6 @@
                       <e p="IGridEditorToolService.cs" t="Include" />
                       <e p="RegisterGridEditorServiceSystem.cs" t="Include" />
                     </e>
-                    <e p="GridEditorNavigationService.cs" t="Include" />
-                    <e p="GridEditorObjectService.cs" t="Include" />
-                    <e p="GridEditorService.cs" t="Include" />
-                    <e p="GridEditorToolsService.cs" t="Include" />
                   </e>
                 </e>
                 <e p="Id" t="Include">
@@ -369,24 +387,46 @@
             </e>
             <e p="GameEditor" t="Include">
               <e p="EditorServices.cs" t="Include" />
+              <e p="EditorSystems.cs" t="Include" />
               <e p="Pieces" t="Include">
-                <e p="GridEditor" t="Include">
+                <e p="MapEditor" t="Include">
+                  <e p="Command" t="Include">
+                    <e p="CreateMapEditor" t="Include">
+                      <e p="CommandCreateMapEditorComponent.cs" t="Include" />
+                      <e p="CommandRequestCreateMapEditorComponent.cs" t="Include" />
+                      <e p="CreateMapEditorSystem.cs" t="Include" />
+                      <e p="RequestCreateMapEditorSystem.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Components" t="Include">
+                    <e p="AssetBayAssetsComponent.cs" t="Include" />
+                    <e p="AssetBayComponent.cs" t="Include" />
+                    <e p="AssetDataComponent.cs" t="Include" />
+                    <e p="MapEditorComponent.cs" t="Include" />
+                  </e>
+                  <e p="Services" t="Include">
+                    <e p="GridEditorNavigationService.cs" t="Include" />
+                    <e p="GridEditorObjectService.cs" t="Include" />
+                    <e p="GridEditorService.cs" t="Include" />
+                    <e p="GridEditorToolsService.cs" t="Include" />
+                  </e>
                   <e p="Systems" t="Include">
                     <e p="GenerateGridDebugSystem.cs" t="Include" />
+                    <e p="UpdateAssetBayAssetsSystem.cs" t="Include" />
                   </e>
                 </e>
               </e>
               <e p="Unity" t="Include">
                 <e p="Data" t="Include">
+                  <e p="IMapEditorAssetData.cs" t="Include" />
                   <e p="UnityMapEditorAssetData.cs" t="Include" />
                 </e>
                 <e p="UnityGridEditorAssetLoader.cs" t="Include" />
                 <e p="Views" t="Include">
-                  <e p="GridEditor" t="Include">
-                    <e p="UnityGridEditorBayView.cs" t="Include" />
-                    <e p="UnityGridEditorObjectView.cs" t="Include" />
-                    <e p="UnityGridEditorView.cs" t="Include" />
-                  </e>
+                  <e p="UnityAssetBayView.cs" t="Include" />
+                  <e p="UnityGridEditorObjectView.cs" t="Include" />
+                  <e p="UnityMapEditorBaseView.cs" t="Include" />
+                  <e p="UnityMapEditorView.cs" t="Include" />
                 </e>
               </e>
             </e>

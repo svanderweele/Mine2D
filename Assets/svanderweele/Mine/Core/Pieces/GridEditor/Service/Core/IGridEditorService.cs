@@ -8,6 +8,5 @@ namespace svanderweele.Mine.Core.Pieces.GridEditor.Service
         IGridEditorObjectService
     {
 
-        void SetupEditor(IGridEditorView view);
     }
 }

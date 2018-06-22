@@ -4,6 +4,5 @@ namespace svanderweele.Mine.Core.Pieces.GridEditor.Interfaces
 {
     public interface IGridEditorObjectViewController : IViewController
     {
-        
     }
 }

@@ -1,4 +1,5 @@
 using Entitas;
+using svanderweele.Mine.Core.Pieces.View;
 using svanderweele.Mine.Core.Services.Collision;
 using svanderweele.Mine.Core.Services.Events;
 using svanderweele.Mine.Core.Services.Selection;
@@ -10,9 +11,9 @@ namespace svanderweele.Mine.Game.Unity
     public class UnityViewService : IViewService
     {
 
-        public void LoadAsset(Contexts contexts, IEntity entity, string assetName)
+        public void LoadAsset(Contexts contexts, IEntity entity, string assetPath)
         {
-            var go = GameObject.Instantiate(Resources.Load<GameObject>("prefabs/" + assetName));
+            var go = GameObject.Instantiate(Resources.Load<GameObject>(assetPath));
 
             var view = go.GetComponent<IViewController>();
 

@@ -1,5 +1,6 @@
 
 using Entitas;
+using svanderweele.Mine.Core.Pieces.View;
 
 namespace svanderweele.Mine.Core.Services.View
 {

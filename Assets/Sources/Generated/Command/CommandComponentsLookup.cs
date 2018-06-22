@@ -17,8 +17,10 @@ public static class CommandComponentsLookup {
     public const int CommandAddEntityToGrid = 6;
     public const int CommandRequestAddEntityToGrid = 7;
     public const int Id = 8;
+    public const int CommandCreateMapEditor = 9;
+    public const int CommandRequestCreateMapEditor = 10;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 11;
 
     public static readonly string[] componentNames = {
         "CommandDestroyedListener",
@@ -29,7 +31,9 @@ public static class CommandComponentsLookup {
         "Destroyed",
         "CommandAddEntityToGrid",
         "CommandRequestAddEntityToGrid",
-        "Id"
+        "Id",
+        "CommandCreateMapEditor",
+        "CommandRequestCreateMapEditor"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -41,6 +45,8 @@ public static class CommandComponentsLookup {
         typeof(svanderweele.Mine.Core.Pieces.Destroy.DestroyedComponent),
         typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Commands.AddEntityToGrid.CommandAddEntityToGridComponent),
         typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Commands.AddEntityToGrid.CommandRequestAddEntityToGridComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Id.IdComponent)
+        typeof(svanderweele.Mine.Core.Pieces.Id.IdComponent),
+        typeof(svanderweele.Mine.GameEditor.Pieces.MapEditor.Command.CreateMapEditor.CommandCreateMapEditorComponent),
+        typeof(svanderweele.Mine.GameEditor.Pieces.MapEditor.Command.CreateMapEditor.CommandRequestCreateMapEditorComponent)
     };
 }

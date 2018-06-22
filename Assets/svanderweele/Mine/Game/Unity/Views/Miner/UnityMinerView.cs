@@ -14,7 +14,7 @@ namespace svanderweele.Mine.Game.Unity.Views.Miner
             }
         }
 
-        public override void RegisterEvents(GameEntity entity)
+        protected override void RegisterEvents(GameEntity entity)
         {
             entity.AddSpriteColorListener(this);
         }

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using svanderweele.Mine.Core.Pieces.Grid.GridEditor.Data;
+using svanderweele.Mine.GameEditor.Unity.Data;
 
 namespace svanderweele.Mine.Core.Pieces.Grid.GridEditor.Interfaces
 {
     public interface IGridEditorAssetLoader
     {
-        List<GridEditorAssetData> GetAssets();
+        List<IMapEditorAssetData> GetAssets();
     }
 }

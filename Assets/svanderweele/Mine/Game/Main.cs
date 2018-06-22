@@ -14,6 +14,7 @@ using svanderweele.Mine.Game.Unity;
 using svanderweele.Mine.Game.Utils;
 using svanderweele.Mine.Game.Utils.Containers;
 using svanderweele.Mine.GameEditor;
+using svanderweele.Mine.GameEditor.Pieces.MapEditor.Services;
 using svanderweele.Mine.GameEditor.Unity;
 using UnityEngine;
 using Color = svanderweele.Mine.Game.Utils.Containers.Color;
@@ -50,19 +51,25 @@ namespace svanderweele.Mine.Game
 
 
             var e = _contexts.game.CreateEntity();
-            _coreServices.View.LoadAsset(_contexts, e, "Miner");
+            _coreServices.View.LoadAsset(_contexts, e, "prefabs/miner");
             e.AddPosition(-3, 3);
             e.AddVisible(true);
             e.AddSelectionColor(newSelectionDown: new Color(0.0f, 1.0f, 0.0f, 1.0f), newSelectionHeld: new Color(),
                 newSelectionHoverIn: new Color(), newSelectionHoverOut: new Color(),
                 newSelectionHoverSelect: new Color(), newSelectionUp: new Color());
+
+
+            var createGridEditorReq = _contexts.command.CreateCommandRequest(0);
+            createGridEditorReq.AddCommandRequestCreateMapEditor(grid.id.value);
+            
         }
 
         private Systems CreateSystems()
         {
             return new Systems()
                 .Add(new DebugSystems(_contexts))
-                .Add(new GameSystems(_contexts, _coreServices, _gameServices, _editorServices));
+                .Add(new GameSystems(_contexts, _coreServices, _gameServices, _editorServices))
+                .Add(new EditorSystems(_contexts));
         }
 
         void Update()

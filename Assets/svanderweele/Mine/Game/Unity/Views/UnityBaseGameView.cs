@@ -5,7 +5,7 @@ using svanderweele.Mine.Core.Services.Selection;
 using svanderweele.Mine.Core.Services.View;
 using UnityEngine;
 
-namespace svanderweele.Mine.Game.Unity
+namespace svanderweele.Mine.Game.Unity.Views
 {
     public abstract class UnityBaseGameView : MonoBehaviour, IViewController, IEventListener, IVisibleListener,
         IGameDestroyedListener
@@ -22,6 +22,7 @@ namespace svanderweele.Mine.Game.Unity
 
             _entity = (GameEntity) entity;
 
+            //TODO : How to solve this repeated code?
             var evtListeners = GetComponents<IEventListener>();
 
             foreach (IEventListener listener in evtListeners)
@@ -42,6 +43,7 @@ namespace svanderweele.Mine.Game.Unity
             {
                 controller.Initialize(contexts, entity);
             }
+            
         }
 
         public void Unlink()
@@ -63,7 +65,7 @@ namespace svanderweele.Mine.Game.Unity
             RegisterEvents(_entity);
         }
 
-        public virtual void RegisterEvents(GameEntity entity)
+        protected virtual void RegisterEvents(GameEntity entity)
         {
         }
 
