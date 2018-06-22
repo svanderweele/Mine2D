@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public svanderweele.Mine.Game.Pieces.Sprite.SpriteComponent sprite { get { return (svanderweele.Mine.Game.Pieces.Sprite.SpriteComponent)GetComponent(GameComponentsLookup.Sprite); } }
+    public svanderweele.Mine.Core.Pieces.Sprite.SpriteComponent sprite { get { return (svanderweele.Mine.Core.Pieces.Sprite.SpriteComponent)GetComponent(GameComponentsLookup.Sprite); } }
     public bool hasSprite { get { return HasComponent(GameComponentsLookup.Sprite); } }
 
     public void AddSprite(string newName) {
         var index = GameComponentsLookup.Sprite;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Sprite.SpriteComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Sprite.SpriteComponent>(index);
         component.name = newName;
         AddComponent(index, component);
     }
 
     public void ReplaceSprite(string newName) {
         var index = GameComponentsLookup.Sprite;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Sprite.SpriteComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Sprite.SpriteComponent>(index);
         component.name = newName;
         ReplaceComponent(index, component);
     }

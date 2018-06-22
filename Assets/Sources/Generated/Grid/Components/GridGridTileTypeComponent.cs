@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GridEntity {
 
-    public svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent gridTileType { get { return (svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent)GetComponent(GridComponentsLookup.GridTileType); } }
+    public svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileTypeComponent gridTileType { get { return (svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileTypeComponent)GetComponent(GridComponentsLookup.GridTileType); } }
     public bool hasGridTileType { get { return HasComponent(GridComponentsLookup.GridTileType); } }
 
     public void AddGridTileType(string newType) {
         var index = GridComponentsLookup.GridTileType;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileTypeComponent>(index);
         component.type = newType;
         AddComponent(index, component);
     }
 
     public void ReplaceGridTileType(string newType) {
         var index = GridComponentsLookup.GridTileType;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileTypeComponent>(index);
         component.type = newType;
         ReplaceComponent(index, component);
     }

@@ -1,13 +1,20 @@
 using Entitas;
+using svanderweele.Mine.Core.Pieces;
+using svanderweele.Mine.Core.Pieces.Commands;
+using svanderweele.Mine.Core.Pieces.Grid.Core;
+using svanderweele.Mine.Core.Pieces.Grid.Core.Service;
+using svanderweele.Mine.Core.Pieces.Grid.GridEditor.Service;
+using svanderweele.Mine.Core.Pieces.GridEditor;
+using svanderweele.Mine.Core.Pieces.GridEditor.Service;
+using svanderweele.Mine.Core.Pieces.Id;
 using svanderweele.Mine.Core.Services;
-using svanderweele.Mine.Game.Pieces.Commands;
 using svanderweele.Mine.Game.Pieces.Grid;
-using svanderweele.Mine.Game.Pieces.Grid.Service;
-using svanderweele.Mine.Game.Pieces.Id;
 using svanderweele.Mine.Game.Services;
 using svanderweele.Mine.Game.Unity;
 using svanderweele.Mine.Game.Utils;
 using svanderweele.Mine.Game.Utils.Containers;
+using svanderweele.Mine.GameEditor;
+using svanderweele.Mine.GameEditor.Unity;
 using UnityEngine;
 using Color = svanderweele.Mine.Game.Utils.Containers.Color;
 using Vector2 = svanderweele.Mine.Game.Utils.Math.Vector2;
@@ -20,6 +27,7 @@ namespace svanderweele.Mine.Game
         private Systems _systems;
         private CoreServices _coreServices;
         private GameServices _gameServices;
+        private EditorServices _editorServices;
 
         void Awake()
         {
@@ -31,6 +39,9 @@ namespace svanderweele.Mine.Game
                 new SelectionService(_contexts), new UnityTimeService());
 
             _gameServices = new GameServices(new GridService(_contexts));
+
+            _editorServices = new EditorServices(new GridEditorService(_contexts, new UnityGridEditorAssetLoader(),
+                new GridEditorToolsService(), new GridEditorNavigationService(), new GridEditorObjectService()));
 
             _systems = CreateSystems();
             _systems.Initialize();
@@ -51,7 +62,7 @@ namespace svanderweele.Mine.Game
         {
             return new Systems()
                 .Add(new DebugSystems(_contexts))
-                .Add(new GameSystems(_contexts, _coreServices, _gameServices));
+                .Add(new GameSystems(_contexts, _coreServices, _gameServices, _editorServices));
         }
 
         void Update()

@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 public partial interface IGridTileTypeEntity {
 
-    svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent gridTileType { get; }
+    svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileTypeComponent gridTileType { get; }
     bool hasGridTileType { get; }
 
     void AddGridTileType(string newType);

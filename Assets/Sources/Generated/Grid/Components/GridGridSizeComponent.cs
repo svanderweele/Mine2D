@@ -8,12 +8,12 @@
 //------------------------------------------------------------------------------
 public partial class GridEntity {
 
-    public svanderweele.Mine.Game.Pieces.Grid.Components.GridSizeComponent gridSize { get { return (svanderweele.Mine.Game.Pieces.Grid.Components.GridSizeComponent)GetComponent(GridComponentsLookup.GridSize); } }
+    public svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridSizeComponent gridSize { get { return (svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridSizeComponent)GetComponent(GridComponentsLookup.GridSize); } }
     public bool hasGridSize { get { return HasComponent(GridComponentsLookup.GridSize); } }
 
     public void AddGridSize(int newColumns, int newRows) {
         var index = GridComponentsLookup.GridSize;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridSizeComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridSizeComponent>(index);
         component.columns = newColumns;
         component.rows = newRows;
         AddComponent(index, component);
@@ -21,7 +21,7 @@ public partial class GridEntity {
 
     public void ReplaceGridSize(int newColumns, int newRows) {
         var index = GridComponentsLookup.GridSize;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridSizeComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridSizeComponent>(index);
         component.columns = newColumns;
         component.rows = newRows;
         ReplaceComponent(index, component);

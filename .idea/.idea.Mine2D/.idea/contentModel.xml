@@ -139,6 +139,7 @@
             <e p="Meta" t="Include">
               <e p="Components" t="Include">
                 <e p="MetaCollisionServiceComponent.cs" t="Include" />
+                <e p="MetaGridEditorServiceComponent.cs" t="Include" />
                 <e p="MetaGridServiceComponent.cs" t="Include" />
                 <e p="MetaIdComponent.cs" t="Include" />
                 <e p="MetaInputControllerComponent.cs" t="Include" />
@@ -158,65 +159,18 @@
         <e p="svanderweele" t="Include">
           <e p="Mine" t="Include">
             <e p="Core" t="Include">
-              <e p="Services" t="Include">
-                <e p="Collision" t="Include">
-                  <e p="CollisionServiceComponent.cs" t="Include" />
-                  <e p="ICollisionController.cs" t="Include" />
-                  <e p="ICollisionService.cs" t="Include" />
-                  <e p="RegisterCollisionServiceSystem.cs" t="Include" />
-                </e>
-                <e p="CoreServiceCleanupSystems.cs" t="Include" />
-                <e p="CoreServices.cs" t="Include" />
-                <e p="Events" t="Include">
-                  <e p="IEventListener.cs" t="Include" />
-                </e>
-                <e p="Input" t="Include">
-                  <e p="Binding" t="Include">
-                    <e p="IInputBindConfiguration.cs" t="Include" />
-                    <e p="InputBind.cs" t="Include" />
-                    <e p="InputBindConfiguration.cs" t="Include" />
-                    <e p="InputMapper.cs" t="Include" />
-                  </e>
-                  <e p="Controller" t="Include">
-                    <e p="IInputController.cs" t="Include" />
-                    <e p="InputControllerComponent.cs" t="Include" />
-                    <e p="RegisterInputControllerSystem.cs" t="Include" />
-                  </e>
-                  <e p="Service" t="Include">
-                    <e p="IInputMapper.cs" t="Include" />
-                    <e p="IInputService.cs" t="Include" />
-                    <e p="InputServiceComponent.cs" t="Include" />
-                    <e p="RegisterInputServiceSystem.cs" t="Include" />
-                  </e>
-                </e>
-                <e p="RegisterServicesSystem.cs" t="Include" />
-                <e p="Selection" t="Include">
-                  <e p="ISelectionController.cs" t="Include" />
-                  <e p="ISelectionService.cs" t="Include" />
-                  <e p="RegisterSelectionServiceSystem.cs" t="Include" />
-                  <e p="SelectionCleanupSystem.cs" t="Include" />
-                  <e p="SelectionServiceComponent.cs" t="Include" />
-                </e>
-                <e p="Time" t="Include">
-                  <e p="ITimeService.cs" t="Include" />
-                  <e p="RegisterTimeServiceSystem.cs" t="Include" />
-                  <e p="TimeServiceComponent.cs" t="Include" />
-                </e>
-                <e p="View" t="Include">
-                  <e p="IViewController.cs" t="Include" />
-                  <e p="IViewService.cs" t="Include" />
-                  <e p="RegisterViewServiceSystem.cs" t="Include" />
-                  <e p="ViewServiceComponent.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-            <e p="Game" t="Include">
-              <e p="DebugSystems.cs" t="Include" />
-              <e p="GameSystems.cs" t="Include" />
-              <e p="Main.cs" t="Include" />
               <e p="Pieces" t="Include">
                 <e p="Collision" t="Include">
-                  <e p="CollisionComponent.cs" t="Include" />
+                  <e p="Components" t="Include">
+                    <e p="CollisionComponent.cs" t="Include" />
+                  </e>
+                  <e p="Services" t="Include">
+                    <e p="CollisionService.cs" t="Include" />
+                    <e p="CollisionServiceComponent.cs" t="Include" />
+                    <e p="ICollisionController.cs" t="Include" />
+                    <e p="ICollisionService.cs" t="Include" />
+                    <e p="RegisterCollisionServiceSystem.cs" t="Include" />
+                  </e>
                 </e>
                 <e p="Commands" t="Include">
                   <e p="CommandContextExtension.cs" t="Include" />
@@ -233,9 +187,16 @@
                     <e p="UpdateCommandDelaySystem.cs" t="Include" />
                   </e>
                 </e>
+                <e p="CoreServiceCleanupSystems.cs" t="Include" />
+                <e p="CoreServices.cs" t="Include" />
                 <e p="Destroy" t="Include">
                   <e p="DestroyedComponent.cs" t="Include" />
                   <e p="DestroyEntitiesSystem.cs" t="Include" />
+                </e>
+                <e p="Events" t="Include">
+                  <e p="Interfaces" t="Include">
+                    <e p="IEventListener.cs" t="Include" />
+                  </e>
                 </e>
                 <e p="Grid" t="Include">
                   <e p="Core" t="Include">
@@ -267,21 +228,61 @@
                       <e p="IGridService.cs" t="Include" />
                       <e p="RegisterGridServiceSystem.cs" t="Include" />
                     </e>
-                    <e p="Systems" t="Include">
-                      <e p="GenerateGridDebugSystem.cs" t="Include" />
-                      <e p="GenerateGridSystem.cs" t="Include" />
-                    </e>
                   </e>
-                  <e p="GridEditor" t="Include">
-                    <e p="Components" t="Include">
-                      <e p="GridTileEditorComponent.cs" t="Include" />
+                </e>
+                <e p="GridEditor" t="Include">
+                  <e p="Components" t="Include">
+                    <e p="GridTileEditorComponent.cs" t="Include" />
+                  </e>
+                  <e p="Data" t="Include">
+                    <e p="GridEditorAssetData.cs" t="Include" />
+                  </e>
+                  <e p="Interfaces" t="Include">
+                    <e p="IGridEditorAssetBay.cs" t="Include" />
+                    <e p="IGridEditorAssetLoader.cs" t="Include" />
+                    <e p="IGridEditorObjectViewController.cs" t="Include" />
+                    <e p="IGridEditorView.cs" t="Include" />
+                  </e>
+                  <e p="Service" t="Include">
+                    <e p="Core" t="Include">
+                      <e p="GridEditorServiceComponent.cs" t="Include" />
+                      <e p="IGridEditorNavigationService.cs" t="Include" />
+                      <e p="IGridEditorObjectService.cs" t="Include" />
+                      <e p="IGridEditorService.cs" t="Include" />
+                      <e p="IGridEditorToolService.cs" t="Include" />
+                      <e p="RegisterGridEditorServiceSystem.cs" t="Include" />
                     </e>
+                    <e p="GridEditorNavigationService.cs" t="Include" />
+                    <e p="GridEditorObjectService.cs" t="Include" />
+                    <e p="GridEditorService.cs" t="Include" />
+                    <e p="GridEditorToolsService.cs" t="Include" />
                   </e>
                 </e>
                 <e p="Id" t="Include">
                   <e p="ContextsIdExtensions.cs" t="Include" />
                   <e p="IdComponent.cs" t="Include" />
                 </e>
+                <e p="Input" t="Include">
+                  <e p="Binding" t="Include">
+                    <e p="IInputBindConfiguration.cs" t="Include" />
+                    <e p="InputBind.cs" t="Include" />
+                    <e p="InputBindConfiguration.cs" t="Include" />
+                    <e p="InputMapper.cs" t="Include" />
+                  </e>
+                  <e p="Controller" t="Include">
+                    <e p="IInputController.cs" t="Include" />
+                    <e p="InputControllerComponent.cs" t="Include" />
+                    <e p="RegisterInputControllerSystem.cs" t="Include" />
+                  </e>
+                  <e p="Service" t="Include">
+                    <e p="IInputMapper.cs" t="Include" />
+                    <e p="IInputService.cs" t="Include" />
+                    <e p="InputService.cs" t="Include" />
+                    <e p="InputServiceComponent.cs" t="Include" />
+                    <e p="RegisterInputServiceSystem.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="RegisterServicesSystem.cs" t="Include" />
                 <e p="Selection" t="Include">
                   <e p="Components" t="Include">
                     <e p="SelectionColorComponent.cs" t="Include" />
@@ -289,6 +290,14 @@
                     <e p="SelectionOutComponent.cs" t="Include" />
                     <e p="SelectionOverComponent.cs" t="Include" />
                     <e p="SelectionUpComponent.cs" t="Include" />
+                  </e>
+                  <e p="Services" t="Include">
+                    <e p="ISelectionController.cs" t="Include" />
+                    <e p="ISelectionService.cs" t="Include" />
+                    <e p="RegisterSelectionServiceSystem.cs" t="Include" />
+                    <e p="SelectionCleanupSystem.cs" t="Include" />
+                    <e p="SelectionService.cs" t="Include" />
+                    <e p="SelectionServiceComponent.cs" t="Include" />
                   </e>
                   <e p="Systems" t="Include">
                     <e p="DebugSelectionSystem.cs" t="Include" />
@@ -302,24 +311,50 @@
                   <e p="SpriteColorComponent.cs" t="Include" />
                   <e p="SpriteComponent.cs" t="Include" />
                 </e>
+                <e p="Time" t="Include">
+                  <e p="ITimeService.cs" t="Include" />
+                  <e p="RegisterTimeServiceSystem.cs" t="Include" />
+                  <e p="TimeServiceComponent.cs" t="Include" />
+                </e>
+                <e p="View" t="Include">
+                  <e p="IViewController.cs" t="Include" />
+                  <e p="IViewService.cs" t="Include" />
+                  <e p="RegisterViewServiceSystem.cs" t="Include" />
+                  <e p="ViewServiceComponent.cs" t="Include" />
+                </e>
                 <e p="Visible" t="Include">
                   <e p="VisibleComponent.cs" t="Include" />
                 </e>
               </e>
-              <e p="Services" t="Include">
-                <e p="CollisionService.cs" t="Include" />
-                <e p="GameServices.cs" t="Include" />
-                <e p="InputService.cs" t="Include" />
-                <e p="SelectionService.cs" t="Include" />
+            </e>
+            <e p="Game" t="Include">
+              <e p="DebugSystems.cs" t="Include" />
+              <e p="GameServices.cs" t="Include" />
+              <e p="GameSystems.cs" t="Include" />
+              <e p="Main.cs" t="Include" />
+              <e p="Pieces" t="Include">
+                <e p="Grid" t="Include">
+                  <e p="Systems" t="Include">
+                    <e p="GenerateGridSystem.cs" t="Include" />
+                  </e>
+                </e>
               </e>
               <e p="Unity" t="Include">
+                <e p="Position" t="Include">
+                  <e p="UnityPositionController.cs" t="Include" />
+                </e>
                 <e p="UnityCollisionController.cs" t="Include" />
-                <e p="UnityGameView.cs" t="Include" />
                 <e p="UnityInputController.cs" t="Include" />
                 <e p="UnityInputMapper.cs" t="Include" />
                 <e p="UnitySelectionController.cs" t="Include" />
                 <e p="UnityTimeService.cs" t="Include" />
                 <e p="UnityViewService.cs" t="Include" />
+                <e p="Views" t="Include">
+                  <e p="Miner" t="Include">
+                    <e p="UnityMinerView.cs" t="Include" />
+                  </e>
+                  <e p="UnityBaseGameView.cs" t="Include" />
+                </e>
               </e>
               <e p="Utils" t="Include">
                 <e p="AssetPaths.cs" t="Include" />
@@ -332,11 +367,37 @@
                 </e>
               </e>
             </e>
+            <e p="GameEditor" t="Include">
+              <e p="EditorServices.cs" t="Include" />
+              <e p="Pieces" t="Include">
+                <e p="GridEditor" t="Include">
+                  <e p="Systems" t="Include">
+                    <e p="GenerateGridDebugSystem.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Unity" t="Include">
+                <e p="Data" t="Include">
+                  <e p="UnityMapEditorAssetData.cs" t="Include" />
+                </e>
+                <e p="UnityGridEditorAssetLoader.cs" t="Include" />
+                <e p="Views" t="Include">
+                  <e p="GridEditor" t="Include">
+                    <e p="UnityGridEditorBayView.cs" t="Include" />
+                    <e p="UnityGridEditorObjectView.cs" t="Include" />
+                    <e p="UnityGridEditorView.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
             <e p="Testing" t="Include">
               <e p="InputBindTest" t="Include">
                 <e p="InputBindConfiguration.cs" t="Include" />
                 <e p="MainTest.cs" t="Include" />
               </e>
+            </e>
+            <e p="Utilities" t="Include">
+              <e p="CanvasAutoAssignMainCamera.cs" t="Include" />
             </e>
           </e>
         </e>

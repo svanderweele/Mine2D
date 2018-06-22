@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class CommandEntity {
 
-    public svanderweele.Mine.Game.Pieces.Id.IdComponent id { get { return (svanderweele.Mine.Game.Pieces.Id.IdComponent)GetComponent(CommandComponentsLookup.Id); } }
+    public svanderweele.Mine.Core.Pieces.Id.IdComponent id { get { return (svanderweele.Mine.Core.Pieces.Id.IdComponent)GetComponent(CommandComponentsLookup.Id); } }
     public bool hasId { get { return HasComponent(CommandComponentsLookup.Id); } }
 
     public void AddId(int newValue) {
         var index = CommandComponentsLookup.Id;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Id.IdComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Id.IdComponent>(index);
         component.value = newValue;
         AddComponent(index, component);
     }
 
     public void ReplaceId(int newValue) {
         var index = CommandComponentsLookup.Id;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Id.IdComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Id.IdComponent>(index);
         component.value = newValue;
         ReplaceComponent(index, component);
     }

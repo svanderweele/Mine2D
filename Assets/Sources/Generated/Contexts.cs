@@ -74,42 +74,42 @@ public partial class Contexts {
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, int>(
             GridLayer,
             game.GetGroup(GameMatcher.GridLayer),
-            (e, c) => ((svanderweele.Mine.Game.Pieces.Grid.Components.GridLayerComponent)c).layer));
+            (e, c) => ((svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridLayerComponent)c).layer));
 
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, svanderweele.Mine.Game.Utils.Math.Vector2>(
             GridPosition,
             game.GetGroup(GameMatcher.GridPosition),
-            (e, c) => ((svanderweele.Mine.Game.Pieces.Grid.Components.GridPositionComponent)c).position));
+            (e, c) => ((svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridPositionComponent)c).position));
 
         grid.AddEntityIndex(new Entitas.EntityIndex<GridEntity, string>(
             GridTileType,
             grid.GetGroup(GridMatcher.GridTileType),
-            (e, c) => ((svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent)c).type));
+            (e, c) => ((svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileTypeComponent)c).type));
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, string>(
             GridTileType,
             game.GetGroup(GameMatcher.GridTileType),
-            (e, c) => ((svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent)c).type));
+            (e, c) => ((svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileTypeComponent)c).type));
 
         game.AddEntityIndex(new Entitas.PrimaryEntityIndex<GameEntity, int>(
             Id,
             game.GetGroup(GameMatcher.Id),
-            (e, c) => ((svanderweele.Mine.Game.Pieces.Id.IdComponent)c).value));
+            (e, c) => ((svanderweele.Mine.Core.Pieces.Id.IdComponent)c).value));
         input.AddEntityIndex(new Entitas.PrimaryEntityIndex<InputEntity, int>(
             Id,
             input.GetGroup(InputMatcher.Id),
-            (e, c) => ((svanderweele.Mine.Game.Pieces.Id.IdComponent)c).value));
+            (e, c) => ((svanderweele.Mine.Core.Pieces.Id.IdComponent)c).value));
         meta.AddEntityIndex(new Entitas.PrimaryEntityIndex<MetaEntity, int>(
             Id,
             meta.GetGroup(MetaMatcher.Id),
-            (e, c) => ((svanderweele.Mine.Game.Pieces.Id.IdComponent)c).value));
+            (e, c) => ((svanderweele.Mine.Core.Pieces.Id.IdComponent)c).value));
         command.AddEntityIndex(new Entitas.PrimaryEntityIndex<CommandEntity, int>(
             Id,
             command.GetGroup(CommandMatcher.Id),
-            (e, c) => ((svanderweele.Mine.Game.Pieces.Id.IdComponent)c).value));
+            (e, c) => ((svanderweele.Mine.Core.Pieces.Id.IdComponent)c).value));
         grid.AddEntityIndex(new Entitas.PrimaryEntityIndex<GridEntity, int>(
             Id,
             grid.GetGroup(GridMatcher.Id),
-            (e, c) => ((svanderweele.Mine.Game.Pieces.Id.IdComponent)c).value));
+            (e, c) => ((svanderweele.Mine.Core.Pieces.Id.IdComponent)c).value));
     }
 }
 

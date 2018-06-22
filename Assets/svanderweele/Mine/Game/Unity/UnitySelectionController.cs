@@ -11,8 +11,8 @@ namespace svanderweele.Mine.Game.Unity
 
         public void Initialize(Contexts contexts, IEntity entity)
         {
-            _selectionService = contexts.meta.selectionService.selection;
             _entity = (GameEntity) entity;
+            _selectionService = contexts.meta.selectionService.selection;
         }
 
 

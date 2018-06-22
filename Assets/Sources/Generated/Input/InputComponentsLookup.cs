@@ -22,7 +22,7 @@ public static class InputComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(InputDestroyedListenerComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Destroy.DestroyedComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Id.IdComponent)
+        typeof(svanderweele.Mine.Core.Pieces.Destroy.DestroyedComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Id.IdComponent)
     };
 }

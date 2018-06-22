@@ -38,15 +38,15 @@ public static class GridComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(GridDestroyedListenerComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Destroy.DestroyedComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridChangedComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridInitializedComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridSizeComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridTilesComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridTileSizeComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.GridTileTypeComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Grid.Components.NewGridComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Id.IdComponent)
+        typeof(svanderweele.Mine.Core.Pieces.Destroy.DestroyedComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridChangedComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridInitializedComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridSizeComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTilesComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileSizeComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileTypeComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.NewGridComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Id.IdComponent)
     };
 }

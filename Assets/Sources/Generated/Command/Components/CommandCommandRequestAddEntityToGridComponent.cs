@@ -8,12 +8,12 @@
 //------------------------------------------------------------------------------
 public partial class CommandEntity {
 
-    public svanderweele.Mine.Game.Pieces.Grid.Commands.CommandRequestAddEntityToGridComponent commandRequestAddEntityToGrid { get { return (svanderweele.Mine.Game.Pieces.Grid.Commands.CommandRequestAddEntityToGridComponent)GetComponent(CommandComponentsLookup.CommandRequestAddEntityToGrid); } }
+    public svanderweele.Mine.Core.Pieces.Grid.Core.Commands.AddEntityToGrid.CommandRequestAddEntityToGridComponent commandRequestAddEntityToGrid { get { return (svanderweele.Mine.Core.Pieces.Grid.Core.Commands.AddEntityToGrid.CommandRequestAddEntityToGridComponent)GetComponent(CommandComponentsLookup.CommandRequestAddEntityToGrid); } }
     public bool hasCommandRequestAddEntityToGrid { get { return HasComponent(CommandComponentsLookup.CommandRequestAddEntityToGrid); } }
 
     public void AddCommandRequestAddEntityToGrid(int newEntityId, int newGridId, int newLayer) {
         var index = CommandComponentsLookup.CommandRequestAddEntityToGrid;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Commands.CommandRequestAddEntityToGridComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.Core.Commands.AddEntityToGrid.CommandRequestAddEntityToGridComponent>(index);
         component.entityId = newEntityId;
         component.gridId = newGridId;
         component.layer = newLayer;
@@ -22,7 +22,7 @@ public partial class CommandEntity {
 
     public void ReplaceCommandRequestAddEntityToGrid(int newEntityId, int newGridId, int newLayer) {
         var index = CommandComponentsLookup.CommandRequestAddEntityToGrid;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Commands.CommandRequestAddEntityToGridComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.Core.Commands.AddEntityToGrid.CommandRequestAddEntityToGridComponent>(index);
         component.entityId = newEntityId;
         component.gridId = newGridId;
         component.layer = newLayer;

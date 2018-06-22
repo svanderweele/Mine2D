@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public svanderweele.Mine.Game.Pieces.Grid.Components.GridPositionComponent gridPosition { get { return (svanderweele.Mine.Game.Pieces.Grid.Components.GridPositionComponent)GetComponent(GameComponentsLookup.GridPosition); } }
+    public svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridPositionComponent gridPosition { get { return (svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridPositionComponent)GetComponent(GameComponentsLookup.GridPosition); } }
     public bool hasGridPosition { get { return HasComponent(GameComponentsLookup.GridPosition); } }
 
     public void AddGridPosition(svanderweele.Mine.Game.Utils.Math.Vector2 newPosition) {
         var index = GameComponentsLookup.GridPosition;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridPositionComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridPositionComponent>(index);
         component.position = newPosition;
         AddComponent(index, component);
     }
 
     public void ReplaceGridPosition(svanderweele.Mine.Game.Utils.Math.Vector2 newPosition) {
         var index = GameComponentsLookup.GridPosition;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridPositionComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridPositionComponent>(index);
         component.position = newPosition;
         ReplaceComponent(index, component);
     }

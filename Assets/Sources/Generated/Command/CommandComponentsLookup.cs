@@ -34,13 +34,13 @@ public static class CommandComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(CommandDestroyedListenerComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Commands.Components.CommandComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Commands.Components.CommandConsumedComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Commands.Components.CommandDelayComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Commands.Components.CommandRequestComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Destroy.DestroyedComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Grid.Commands.CommandAddEntityToGridComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Grid.Commands.CommandRequestAddEntityToGridComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Id.IdComponent)
+        typeof(svanderweele.Mine.Core.Pieces.Commands.Components.CommandComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Commands.Components.CommandConsumedComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Commands.Components.CommandDelayComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Commands.Components.CommandRequestComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Destroy.DestroyedComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Commands.AddEntityToGrid.CommandAddEntityToGridComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Commands.AddEntityToGrid.CommandRequestAddEntityToGridComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Id.IdComponent)
     };
 }

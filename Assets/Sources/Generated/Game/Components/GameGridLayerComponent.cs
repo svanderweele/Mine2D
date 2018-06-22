@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public svanderweele.Mine.Game.Pieces.Grid.Components.GridLayerComponent gridLayer { get { return (svanderweele.Mine.Game.Pieces.Grid.Components.GridLayerComponent)GetComponent(GameComponentsLookup.GridLayer); } }
+    public svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridLayerComponent gridLayer { get { return (svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridLayerComponent)GetComponent(GameComponentsLookup.GridLayer); } }
     public bool hasGridLayer { get { return HasComponent(GameComponentsLookup.GridLayer); } }
 
     public void AddGridLayer(int newLayer) {
         var index = GameComponentsLookup.GridLayer;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridLayerComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridLayerComponent>(index);
         component.layer = newLayer;
         AddComponent(index, component);
     }
 
     public void ReplaceGridLayer(int newLayer) {
         var index = GameComponentsLookup.GridLayer;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Grid.Components.GridLayerComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridLayerComponent>(index);
         component.layer = newLayer;
         ReplaceComponent(index, component);
     }

@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public svanderweele.Mine.Game.Pieces.Id.IdComponent id { get { return (svanderweele.Mine.Game.Pieces.Id.IdComponent)GetComponent(GameComponentsLookup.Id); } }
+    public svanderweele.Mine.Core.Pieces.Id.IdComponent id { get { return (svanderweele.Mine.Core.Pieces.Id.IdComponent)GetComponent(GameComponentsLookup.Id); } }
     public bool hasId { get { return HasComponent(GameComponentsLookup.Id); } }
 
     public void AddId(int newValue) {
         var index = GameComponentsLookup.Id;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Id.IdComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Id.IdComponent>(index);
         component.value = newValue;
         AddComponent(index, component);
     }
 
     public void ReplaceId(int newValue) {
         var index = GameComponentsLookup.Id;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Id.IdComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Id.IdComponent>(index);
         component.value = newValue;
         ReplaceComponent(index, component);
     }

@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public svanderweele.Mine.Game.Pieces.Collision.CollisionComponent collision { get { return (svanderweele.Mine.Game.Pieces.Collision.CollisionComponent)GetComponent(GameComponentsLookup.Collision); } }
+    public svanderweele.Mine.Core.Pieces.Collision.CollisionComponent collision { get { return (svanderweele.Mine.Core.Pieces.Collision.CollisionComponent)GetComponent(GameComponentsLookup.Collision); } }
     public bool hasCollision { get { return HasComponent(GameComponentsLookup.Collision); } }
 
     public void AddCollision(System.Collections.Generic.List<int> newCollisions) {
         var index = GameComponentsLookup.Collision;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Collision.CollisionComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Collision.CollisionComponent>(index);
         component.collisions = newCollisions;
         AddComponent(index, component);
     }
 
     public void ReplaceCollision(System.Collections.Generic.List<int> newCollisions) {
         var index = GameComponentsLookup.Collision;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Collision.CollisionComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Collision.CollisionComponent>(index);
         component.collisions = newCollisions;
         ReplaceComponent(index, component);
     }

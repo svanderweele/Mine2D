@@ -1,20 +1,22 @@
 ﻿using Entitas;
+using svanderweele.Mine.Core.Pieces;
+using svanderweele.Mine.Core.Pieces.Commands.Systems;
+using svanderweele.Mine.Core.Pieces.Destroy;
+using svanderweele.Mine.Core.Pieces.Grid.Core.Commands.AddEntityToGrid;
+using svanderweele.Mine.Core.Pieces.Selection.Systems;
 using svanderweele.Mine.Core.Services;
-using svanderweele.Mine.Game.Pieces.Commands.Systems;
-using svanderweele.Mine.Game.Pieces.Destroy;
-using svanderweele.Mine.Game.Pieces.Grid.Commands.AddEntityToGrid;
-using svanderweele.Mine.Game.Pieces.Selection.Systems;
 using svanderweele.Mine.Game.Services;
+using svanderweele.Mine.GameEditor;
 using UnityEngine;
 
 namespace svanderweele.Mine.Game
 {
     public class GameSystems : Feature
     {
-        public GameSystems(Contexts contexts, CoreServices coreServices, GameServices gameServices)
+        public GameSystems(Contexts contexts, CoreServices coreServices, GameServices gameServices, EditorServices editorServices)
         {
             //Initialize
-            Add(new RegisterServicesSystem(contexts, coreServices, gameServices));
+            Add(new RegisterServicesSystem(contexts, coreServices, gameServices, editorServices));
 
             //Remove
             Add(new RemoveCommandSystem(contexts));

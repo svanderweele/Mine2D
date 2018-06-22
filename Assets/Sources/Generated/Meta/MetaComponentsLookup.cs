@@ -8,36 +8,39 @@
 //------------------------------------------------------------------------------
 public static class MetaComponentsLookup {
 
-    public const int CollisionService = 0;
-    public const int InputController = 1;
-    public const int InputService = 2;
-    public const int SelectionService = 3;
-    public const int TimeService = 4;
-    public const int ViewService = 5;
-    public const int GridService = 6;
-    public const int Id = 7;
+    public const int GridService = 0;
+    public const int GridEditorService = 1;
+    public const int Id = 2;
+    public const int CollisionService = 3;
+    public const int InputController = 4;
+    public const int InputService = 5;
+    public const int SelectionService = 6;
+    public const int TimeService = 7;
+    public const int ViewService = 8;
 
-    public const int TotalComponents = 8;
+    public const int TotalComponents = 9;
 
     public static readonly string[] componentNames = {
+        "GridService",
+        "GridEditorService",
+        "Id",
         "CollisionService",
         "InputController",
         "InputService",
         "SelectionService",
         "TimeService",
-        "ViewService",
-        "GridService",
-        "Id"
+        "ViewService"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Service.GridServiceComponent),
+        typeof(svanderweele.Mine.Core.Pieces.GridEditor.Service.GridEditorServiceComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Id.IdComponent),
         typeof(svanderweele.Mine.Core.Services.Collision.CollisionServiceComponent),
         typeof(svanderweele.Mine.Core.Services.Input.Controller.InputControllerComponent),
         typeof(svanderweele.Mine.Core.Services.Input.Service.InputServiceComponent),
         typeof(svanderweele.Mine.Core.Services.Selection.SelectionServiceComponent),
         typeof(svanderweele.Mine.Core.Services.Time.TimeServiceComponent),
-        typeof(svanderweele.Mine.Core.Services.View.ViewServiceComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Grid.Service.GridServiceComponent),
-        typeof(svanderweele.Mine.Game.Pieces.Id.IdComponent)
+        typeof(svanderweele.Mine.Core.Services.View.ViewServiceComponent)
     };
 }

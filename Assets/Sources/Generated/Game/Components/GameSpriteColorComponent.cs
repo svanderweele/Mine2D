@@ -8,12 +8,12 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public svanderweele.Mine.Game.Pieces.Sprite.SpriteColorComponent spriteColor { get { return (svanderweele.Mine.Game.Pieces.Sprite.SpriteColorComponent)GetComponent(GameComponentsLookup.SpriteColor); } }
+    public svanderweele.Mine.Core.Pieces.Sprite.SpriteColorComponent spriteColor { get { return (svanderweele.Mine.Core.Pieces.Sprite.SpriteColorComponent)GetComponent(GameComponentsLookup.SpriteColor); } }
     public bool hasSpriteColor { get { return HasComponent(GameComponentsLookup.SpriteColor); } }
 
     public void AddSpriteColor(float newR, float newG, float newB, float newA) {
         var index = GameComponentsLookup.SpriteColor;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Sprite.SpriteColorComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Sprite.SpriteColorComponent>(index);
         component.r = newR;
         component.g = newG;
         component.b = newB;
@@ -23,7 +23,7 @@ public partial class GameEntity {
 
     public void ReplaceSpriteColor(float newR, float newG, float newB, float newA) {
         var index = GameComponentsLookup.SpriteColor;
-        var component = CreateComponent<svanderweele.Mine.Game.Pieces.Sprite.SpriteColorComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Sprite.SpriteColorComponent>(index);
         component.r = newR;
         component.g = newG;
         component.b = newB;

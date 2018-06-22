@@ -9,6 +9,7 @@ namespace svanderweele.Mine.Game.Unity
 {
     public class UnityViewService : IViewService
     {
+
         public void LoadAsset(Contexts contexts, IEntity entity, string assetName)
         {
             var go = GameObject.Instantiate(Resources.Load<GameObject>("prefabs/" + assetName));
@@ -19,28 +20,12 @@ namespace svanderweele.Mine.Game.Unity
             {
                 view.Link(contexts, entity);
             }
+        }
 
-            var evtListeners = go.GetComponents<IEventListener>();
-
-            foreach (IEventListener listener in evtListeners)
-            {
-                listener.RegisterEvents(contexts, entity);
-            }
-
-
-            var collisionListeners = go.GetComponents<ICollisionController>();
-
-            foreach (var collisionController in collisionListeners)
-            {
-                collisionController.Initialize(contexts, entity);
-            }
-
-            var selectionController = go.GetComponents<ISelectionController>();
-            
-            foreach (var controller in selectionController)
-            {
-                controller.Initialize(contexts, entity);    
-            }
+        public void LinkAsset(Contexts contexts, IEntity entity, IViewController controller)
+        {
+            controller.Unlink();
+            controller.Link(contexts, entity);
         }
     }
 }
