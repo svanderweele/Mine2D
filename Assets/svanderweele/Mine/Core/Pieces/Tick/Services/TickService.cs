@@ -16,6 +16,35 @@ namespace svanderweele.Mine.Core.Pieces.Tick.Services
         {
             return entity.tick.ticks[tickEnum].shouldTick;
         }
+
+        public void SetFrozenState(ITickableEntity entity, TickEnum tickEnum, bool state)
+        {
+            var tick = entity.tick.ticks[tickEnum];
+            tick.frozen = state;
+            entity.ReplaceTick(entity.tick.ticks);
+        }
+
+        public void SetValue(ITickableEntity entity, TickEnum tickEnum, float value)
+        {
+            var tick = entity.tick.ticks[tickEnum];
+            tick.currentValue = value;
+            tick.value = value;
+            entity.ReplaceTick(entity.tick.ticks);
+        }
+
+        public void SetDelay(ITickableEntity entity, TickEnum tickEnum, float delay)
+        {
+            var tick = entity.tick.ticks[tickEnum];
+            tick.delay = delay;
+            tick.delayValue = delay;
+            entity.ReplaceTick(entity.tick.ticks);
+        }
+
+        public void ResetDelay(ITickableEntity entity, TickEnum tickEnum)
+        {
+            var tick = entity.tick.ticks[tickEnum];
+            SetDelay(entity, tickEnum, tick.delay);
+        }
     }
 }
 

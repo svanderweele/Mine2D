@@ -42,6 +42,11 @@ namespace svanderweele.Mine.Core.Pieces.Tick.Systems
                     }
                     else
                     {
+                        if (tick.frozen)
+                        {
+                            continue;
+                        }
+
                         tick.currentValue -= _timeService.GetFixedDeltaTime();
 
                         if (tick.currentValue <= 0)
@@ -50,10 +55,9 @@ namespace svanderweele.Mine.Core.Pieces.Tick.Systems
                             var fps = _timeService.GetApplicationFrameRate();
                             var tickMultiplier = tick.multiplier;
                             var newTickValue = 1 / (tickMultiplier * fps);
-                            tick.value = newTickValue;
-                            tick.currentValue = newTickValue;
                             tick.shouldTick = true;
-                            tick.delayValue = tick.delay;
+                            _tickService.SetValue(gameEntity, ticksKey.Key, newTickValue);
+                            _tickService.ResetDelay(gameEntity, ticksKey.Key);
                         }
                     }
                 }

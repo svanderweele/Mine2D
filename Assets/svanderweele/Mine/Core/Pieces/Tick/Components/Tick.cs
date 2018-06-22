@@ -9,5 +9,6 @@
         public float delay;
         public float multiplier;
         public bool shouldTick;
+        public bool frozen;
     }
 }

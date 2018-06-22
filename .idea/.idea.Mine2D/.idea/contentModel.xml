@@ -348,7 +348,6 @@
                     <e p="TickServiceComponent.cs" t="Include" />
                   </e>
                   <e p="Systems" t="Include">
-                    <e p="ResetTickSystem.cs" t="Include" />
                     <e p="UpdateTickSystem.cs" t="Include" />
                   </e>
                 </e>
