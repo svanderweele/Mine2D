@@ -29,7 +29,7 @@ namespace svanderweele.Mine.GameEditor.Pieces.MapEditor.Systems
         {
             foreach (var tickEntity in entities)
             {
-                if (tickEntity.tick.ticks[TickEnum.MapEditor_AssetLoading].shouldTick == false)
+                if (_contexts.meta.tickService.instance.IsTick(tickEntity, TickEnum.MapEditor_AssetLoading) == false)
                 {
                     return;
                 }

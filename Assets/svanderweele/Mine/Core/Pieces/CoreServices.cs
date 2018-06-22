@@ -1,4 +1,6 @@
 using svanderweele.Mine.Core.Pieces.GridEditor.Service;
+using svanderweele.Mine.Core.Pieces.Tick.Services;
+using svanderweele.Mine.Core.Pieces.Time;
 using svanderweele.Mine.Core.Pieces.View;
 using svanderweele.Mine.Core.Services.Collision;
 using svanderweele.Mine.Core.Services.Input.Controller;
@@ -17,8 +19,9 @@ namespace svanderweele.Mine.Core.Pieces
         public readonly ICollisionService Collision;
         public readonly ISelectionService Selection;
         public readonly ITimeService Time;
+        public readonly ITickService Tick;
         
-        public CoreServices(IViewService view, IInputService input, IInputController inputController, ICollisionService collision, ISelectionService selection, ITimeService time)
+        public CoreServices(IViewService view, IInputService input, IInputController inputController, ICollisionService collision, ISelectionService selection, ITimeService time, ITickService tick)
         {
             View = view;
             Input = input;
@@ -26,6 +29,7 @@ namespace svanderweele.Mine.Core.Pieces
             Collision = collision;
             Selection = selection;
             Time = time;
+            Tick = tick;
         }
 
     }

@@ -11,19 +11,21 @@ public static class MetaComponentsLookup {
     public const int GridService = 0;
     public const int GridEditorService = 1;
     public const int Id = 2;
-    public const int CollisionService = 3;
-    public const int InputController = 4;
-    public const int InputService = 5;
-    public const int SelectionService = 6;
-    public const int TimeService = 7;
-    public const int ViewService = 8;
+    public const int TickService = 3;
+    public const int CollisionService = 4;
+    public const int InputController = 5;
+    public const int InputService = 6;
+    public const int SelectionService = 7;
+    public const int TimeService = 8;
+    public const int ViewService = 9;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
         "GridService",
         "GridEditorService",
         "Id",
+        "TickService",
         "CollisionService",
         "InputController",
         "InputService",
@@ -36,6 +38,7 @@ public static class MetaComponentsLookup {
         typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Service.GridServiceComponent),
         typeof(svanderweele.Mine.Core.Pieces.GridEditor.Service.GridEditorServiceComponent),
         typeof(svanderweele.Mine.Core.Pieces.Id.IdComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Tick.Services.TickServiceComponent),
         typeof(svanderweele.Mine.Core.Services.Collision.CollisionServiceComponent),
         typeof(svanderweele.Mine.Core.Services.Input.Controller.InputControllerComponent),
         typeof(svanderweele.Mine.Core.Services.Input.Service.InputServiceComponent),

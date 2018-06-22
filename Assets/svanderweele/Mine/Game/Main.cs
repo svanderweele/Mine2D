@@ -8,6 +8,7 @@ using svanderweele.Mine.Core.Pieces.GridEditor;
 using svanderweele.Mine.Core.Pieces.GridEditor.Service;
 using svanderweele.Mine.Core.Pieces.Id;
 using svanderweele.Mine.Core.Pieces.Tick.Components;
+using svanderweele.Mine.Core.Pieces.Tick.Services;
 using svanderweele.Mine.Game.Services;
 using svanderweele.Mine.Game.Unity;
 using svanderweele.Mine.Game.Utils;
@@ -36,7 +37,7 @@ namespace svanderweele.Mine.Game
 
             _coreServices = new CoreServices(new UnityViewService(), new InputService(_contexts),
                 new UnityInputController(new UnityInputMapper()), new CollisionService(_contexts),
-                new SelectionService(_contexts), new UnityTimeService());
+                new SelectionService(_contexts), new UnityTimeService(), new TickService(_contexts));
 
             _gameServices = new GameServices(new GridService(_contexts));
 
@@ -62,7 +63,7 @@ namespace svanderweele.Mine.Game
             createGridEditorReq.AddCommandRequestCreateMapEditor(grid.id.value);
 
             var tick = _contexts.game.CreateEntity();
-            var newTick = new Tick() {delayValue = 10, delay = 10, multiplier = 1f};
+            var newTick = new Tick() {delayValue = 0.05f, delay = 1, multiplier = 1f};
             tick.AddTick(new Dictionary<TickEnum, Tick>() {{TickEnum.MapEditor_AssetLoading, newTick}});
         }
 

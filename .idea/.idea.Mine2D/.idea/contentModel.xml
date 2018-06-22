@@ -36,6 +36,7 @@
                 <e p="IDestroyedEntity.cs" t="Include" />
                 <e p="IGridTileTypeEntity.cs" t="Include" />
                 <e p="IIdEntity.cs" t="Include" />
+                <e p="ITickEntity.cs" t="Include" />
               </e>
             </e>
             <e p="Contexts.cs" t="Include" />
@@ -156,6 +157,7 @@
                 <e p="MapEditorAssetDataListenerComponent.cs" t="Include" />
                 <e p="MapEditorIdComponent.cs" t="Include" />
                 <e p="MapEditorMapEditorComponent.cs" t="Include" />
+                <e p="MapEditorTickComponent.cs" t="Include" />
               </e>
               <e p="MapEditorAttribute.cs" t="Include" />
               <e p="MapEditorComponentsLookup.cs" t="Include" />
@@ -172,6 +174,7 @@
                 <e p="MetaInputControllerComponent.cs" t="Include" />
                 <e p="MetaInputServiceComponent.cs" t="Include" />
                 <e p="MetaSelectionServiceComponent.cs" t="Include" />
+                <e p="MetaTickServiceComponent.cs" t="Include" />
                 <e p="MetaTimeServiceComponent.cs" t="Include" />
                 <e p="MetaViewServiceComponent.cs" t="Include" />
               </e>
@@ -338,9 +341,14 @@
                     <e p="TickDelayComponent.cs" t="Include" />
                     <e p="TickMultiplierComponent.cs" t="Include" />
                   </e>
+                  <e p="Services" t="Include">
+                    <e p="ITickService.cs" t="Include" />
+                    <e p="RegisterTickServiceSystem.cs" t="Include" />
+                    <e p="TickService.cs" t="Include" />
+                    <e p="TickServiceComponent.cs" t="Include" />
+                  </e>
                   <e p="Systems" t="Include">
                     <e p="ResetTickSystem.cs" t="Include" />
-                    <e p="TestTickSystem.cs" t="Include" />
                     <e p="UpdateTickSystem.cs" t="Include" />
                   </e>
                 </e>

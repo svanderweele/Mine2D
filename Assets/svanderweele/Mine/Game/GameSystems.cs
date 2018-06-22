@@ -14,7 +14,8 @@ namespace svanderweele.Mine.Game
 {
     public class GameSystems : Feature
     {
-        public GameSystems(Contexts contexts, CoreServices coreServices, GameServices gameServices, EditorServices editorServices)
+        public GameSystems(Contexts contexts, CoreServices coreServices, GameServices gameServices,
+            EditorServices editorServices)
         {
             //Initialize
             Add(new RegisterServicesSystem(contexts, coreServices, gameServices, editorServices));
@@ -29,12 +30,9 @@ namespace svanderweele.Mine.Game
             Add(new CommandAddEntityToGridSystem(contexts));
 
             //Update
-//            Add(new DrawGridDebugSystem(contexts));
-//            Add(new GenerateGridSystem(contexts));
             Add(new UpdateCommandDelaySystem(contexts));
             Add(new UpdateSelectionColorSystem(contexts));
             Add(new UpdateTickSystem(contexts));
-            Add(new TestTickSystem(contexts));
 
             //Events
             Add(new CommandEventSystems(contexts));
@@ -50,6 +48,5 @@ namespace svanderweele.Mine.Game
         {
             return base.Add(system);
         }
-
     }
 }

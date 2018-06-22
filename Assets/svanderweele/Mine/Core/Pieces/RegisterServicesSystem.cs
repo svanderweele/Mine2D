@@ -1,7 +1,7 @@
 using Entitas;
-using svanderweele.Mine.Core.Pieces;
 using svanderweele.Mine.Core.Pieces.Grid.Core.Service;
 using svanderweele.Mine.Core.Pieces.GridEditor.Service;
+using svanderweele.Mine.Core.Pieces.Tick.Services;
 using svanderweele.Mine.Core.Services.Collision;
 using svanderweele.Mine.Core.Services.Input.Controller;
 using svanderweele.Mine.Core.Services.Input.Service;
@@ -9,10 +9,9 @@ using svanderweele.Mine.Core.Services.Selection;
 using svanderweele.Mine.Core.Services.Time;
 using svanderweele.Mine.Core.Services.View;
 using svanderweele.Mine.Game;
-using svanderweele.Mine.Game.Services;
 using svanderweele.Mine.GameEditor;
 
-namespace svanderweele.Mine.Core.Services
+namespace svanderweele.Mine.Core.Pieces
 {
     public class RegisterServicesSystem : Feature
     {
@@ -27,6 +26,7 @@ namespace svanderweele.Mine.Core.Services
             Add(new RegisterInputServiceSystem(contexts, coreServices.Input));
             Add(new RegisterSelectionServiceSystem(contexts, coreServices.Selection));
             Add(new RegisterInputControllerSystem(contexts, coreServices.InputController));
+            Add(new RegisterTickServiceSystem(contexts, coreServices.Tick));
 
             //Game Services
             Add(new RegisterGridServiceSystem(contexts, gameServices.Grid));

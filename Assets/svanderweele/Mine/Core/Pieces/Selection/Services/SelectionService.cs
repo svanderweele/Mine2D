@@ -1,4 +1,5 @@
-﻿using svanderweele.Mine.Core.Services.Selection;
+﻿using svanderweele.Mine.Core.Pieces.Time;
+using svanderweele.Mine.Core.Services.Selection;
 using svanderweele.Mine.Core.Services.Time;
 
 namespace svanderweele.Mine.Game.Services

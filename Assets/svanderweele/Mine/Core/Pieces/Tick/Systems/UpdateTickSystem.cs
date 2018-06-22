@@ -1,12 +1,16 @@
 ﻿using System.Runtime.InteropServices;
 using Entitas;
+using svanderweele.Mine.Core.Pieces.Tick.Services;
+using svanderweele.Mine.Core.Pieces.Time;
 using UnityEngine;
 
 namespace svanderweele.Mine.Core.Pieces.Tick.Systems
 {
-    public class UpdateTickSystem : IExecuteSystem, ICleanupSystem
+    public class UpdateTickSystem : IInitializeSystem, IExecuteSystem, ICleanupSystem
     {
         private readonly Contexts _contexts;
+        private ITickService _tickService;
+        private ITimeService _timeService;
 
 
         public UpdateTickSystem(Contexts contexts)
@@ -14,6 +18,12 @@ namespace svanderweele.Mine.Core.Pieces.Tick.Systems
             _contexts = contexts;
         }
 
+
+        public void Initialize()
+        {
+            _timeService = _contexts.meta.timeService.time;
+            _tickService = _contexts.meta.tickService.instance;
+        }
 
         public void Execute()
         {
@@ -28,23 +38,21 @@ namespace svanderweele.Mine.Core.Pieces.Tick.Systems
 
                     if (tick.delayValue > 0)
                     {
-                        tick.delayValue -= Time.fixedDeltaTime;
+                        tick.delayValue -= _timeService.GetFixedDeltaTime();
                     }
                     else
                     {
-                        tick.currentValue -= Time.fixedDeltaTime;
+                        tick.currentValue -= _timeService.GetFixedDeltaTime();
 
                         if (tick.currentValue <= 0)
                         {
                             //Reset tick value
-                            //TODO : Create service for frame rate 
-                            var fps = Application.targetFrameRate;
+                            var fps = _timeService.GetApplicationFrameRate();
                             var tickMultiplier = tick.multiplier;
                             var newTickValue = 1 / (tickMultiplier * fps);
                             tick.value = newTickValue;
                             tick.currentValue = newTickValue;
                             tick.shouldTick = true;
-
                             tick.delayValue = tick.delay;
                         }
                     }

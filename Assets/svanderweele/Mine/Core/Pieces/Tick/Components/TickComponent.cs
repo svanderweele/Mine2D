@@ -3,7 +3,7 @@ using Entitas;
 
 namespace svanderweele.Mine.Core.Pieces.Tick.Components
 {
-    [Game]
+    [Game, MapEditor]
     public class TickComponent : IComponent
     {
         public Dictionary<TickEnum, Tick> ticks;

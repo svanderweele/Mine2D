@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Entitas;
-using UnityEngine;
 
 namespace svanderweele.Mine.Core.Pieces.Commands.Systems
 {
@@ -29,7 +28,7 @@ namespace svanderweele.Mine.Core.Pieces.Commands.Systems
             {
                 var delay = commandEntity.commandDelay.delay;
 
-                delay -= Time.deltaTime;
+                delay -= _contexts.meta.timeService.time.GetDeltaTime();
                 commandEntity.ReplaceCommandDelay(delay);
                 if (delay <= 0)
                 {
