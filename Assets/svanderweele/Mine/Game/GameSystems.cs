@@ -4,6 +4,7 @@ using svanderweele.Mine.Core.Pieces.Commands.Systems;
 using svanderweele.Mine.Core.Pieces.Destroy;
 using svanderweele.Mine.Core.Pieces.Grid.Core.Commands.AddEntityToGrid;
 using svanderweele.Mine.Core.Pieces.Selection.Systems;
+using svanderweele.Mine.Core.Pieces.Tick.Systems;
 using svanderweele.Mine.Core.Services;
 using svanderweele.Mine.Game.Services;
 using svanderweele.Mine.GameEditor;
@@ -32,6 +33,8 @@ namespace svanderweele.Mine.Game
 //            Add(new GenerateGridSystem(contexts));
             Add(new UpdateCommandDelaySystem(contexts));
             Add(new UpdateSelectionColorSystem(contexts));
+            Add(new UpdateTickSystem(contexts));
+            Add(new TestTickSystem(contexts));
 
             //Events
             Add(new CommandEventSystems(contexts));

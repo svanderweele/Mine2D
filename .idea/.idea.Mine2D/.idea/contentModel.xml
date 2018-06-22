@@ -104,6 +104,8 @@
                 <e p="GameSpriteColorListenerComponent.cs" t="Include" />
                 <e p="GameSpriteComponent.cs" t="Include" />
                 <e p="GameSpriteListenerComponent.cs" t="Include" />
+                <e p="GameTickComponent.cs" t="Include" />
+                <e p="GameTickDelayComponent.cs" t="Include" />
                 <e p="GameVisibleComponent.cs" t="Include" />
                 <e p="GameVisibleListenerComponent.cs" t="Include" />
               </e>
@@ -328,6 +330,19 @@
                 <e p="Sprite" t="Include">
                   <e p="SpriteColorComponent.cs" t="Include" />
                   <e p="SpriteComponent.cs" t="Include" />
+                </e>
+                <e p="Tick" t="Include">
+                  <e p="Components" t="Include">
+                    <e p="Tick.cs" t="Include" />
+                    <e p="TickComponent.cs" t="Include" />
+                    <e p="TickDelayComponent.cs" t="Include" />
+                    <e p="TickMultiplierComponent.cs" t="Include" />
+                  </e>
+                  <e p="Systems" t="Include">
+                    <e p="ResetTickSystem.cs" t="Include" />
+                    <e p="TestTickSystem.cs" t="Include" />
+                    <e p="UpdateTickSystem.cs" t="Include" />
+                  </e>
                 </e>
                 <e p="Time" t="Include">
                   <e p="ITimeService.cs" t="Include" />

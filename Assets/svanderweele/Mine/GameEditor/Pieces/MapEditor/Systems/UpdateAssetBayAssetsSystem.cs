@@ -1,45 +1,55 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using Entitas;
 using UnityEngine;
 
 namespace svanderweele.Mine.GameEditor.Pieces.MapEditor.Systems
 {
-    public class UpdateAssetBayAssetsSystem : ReactiveSystem<MapEditorEntity>
+    public class UpdateAssetBayAssetsSystem : ReactiveSystem<GameEntity>
     {
         private readonly Contexts _contexts;
 
-        public UpdateAssetBayAssetsSystem(Contexts contexts) : base(contexts.mapEditor)
+        public UpdateAssetBayAssetsSystem(Contexts contexts) : base(contexts.game)
         {
             _contexts = contexts;
         }
 
-        protected override ICollector<MapEditorEntity> GetTrigger(IContext<MapEditorEntity> context)
+        protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
         {
-            return context.CreateCollector(MapEditorMatcher.AnyOf(MapEditorMatcher.AssetBayAssets, MapEditorMatcher.AssetBay));
+            return context.CreateCollector(GameMatcher.Tick);
         }
 
-        protected override bool Filter(MapEditorEntity entity)
+        protected override bool Filter(GameEntity entity)
         {
-            return entity.hasAssetBay;
+            return entity.hasTick;
         }
 
-        protected override void Execute(List<MapEditorEntity> entities)
+        protected override void Execute(List<GameEntity> entities)
         {
-            foreach (var mapEditorEntity in entities)
+            foreach (var tickEntity in entities)
             {
+                if (tickEntity.tick.ticks[TickEnum.MapEditor_AssetLoading].shouldTick == false)
+                {
+                    return;
+                }
+                var gameEntity = _contexts.mapEditor.GetEntities(MapEditorMatcher.AssetBay).Single();
                 var assets = _contexts.meta.gridEditorService.service.GetAssets();
-                var assetBay = _contexts.mapEditor.GetEntityWithId(mapEditorEntity.assetBay.id);
-                
 
-                if (assetBay.hasAssetBayAssets)
+                var mapEditor = _contexts.mapEditor.GetEntityWithAssetBay(gameEntity.assetBay.id);
+                var mapEditorView = mapEditor.mapEditor.view;
+
+                var views = mapEditorView.AssetBay.CreateViews(assets.Count);
+
+                for (int i = 0; i < assets.Count; i++)
                 {
-                    assetBay.ReplaceAssetBayAssets(assets);
+                    var asset = assets[i];
+                    var view = views[i];
+                    var entity = _contexts.mapEditor.CreateEntity();
+                    _contexts.meta.viewService.instance.LinkAsset(_contexts, entity, view);
+                    entity.AddAssetData(asset);
                 }
-                else
-                {
-                    assetBay.AddAssetBayAssets(assets);
-                }
+
             }
         }
     }

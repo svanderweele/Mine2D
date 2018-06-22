@@ -27,10 +27,12 @@ public static class GameComponentsLookup {
     public const int Position = 16;
     public const int SpriteColor = 17;
     public const int Sprite = 18;
-    public const int Visible = 19;
-    public const int VisibleListener = 20;
+    public const int Tick = 19;
+    public const int TickDelay = 20;
+    public const int Visible = 21;
+    public const int VisibleListener = 22;
 
-    public const int TotalComponents = 21;
+    public const int TotalComponents = 23;
 
     public static readonly string[] componentNames = {
         "GameDestroyedListener",
@@ -52,6 +54,8 @@ public static class GameComponentsLookup {
         "Position",
         "SpriteColor",
         "Sprite",
+        "Tick",
+        "TickDelay",
         "Visible",
         "VisibleListener"
     };
@@ -76,6 +80,8 @@ public static class GameComponentsLookup {
         typeof(svanderweele.Mine.Core.Pieces.Spatial.PositionComponent),
         typeof(svanderweele.Mine.Core.Pieces.Sprite.SpriteColorComponent),
         typeof(svanderweele.Mine.Core.Pieces.Sprite.SpriteComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Tick.Components.TickComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Tick.Components.TickDelayComponent),
         typeof(svanderweele.Mine.Core.Pieces.Visible.VisibleComponent),
         typeof(VisibleListenerComponent)
     };

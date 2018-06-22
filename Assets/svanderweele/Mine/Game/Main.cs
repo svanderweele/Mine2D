@@ -1,18 +1,16 @@
+using System.Collections.Generic;
 using Entitas;
 using svanderweele.Mine.Core.Pieces;
 using svanderweele.Mine.Core.Pieces.Commands;
 using svanderweele.Mine.Core.Pieces.Grid.Core;
 using svanderweele.Mine.Core.Pieces.Grid.Core.Service;
-using svanderweele.Mine.Core.Pieces.Grid.GridEditor.Service;
 using svanderweele.Mine.Core.Pieces.GridEditor;
 using svanderweele.Mine.Core.Pieces.GridEditor.Service;
 using svanderweele.Mine.Core.Pieces.Id;
-using svanderweele.Mine.Core.Services;
-using svanderweele.Mine.Game.Pieces.Grid;
+using svanderweele.Mine.Core.Pieces.Tick.Components;
 using svanderweele.Mine.Game.Services;
 using svanderweele.Mine.Game.Unity;
 using svanderweele.Mine.Game.Utils;
-using svanderweele.Mine.Game.Utils.Containers;
 using svanderweele.Mine.GameEditor;
 using svanderweele.Mine.GameEditor.Pieces.MapEditor.Services;
 using svanderweele.Mine.GameEditor.Unity;
@@ -32,6 +30,7 @@ namespace svanderweele.Mine.Game
 
         void Awake()
         {
+            Application.targetFrameRate = 60;
             _contexts = Contexts.sharedInstance;
             _contexts.SubscribeId();
 
@@ -61,7 +60,10 @@ namespace svanderweele.Mine.Game
 
             var createGridEditorReq = _contexts.command.CreateCommandRequest(0);
             createGridEditorReq.AddCommandRequestCreateMapEditor(grid.id.value);
-            
+
+            var tick = _contexts.game.CreateEntity();
+            var newTick = new Tick() {delayValue = 10, delay = 10, multiplier = 1f};
+            tick.AddTick(new Dictionary<TickEnum, Tick>() {{TickEnum.MapEditor_AssetLoading, newTick}});
         }
 
         private Systems CreateSystems()

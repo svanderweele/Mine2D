@@ -66,6 +66,7 @@ public partial class Contexts : Entitas.IContexts {
 //------------------------------------------------------------------------------
 public partial class Contexts {
 
+    public const string AssetBay = "AssetBay";
     public const string GridLayer = "GridLayer";
     public const string GridPosition = "GridPosition";
     public const string GridTileType = "GridTileType";
@@ -73,6 +74,11 @@ public partial class Contexts {
 
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeEntityIndices() {
+        mapEditor.AddEntityIndex(new Entitas.PrimaryEntityIndex<MapEditorEntity, int>(
+            AssetBay,
+            mapEditor.GetGroup(MapEditorMatcher.AssetBay),
+            (e, c) => ((svanderweele.Mine.GameEditor.Pieces.MapEditor.Components.AssetBayComponent)c).id));
+
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, int>(
             GridLayer,
             game.GetGroup(GameMatcher.GridLayer),
@@ -120,6 +126,10 @@ public partial class Contexts {
 }
 
 public static class ContextsExtensions {
+
+    public static MapEditorEntity GetEntityWithAssetBay(this MapEditorContext context, int id) {
+        return ((Entitas.PrimaryEntityIndex<MapEditorEntity, int>)context.GetEntityIndex(Contexts.AssetBay)).GetEntity(id);
+    }
 
     public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithGridLayer(this GameContext context, int layer) {
         return ((Entitas.EntityIndex<GameEntity, int>)context.GetEntityIndex(Contexts.GridLayer)).GetEntities(layer);
