@@ -1,5 +1,5 @@
 ﻿using Entitas;
-using svanderweele.Mine.Core.Services.Selection;
+using svanderweele.Core.Pieces.Selection.Services;
 using UnityEngine;
 
 namespace svanderweele.Mine.Game.Unity

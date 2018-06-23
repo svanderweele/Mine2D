@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public svanderweele.Mine.Core.Pieces.Grid.GridEditor.Components.GridTileEditorComponent gridTileEditor { get { return (svanderweele.Mine.Core.Pieces.Grid.GridEditor.Components.GridTileEditorComponent)GetComponent(GameComponentsLookup.GridTileEditor); } }
+    public svanderweele.Core.Pieces.GridEditor.Components.GridTileEditorComponent gridTileEditor { get { return (svanderweele.Core.Pieces.GridEditor.Components.GridTileEditorComponent)GetComponent(GameComponentsLookup.GridTileEditor); } }
     public bool hasGridTileEditor { get { return HasComponent(GameComponentsLookup.GridTileEditor); } }
 
     public void AddGridTileEditor(int newGridId) {
         var index = GameComponentsLookup.GridTileEditor;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.GridEditor.Components.GridTileEditorComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.GridEditor.Components.GridTileEditorComponent>(index);
         component.gridId = newGridId;
         AddComponent(index, component);
     }
 
     public void ReplaceGridTileEditor(int newGridId) {
         var index = GameComponentsLookup.GridTileEditor;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.GridEditor.Components.GridTileEditorComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.GridEditor.Components.GridTileEditorComponent>(index);
         component.gridId = newGridId;
         ReplaceComponent(index, component);
     }

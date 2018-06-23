@@ -9,12 +9,12 @@
 public partial class MetaContext {
 
     public MetaEntity gridEditorServiceEntity { get { return GetGroup(MetaMatcher.GridEditorService).GetSingleEntity(); } }
-    public svanderweele.Mine.Core.Pieces.GridEditor.Service.GridEditorServiceComponent gridEditorService { get { return gridEditorServiceEntity.gridEditorService; } }
+    public svanderweele.Core.Pieces.GridEditor.Service.Core.GridEditorServiceComponent gridEditorService { get { return gridEditorServiceEntity.gridEditorService; } }
     public bool hasGridEditorService { get { return gridEditorServiceEntity != null; } }
 
-    public MetaEntity SetGridEditorService(svanderweele.Mine.Core.Pieces.GridEditor.Service.IGridEditorService newService) {
+    public MetaEntity SetGridEditorService(svanderweele.Core.Pieces.GridEditor.Service.Core.IGridEditorService newService) {
         if (hasGridEditorService) {
-            throw new Entitas.EntitasException("Could not set GridEditorService!\n" + this + " already has an entity with svanderweele.Mine.Core.Pieces.GridEditor.Service.GridEditorServiceComponent!",
+            throw new Entitas.EntitasException("Could not set GridEditorService!\n" + this + " already has an entity with svanderweele.Core.Pieces.GridEditor.Service.Core.GridEditorServiceComponent!",
                 "You should check if the context already has a gridEditorServiceEntity before setting it or use context.ReplaceGridEditorService().");
         }
         var entity = CreateEntity();
@@ -22,7 +22,7 @@ public partial class MetaContext {
         return entity;
     }
 
-    public void ReplaceGridEditorService(svanderweele.Mine.Core.Pieces.GridEditor.Service.IGridEditorService newService) {
+    public void ReplaceGridEditorService(svanderweele.Core.Pieces.GridEditor.Service.Core.IGridEditorService newService) {
         var entity = gridEditorServiceEntity;
         if (entity == null) {
             entity = SetGridEditorService(newService);
@@ -46,19 +46,19 @@ public partial class MetaContext {
 //------------------------------------------------------------------------------
 public partial class MetaEntity {
 
-    public svanderweele.Mine.Core.Pieces.GridEditor.Service.GridEditorServiceComponent gridEditorService { get { return (svanderweele.Mine.Core.Pieces.GridEditor.Service.GridEditorServiceComponent)GetComponent(MetaComponentsLookup.GridEditorService); } }
+    public svanderweele.Core.Pieces.GridEditor.Service.Core.GridEditorServiceComponent gridEditorService { get { return (svanderweele.Core.Pieces.GridEditor.Service.Core.GridEditorServiceComponent)GetComponent(MetaComponentsLookup.GridEditorService); } }
     public bool hasGridEditorService { get { return HasComponent(MetaComponentsLookup.GridEditorService); } }
 
-    public void AddGridEditorService(svanderweele.Mine.Core.Pieces.GridEditor.Service.IGridEditorService newService) {
+    public void AddGridEditorService(svanderweele.Core.Pieces.GridEditor.Service.Core.IGridEditorService newService) {
         var index = MetaComponentsLookup.GridEditorService;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.GridEditor.Service.GridEditorServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.GridEditor.Service.Core.GridEditorServiceComponent>(index);
         component.service = newService;
         AddComponent(index, component);
     }
 
-    public void ReplaceGridEditorService(svanderweele.Mine.Core.Pieces.GridEditor.Service.IGridEditorService newService) {
+    public void ReplaceGridEditorService(svanderweele.Core.Pieces.GridEditor.Service.Core.IGridEditorService newService) {
         var index = MetaComponentsLookup.GridEditorService;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.GridEditor.Service.GridEditorServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.GridEditor.Service.Core.GridEditorServiceComponent>(index);
         component.service = newService;
         ReplaceComponent(index, component);
     }

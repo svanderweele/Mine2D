@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Entitas;
-using svanderweele.Mine.Core.Pieces.Grid.Core.Components;
+using svanderweele.Core.Pieces.Grid.Core.Components;
 using svanderweele.Mine.Game.Utils;
 using UnityEngine;
 using UnityEngine.WSA;
@@ -54,7 +54,7 @@ namespace svanderweele.Mine.Game.Pieces.Grid.Systems
                         {
                             for (var y = 0; y < gridRows; y++)
                             {
-                                //TODO : Change this to AddTileCommandRequest to check that grid tile is vacant
+                                //TODO : Change this to AddTileActionRequest to check that grid tile is vacant
                                 var tile = _contexts.game.CreateEntity();
                                 _contexts.meta.viewService.instance.LoadAsset(_contexts, tile, "Tile");
                                 tile.AddSprite(AssetPaths.TILE_DIRT);

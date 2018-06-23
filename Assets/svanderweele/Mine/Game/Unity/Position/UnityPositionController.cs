@@ -1,5 +1,5 @@
 ﻿using Entitas;
-using svanderweele.Mine.Core.Services.Events;
+using svanderweele.Core.Pieces.Events.Interfaces;
 using UnityEngine;
 
 namespace svanderweele.Mine.Game.Unity.Position

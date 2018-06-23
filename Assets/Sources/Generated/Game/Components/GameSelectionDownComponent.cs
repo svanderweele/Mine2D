@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public svanderweele.Mine.Core.Pieces.Selection.Components.SelectionDownComponent selectionDown { get { return (svanderweele.Mine.Core.Pieces.Selection.Components.SelectionDownComponent)GetComponent(GameComponentsLookup.SelectionDown); } }
+    public svanderweele.Core.Pieces.Selection.Components.SelectionDownComponent selectionDown { get { return (svanderweele.Core.Pieces.Selection.Components.SelectionDownComponent)GetComponent(GameComponentsLookup.SelectionDown); } }
     public bool hasSelectionDown { get { return HasComponent(GameComponentsLookup.SelectionDown); } }
 
     public void AddSelectionDown(float newTimeSinceDown) {
         var index = GameComponentsLookup.SelectionDown;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Selection.Components.SelectionDownComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Selection.Components.SelectionDownComponent>(index);
         component.timeSinceDown = newTimeSinceDown;
         AddComponent(index, component);
     }
 
     public void ReplaceSelectionDown(float newTimeSinceDown) {
         var index = GameComponentsLookup.SelectionDown;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Selection.Components.SelectionDownComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Selection.Components.SelectionDownComponent>(index);
         component.timeSinceDown = newTimeSinceDown;
         ReplaceComponent(index, component);
     }

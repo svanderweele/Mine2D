@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using Entitas;
+using svanderweele.Core.Pieces.Tick.Components;
 using UnityEngine;
 
 namespace svanderweele.Mine.GameEditor.Pieces.MapEditor.Systems

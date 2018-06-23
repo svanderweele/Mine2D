@@ -9,22 +9,21 @@
 public static class GridComponentsLookup {
 
     public const int GridDestroyedListener = 0;
-    public const int Destroyed = 1;
-    public const int GridChanged = 2;
-    public const int Grid = 3;
-    public const int GridInitialized = 4;
-    public const int GridSize = 5;
-    public const int GridTiles = 6;
-    public const int GridTileSize = 7;
-    public const int GridTileType = 8;
-    public const int NewGrid = 9;
-    public const int Id = 10;
+    public const int GridChanged = 1;
+    public const int Grid = 2;
+    public const int GridInitialized = 3;
+    public const int GridSize = 4;
+    public const int GridTiles = 5;
+    public const int GridTileSize = 6;
+    public const int GridTileType = 7;
+    public const int NewGrid = 8;
+    public const int Id = 9;
+    public const int Destroyed = 10;
 
     public const int TotalComponents = 11;
 
     public static readonly string[] componentNames = {
         "GridDestroyedListener",
-        "Destroyed",
         "GridChanged",
         "Grid",
         "GridInitialized",
@@ -33,20 +32,21 @@ public static class GridComponentsLookup {
         "GridTileSize",
         "GridTileType",
         "NewGrid",
-        "Id"
+        "Id",
+        "Destroyed"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(GridDestroyedListenerComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Destroy.DestroyedComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridChangedComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridInitializedComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridSizeComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTilesComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileSizeComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileTypeComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.NewGridComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Id.IdComponent)
+        typeof(svanderweele.Core.Pieces.Grid.Core.Components.GridChangedComponent),
+        typeof(svanderweele.Core.Pieces.Grid.Core.Components.GridComponent),
+        typeof(svanderweele.Core.Pieces.Grid.Core.Components.GridInitializedComponent),
+        typeof(svanderweele.Core.Pieces.Grid.Core.Components.GridSizeComponent),
+        typeof(svanderweele.Core.Pieces.Grid.Core.Components.GridTilesComponent),
+        typeof(svanderweele.Core.Pieces.Grid.Core.Components.GridTileSizeComponent),
+        typeof(svanderweele.Core.Pieces.Grid.Core.Components.GridTileTypeComponent),
+        typeof(svanderweele.Core.Pieces.Grid.Core.Components.NewGridComponent),
+        typeof(svanderweele.Core.Pieces.Id.IdComponent),
+        typeof(svanderweele.Mine.Core.Pieces.Destroy.DestroyedComponent)
     };
 }

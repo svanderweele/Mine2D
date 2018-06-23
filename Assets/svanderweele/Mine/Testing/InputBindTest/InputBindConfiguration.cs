@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using svanderweele.Mine.Core.Services.Input.Binding;
+using svanderweele.Core.Pieces.Input.Binding;
 using svanderweele.Mine.Game.Utils;
 using UnityEngine;
 using UnityEngine.Profiling;

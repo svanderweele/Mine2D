@@ -8,10 +8,10 @@
 //------------------------------------------------------------------------------
 public partial interface ITickEntity {
 
-    svanderweele.Mine.Core.Pieces.Tick.Components.TickComponent tick { get; }
+    svanderweele.Core.Pieces.Tick.Components.TickComponent tick { get; }
     bool hasTick { get; }
 
-    void AddTick(System.Collections.Generic.Dictionary<TickEnum, svanderweele.Mine.Core.Pieces.Tick.Components.Tick> newTicks);
-    void ReplaceTick(System.Collections.Generic.Dictionary<TickEnum, svanderweele.Mine.Core.Pieces.Tick.Components.Tick> newTicks);
+    void AddTick(System.Collections.Generic.Dictionary<svanderweele.Core.Pieces.Tick.Components.TickEnum, svanderweele.Core.Pieces.Tick.Components.Tick> newTicks);
+    void ReplaceTick(System.Collections.Generic.Dictionary<svanderweele.Core.Pieces.Tick.Components.TickEnum, svanderweele.Core.Pieces.Tick.Components.Tick> newTicks);
     void RemoveTick();
 }

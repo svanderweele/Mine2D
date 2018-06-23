@@ -9,12 +9,12 @@
 public partial class MetaContext {
 
     public MetaEntity collisionServiceEntity { get { return GetGroup(MetaMatcher.CollisionService).GetSingleEntity(); } }
-    public svanderweele.Mine.Core.Services.Collision.CollisionServiceComponent collisionService { get { return collisionServiceEntity.collisionService; } }
+    public svanderweele.Core.Pieces.Collision.Services.CollisionServiceComponent collisionService { get { return collisionServiceEntity.collisionService; } }
     public bool hasCollisionService { get { return collisionServiceEntity != null; } }
 
-    public MetaEntity SetCollisionService(svanderweele.Mine.Core.Services.Collision.ICollisionService newService) {
+    public MetaEntity SetCollisionService(svanderweele.Core.Pieces.Collision.Services.ICollisionService newService) {
         if (hasCollisionService) {
-            throw new Entitas.EntitasException("Could not set CollisionService!\n" + this + " already has an entity with svanderweele.Mine.Core.Services.Collision.CollisionServiceComponent!",
+            throw new Entitas.EntitasException("Could not set CollisionService!\n" + this + " already has an entity with svanderweele.Core.Pieces.Collision.Services.CollisionServiceComponent!",
                 "You should check if the context already has a collisionServiceEntity before setting it or use context.ReplaceCollisionService().");
         }
         var entity = CreateEntity();
@@ -22,7 +22,7 @@ public partial class MetaContext {
         return entity;
     }
 
-    public void ReplaceCollisionService(svanderweele.Mine.Core.Services.Collision.ICollisionService newService) {
+    public void ReplaceCollisionService(svanderweele.Core.Pieces.Collision.Services.ICollisionService newService) {
         var entity = collisionServiceEntity;
         if (entity == null) {
             entity = SetCollisionService(newService);
@@ -46,19 +46,19 @@ public partial class MetaContext {
 //------------------------------------------------------------------------------
 public partial class MetaEntity {
 
-    public svanderweele.Mine.Core.Services.Collision.CollisionServiceComponent collisionService { get { return (svanderweele.Mine.Core.Services.Collision.CollisionServiceComponent)GetComponent(MetaComponentsLookup.CollisionService); } }
+    public svanderweele.Core.Pieces.Collision.Services.CollisionServiceComponent collisionService { get { return (svanderweele.Core.Pieces.Collision.Services.CollisionServiceComponent)GetComponent(MetaComponentsLookup.CollisionService); } }
     public bool hasCollisionService { get { return HasComponent(MetaComponentsLookup.CollisionService); } }
 
-    public void AddCollisionService(svanderweele.Mine.Core.Services.Collision.ICollisionService newService) {
+    public void AddCollisionService(svanderweele.Core.Pieces.Collision.Services.ICollisionService newService) {
         var index = MetaComponentsLookup.CollisionService;
-        var component = CreateComponent<svanderweele.Mine.Core.Services.Collision.CollisionServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Collision.Services.CollisionServiceComponent>(index);
         component.service = newService;
         AddComponent(index, component);
     }
 
-    public void ReplaceCollisionService(svanderweele.Mine.Core.Services.Collision.ICollisionService newService) {
+    public void ReplaceCollisionService(svanderweele.Core.Pieces.Collision.Services.ICollisionService newService) {
         var index = MetaComponentsLookup.CollisionService;
-        var component = CreateComponent<svanderweele.Mine.Core.Services.Collision.CollisionServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Collision.Services.CollisionServiceComponent>(index);
         component.service = newService;
         ReplaceComponent(index, component);
     }

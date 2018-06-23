@@ -1,5 +1,4 @@
-﻿using svanderweele.Mine.Core.Pieces.Grid.Core.Service;
-using svanderweele.Mine.Core.Pieces.GridEditor.Service;
+﻿using svanderweele.Core.Pieces.Grid.Core.Service;
 
 namespace svanderweele.Mine.Game
 {

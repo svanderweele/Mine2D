@@ -1,6 +1,5 @@
 ﻿using Entitas;
-using svanderweele.Mine.Core.Pieces.GridEditor.Interfaces;
-using svanderweele.Mine.Core.Services.Events;
+using svanderweele.Core.Pieces.GridEditor.Interfaces;
 using svanderweele.Mine.Game.Unity;
 using svanderweele.Mine.GameEditor.Unity.Data;
 using UnityEngine;

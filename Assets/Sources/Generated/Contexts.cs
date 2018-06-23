@@ -21,17 +21,17 @@ public partial class Contexts : Entitas.IContexts {
 
     static Contexts _sharedInstance;
 
-    public CommandContext command { get; set; }
+    public ActionContext action { get; set; }
     public GameContext game { get; set; }
     public GridContext grid { get; set; }
     public InputContext input { get; set; }
     public MapEditorContext mapEditor { get; set; }
     public MetaContext meta { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { command, game, grid, input, mapEditor, meta }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { action, game, grid, input, mapEditor, meta }; } }
 
     public Contexts() {
-        command = new CommandContext();
+        action = new ActionContext();
         game = new GameContext();
         grid = new GridContext();
         input = new InputContext();
@@ -82,46 +82,46 @@ public partial class Contexts {
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, int>(
             GridLayer,
             game.GetGroup(GameMatcher.GridLayer),
-            (e, c) => ((svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridLayerComponent)c).layer));
+            (e, c) => ((svanderweele.Core.Pieces.Grid.Core.Components.GridLayerComponent)c).layer));
 
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, svanderweele.Mine.Game.Utils.Math.Vector2>(
             GridPosition,
             game.GetGroup(GameMatcher.GridPosition),
-            (e, c) => ((svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridPositionComponent)c).position));
+            (e, c) => ((svanderweele.Core.Pieces.Grid.Core.Components.GridPositionComponent)c).position));
 
         grid.AddEntityIndex(new Entitas.EntityIndex<GridEntity, string>(
             GridTileType,
             grid.GetGroup(GridMatcher.GridTileType),
-            (e, c) => ((svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileTypeComponent)c).type));
+            (e, c) => ((svanderweele.Core.Pieces.Grid.Core.Components.GridTileTypeComponent)c).type));
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, string>(
             GridTileType,
             game.GetGroup(GameMatcher.GridTileType),
-            (e, c) => ((svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileTypeComponent)c).type));
+            (e, c) => ((svanderweele.Core.Pieces.Grid.Core.Components.GridTileTypeComponent)c).type));
 
         game.AddEntityIndex(new Entitas.PrimaryEntityIndex<GameEntity, int>(
             Id,
             game.GetGroup(GameMatcher.Id),
-            (e, c) => ((svanderweele.Mine.Core.Pieces.Id.IdComponent)c).value));
+            (e, c) => ((svanderweele.Core.Pieces.Id.IdComponent)c).value));
         input.AddEntityIndex(new Entitas.PrimaryEntityIndex<InputEntity, int>(
             Id,
             input.GetGroup(InputMatcher.Id),
-            (e, c) => ((svanderweele.Mine.Core.Pieces.Id.IdComponent)c).value));
+            (e, c) => ((svanderweele.Core.Pieces.Id.IdComponent)c).value));
         meta.AddEntityIndex(new Entitas.PrimaryEntityIndex<MetaEntity, int>(
             Id,
             meta.GetGroup(MetaMatcher.Id),
-            (e, c) => ((svanderweele.Mine.Core.Pieces.Id.IdComponent)c).value));
-        command.AddEntityIndex(new Entitas.PrimaryEntityIndex<CommandEntity, int>(
+            (e, c) => ((svanderweele.Core.Pieces.Id.IdComponent)c).value));
+        action.AddEntityIndex(new Entitas.PrimaryEntityIndex<ActionEntity, int>(
             Id,
-            command.GetGroup(CommandMatcher.Id),
-            (e, c) => ((svanderweele.Mine.Core.Pieces.Id.IdComponent)c).value));
+            action.GetGroup(ActionMatcher.Id),
+            (e, c) => ((svanderweele.Core.Pieces.Id.IdComponent)c).value));
         grid.AddEntityIndex(new Entitas.PrimaryEntityIndex<GridEntity, int>(
             Id,
             grid.GetGroup(GridMatcher.Id),
-            (e, c) => ((svanderweele.Mine.Core.Pieces.Id.IdComponent)c).value));
+            (e, c) => ((svanderweele.Core.Pieces.Id.IdComponent)c).value));
         mapEditor.AddEntityIndex(new Entitas.PrimaryEntityIndex<MapEditorEntity, int>(
             Id,
             mapEditor.GetGroup(MapEditorMatcher.Id),
-            (e, c) => ((svanderweele.Mine.Core.Pieces.Id.IdComponent)c).value));
+            (e, c) => ((svanderweele.Core.Pieces.Id.IdComponent)c).value));
     }
 }
 
@@ -159,8 +159,8 @@ public static class ContextsExtensions {
         return ((Entitas.PrimaryEntityIndex<MetaEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);
     }
 
-    public static CommandEntity GetEntityWithId(this CommandContext context, int value) {
-        return ((Entitas.PrimaryEntityIndex<CommandEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);
+    public static ActionEntity GetEntityWithId(this ActionContext context, int value) {
+        return ((Entitas.PrimaryEntityIndex<ActionEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(value);
     }
 
     public static GridEntity GetEntityWithId(this GridContext context, int value) {
@@ -186,7 +186,7 @@ public partial class Contexts {
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeContexObservers() {
         try {
-            CreateContextObserver(command);
+            CreateContextObserver(action);
             CreateContextObserver(game);
             CreateContextObserver(grid);
             CreateContextObserver(input);

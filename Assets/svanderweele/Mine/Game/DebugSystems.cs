@@ -1,4 +1,4 @@
-﻿using svanderweele.Mine.Core.Pieces.Selection.Systems;
+﻿using svanderweele.Core.Pieces.Selection.Systems;
 
 namespace svanderweele.Mine.Game
 {

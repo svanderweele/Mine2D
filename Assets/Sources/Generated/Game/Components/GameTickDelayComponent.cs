@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public svanderweele.Mine.Core.Pieces.Tick.Components.TickDelayComponent tickDelay { get { return (svanderweele.Mine.Core.Pieces.Tick.Components.TickDelayComponent)GetComponent(GameComponentsLookup.TickDelay); } }
+    public svanderweele.Core.Pieces.Tick.Components.TickDelayComponent tickDelay { get { return (svanderweele.Core.Pieces.Tick.Components.TickDelayComponent)GetComponent(GameComponentsLookup.TickDelay); } }
     public bool hasTickDelay { get { return HasComponent(GameComponentsLookup.TickDelay); } }
 
     public void AddTickDelay(float newDelay) {
         var index = GameComponentsLookup.TickDelay;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Tick.Components.TickDelayComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Tick.Components.TickDelayComponent>(index);
         component.delay = newDelay;
         AddComponent(index, component);
     }
 
     public void ReplaceTickDelay(float newDelay) {
         var index = GameComponentsLookup.TickDelay;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Tick.Components.TickDelayComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Tick.Components.TickDelayComponent>(index);
         component.delay = newDelay;
         ReplaceComponent(index, component);
     }

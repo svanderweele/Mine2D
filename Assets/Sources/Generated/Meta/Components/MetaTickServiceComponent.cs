@@ -9,12 +9,12 @@
 public partial class MetaContext {
 
     public MetaEntity tickServiceEntity { get { return GetGroup(MetaMatcher.TickService).GetSingleEntity(); } }
-    public svanderweele.Mine.Core.Pieces.Tick.Services.TickServiceComponent tickService { get { return tickServiceEntity.tickService; } }
+    public svanderweele.Core.Pieces.Tick.Services.TickServiceComponent tickService { get { return tickServiceEntity.tickService; } }
     public bool hasTickService { get { return tickServiceEntity != null; } }
 
-    public MetaEntity SetTickService(svanderweele.Mine.Core.Pieces.Tick.Services.ITickService newInstance) {
+    public MetaEntity SetTickService(svanderweele.Core.Pieces.Tick.Services.ITickService newInstance) {
         if (hasTickService) {
-            throw new Entitas.EntitasException("Could not set TickService!\n" + this + " already has an entity with svanderweele.Mine.Core.Pieces.Tick.Services.TickServiceComponent!",
+            throw new Entitas.EntitasException("Could not set TickService!\n" + this + " already has an entity with svanderweele.Core.Pieces.Tick.Services.TickServiceComponent!",
                 "You should check if the context already has a tickServiceEntity before setting it or use context.ReplaceTickService().");
         }
         var entity = CreateEntity();
@@ -22,7 +22,7 @@ public partial class MetaContext {
         return entity;
     }
 
-    public void ReplaceTickService(svanderweele.Mine.Core.Pieces.Tick.Services.ITickService newInstance) {
+    public void ReplaceTickService(svanderweele.Core.Pieces.Tick.Services.ITickService newInstance) {
         var entity = tickServiceEntity;
         if (entity == null) {
             entity = SetTickService(newInstance);
@@ -46,19 +46,19 @@ public partial class MetaContext {
 //------------------------------------------------------------------------------
 public partial class MetaEntity {
 
-    public svanderweele.Mine.Core.Pieces.Tick.Services.TickServiceComponent tickService { get { return (svanderweele.Mine.Core.Pieces.Tick.Services.TickServiceComponent)GetComponent(MetaComponentsLookup.TickService); } }
+    public svanderweele.Core.Pieces.Tick.Services.TickServiceComponent tickService { get { return (svanderweele.Core.Pieces.Tick.Services.TickServiceComponent)GetComponent(MetaComponentsLookup.TickService); } }
     public bool hasTickService { get { return HasComponent(MetaComponentsLookup.TickService); } }
 
-    public void AddTickService(svanderweele.Mine.Core.Pieces.Tick.Services.ITickService newInstance) {
+    public void AddTickService(svanderweele.Core.Pieces.Tick.Services.ITickService newInstance) {
         var index = MetaComponentsLookup.TickService;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Tick.Services.TickServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Tick.Services.TickServiceComponent>(index);
         component.instance = newInstance;
         AddComponent(index, component);
     }
 
-    public void ReplaceTickService(svanderweele.Mine.Core.Pieces.Tick.Services.ITickService newInstance) {
+    public void ReplaceTickService(svanderweele.Core.Pieces.Tick.Services.ITickService newInstance) {
         var index = MetaComponentsLookup.TickService;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Tick.Services.TickServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Tick.Services.TickServiceComponent>(index);
         component.instance = newInstance;
         ReplaceComponent(index, component);
     }

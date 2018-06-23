@@ -2,7 +2,7 @@
 using Entitas;
 using svanderweele.Mine.Game.Utils;
 
-namespace svanderweele.Mine.MapEditor.Pieces.GridEditor.Systems
+namespace svanderweele.Mine.GameEditor.Pieces.MapEditor.Systems
 {
     public class GenerateGridDebugSystem : ReactiveSystem<GridEntity>
     {

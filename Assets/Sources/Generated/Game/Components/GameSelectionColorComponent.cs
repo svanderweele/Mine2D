@@ -8,12 +8,12 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public svanderweele.Mine.Core.Pieces.Selection.Components.SelectionColorComponent selectionColor { get { return (svanderweele.Mine.Core.Pieces.Selection.Components.SelectionColorComponent)GetComponent(GameComponentsLookup.SelectionColor); } }
+    public svanderweele.Core.Pieces.Selection.Components.SelectionColorComponent selectionColor { get { return (svanderweele.Core.Pieces.Selection.Components.SelectionColorComponent)GetComponent(GameComponentsLookup.SelectionColor); } }
     public bool hasSelectionColor { get { return HasComponent(GameComponentsLookup.SelectionColor); } }
 
     public void AddSelectionColor(svanderweele.Mine.Game.Utils.Containers.Color newSelectionDown, svanderweele.Mine.Game.Utils.Containers.Color newSelectionUp, svanderweele.Mine.Game.Utils.Containers.Color newSelectionHeld, svanderweele.Mine.Game.Utils.Containers.Color newSelectionHoverOut, svanderweele.Mine.Game.Utils.Containers.Color newSelectionHoverIn, svanderweele.Mine.Game.Utils.Containers.Color newSelectionHoverSelect) {
         var index = GameComponentsLookup.SelectionColor;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Selection.Components.SelectionColorComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Selection.Components.SelectionColorComponent>(index);
         component.selectionDown = newSelectionDown;
         component.selectionUp = newSelectionUp;
         component.selectionHeld = newSelectionHeld;
@@ -25,7 +25,7 @@ public partial class GameEntity {
 
     public void ReplaceSelectionColor(svanderweele.Mine.Game.Utils.Containers.Color newSelectionDown, svanderweele.Mine.Game.Utils.Containers.Color newSelectionUp, svanderweele.Mine.Game.Utils.Containers.Color newSelectionHeld, svanderweele.Mine.Game.Utils.Containers.Color newSelectionHoverOut, svanderweele.Mine.Game.Utils.Containers.Color newSelectionHoverIn, svanderweele.Mine.Game.Utils.Containers.Color newSelectionHoverSelect) {
         var index = GameComponentsLookup.SelectionColor;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Selection.Components.SelectionColorComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Selection.Components.SelectionColorComponent>(index);
         component.selectionDown = newSelectionDown;
         component.selectionUp = newSelectionUp;
         component.selectionHeld = newSelectionHeld;

@@ -1,9 +1,7 @@
-﻿using svanderweele.Mine.Core.Pieces.GridEditor.Interfaces;
-using svanderweele.Mine.GameEditor.Unity.Data;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
-namespace svanderweele.Mine.Engine.Unity.MapEditor
+namespace svanderweele.Mine.GameEditor.Unity.Data
 {
     [CreateAssetMenu(menuName = "Mine2D/Map Editor/Create Asset Data")]
     public class UnityMapEditorAssetData : ScriptableObject, IMapEditorAssetData

@@ -1,7 +1,6 @@
 ﻿using Entitas;
-using svanderweele.Mine.Core.Pieces.View;
-using svanderweele.Mine.Core.Services.Collision;
-using svanderweele.Mine.Core.Services.View;
+using svanderweele.Core.Pieces.Collision.Services;
+using svanderweele.Core.Pieces.View;
 using UnityEngine;
 
 namespace svanderweele.Mine.Game.Unity

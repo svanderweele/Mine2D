@@ -11,9 +11,9 @@ public static class MapEditorComponentsLookup {
     public const int AssetBayAssetsListener = 0;
     public const int AssetDataListener = 1;
     public const int MapEditorDestroyedListener = 2;
-    public const int Destroyed = 3;
-    public const int Id = 4;
-    public const int Tick = 5;
+    public const int Id = 3;
+    public const int Tick = 4;
+    public const int Destroyed = 5;
     public const int AssetBayAssets = 6;
     public const int AssetBay = 7;
     public const int AssetData = 8;
@@ -25,9 +25,9 @@ public static class MapEditorComponentsLookup {
         "AssetBayAssetsListener",
         "AssetDataListener",
         "MapEditorDestroyedListener",
-        "Destroyed",
         "Id",
         "Tick",
+        "Destroyed",
         "AssetBayAssets",
         "AssetBay",
         "AssetData",
@@ -38,9 +38,9 @@ public static class MapEditorComponentsLookup {
         typeof(AssetBayAssetsListenerComponent),
         typeof(AssetDataListenerComponent),
         typeof(MapEditorDestroyedListenerComponent),
+        typeof(svanderweele.Core.Pieces.Id.IdComponent),
+        typeof(svanderweele.Core.Pieces.Tick.Components.TickComponent),
         typeof(svanderweele.Mine.Core.Pieces.Destroy.DestroyedComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Id.IdComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Tick.Components.TickComponent),
         typeof(svanderweele.Mine.GameEditor.Pieces.MapEditor.Components.AssetBayAssetsComponent),
         typeof(svanderweele.Mine.GameEditor.Pieces.MapEditor.Components.AssetBayComponent),
         typeof(svanderweele.Mine.GameEditor.Pieces.MapEditor.Components.AssetDataComponent),

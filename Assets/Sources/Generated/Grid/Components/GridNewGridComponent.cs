@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 public partial class GridEntity {
 
-    static readonly svanderweele.Mine.Core.Pieces.Grid.Core.Components.NewGridComponent newGridComponent = new svanderweele.Mine.Core.Pieces.Grid.Core.Components.NewGridComponent();
+    static readonly svanderweele.Core.Pieces.Grid.Core.Components.NewGridComponent newGridComponent = new svanderweele.Core.Pieces.Grid.Core.Components.NewGridComponent();
 
     public bool isNewGrid {
         get { return HasComponent(GridComponentsLookup.NewGrid); }

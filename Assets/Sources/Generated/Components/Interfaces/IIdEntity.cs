@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 public partial interface IIdEntity {
 
-    svanderweele.Mine.Core.Pieces.Id.IdComponent id { get; }
+    svanderweele.Core.Pieces.Id.IdComponent id { get; }
     bool hasId { get; }
 
     void AddId(int newValue);

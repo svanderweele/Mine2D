@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GridEntity {
 
-    public svanderweele.Mine.Core.Pieces.Id.IdComponent id { get { return (svanderweele.Mine.Core.Pieces.Id.IdComponent)GetComponent(GridComponentsLookup.Id); } }
+    public svanderweele.Core.Pieces.Id.IdComponent id { get { return (svanderweele.Core.Pieces.Id.IdComponent)GetComponent(GridComponentsLookup.Id); } }
     public bool hasId { get { return HasComponent(GridComponentsLookup.Id); } }
 
     public void AddId(int newValue) {
         var index = GridComponentsLookup.Id;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Id.IdComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Id.IdComponent>(index);
         component.value = newValue;
         AddComponent(index, component);
     }
 
     public void ReplaceId(int newValue) {
         var index = GridComponentsLookup.Id;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Id.IdComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Id.IdComponent>(index);
         component.value = newValue;
         ReplaceComponent(index, component);
     }

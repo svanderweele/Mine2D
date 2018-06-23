@@ -13,23 +13,23 @@ public static class GameComponentsLookup {
     public const int SpriteColorListener = 2;
     public const int SpriteListener = 3;
     public const int Collision = 4;
-    public const int Destroyed = 5;
-    public const int GridLayer = 6;
-    public const int GridPosition = 7;
-    public const int GridTileType = 8;
-    public const int GridTileEditor = 9;
-    public const int Id = 10;
-    public const int SelectionColor = 11;
-    public const int SelectionDown = 12;
-    public const int SelectionOut = 13;
-    public const int SelectionOver = 14;
-    public const int SelectionUp = 15;
-    public const int Position = 16;
-    public const int SpriteColor = 17;
-    public const int Sprite = 18;
-    public const int Tick = 19;
-    public const int TickDelay = 20;
-    public const int Visible = 21;
+    public const int GridLayer = 5;
+    public const int GridPosition = 6;
+    public const int GridTileType = 7;
+    public const int GridTileEditor = 8;
+    public const int Id = 9;
+    public const int SelectionColor = 10;
+    public const int SelectionDown = 11;
+    public const int SelectionOut = 12;
+    public const int SelectionOver = 13;
+    public const int SelectionUp = 14;
+    public const int Position = 15;
+    public const int SpriteColor = 16;
+    public const int Sprite = 17;
+    public const int Tick = 18;
+    public const int TickDelay = 19;
+    public const int Visible = 20;
+    public const int Destroyed = 21;
     public const int VisibleListener = 22;
 
     public const int TotalComponents = 23;
@@ -40,7 +40,6 @@ public static class GameComponentsLookup {
         "SpriteColorListener",
         "SpriteListener",
         "Collision",
-        "Destroyed",
         "GridLayer",
         "GridPosition",
         "GridTileType",
@@ -57,6 +56,7 @@ public static class GameComponentsLookup {
         "Tick",
         "TickDelay",
         "Visible",
+        "Destroyed",
         "VisibleListener"
     };
 
@@ -65,24 +65,24 @@ public static class GameComponentsLookup {
         typeof(PositionListenerComponent),
         typeof(SpriteColorListenerComponent),
         typeof(SpriteListenerComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Collision.CollisionComponent),
+        typeof(svanderweele.Core.Pieces.Collision.Components.CollisionComponent),
+        typeof(svanderweele.Core.Pieces.Grid.Core.Components.GridLayerComponent),
+        typeof(svanderweele.Core.Pieces.Grid.Core.Components.GridPositionComponent),
+        typeof(svanderweele.Core.Pieces.Grid.Core.Components.GridTileTypeComponent),
+        typeof(svanderweele.Core.Pieces.GridEditor.Components.GridTileEditorComponent),
+        typeof(svanderweele.Core.Pieces.Id.IdComponent),
+        typeof(svanderweele.Core.Pieces.Selection.Components.SelectionColorComponent),
+        typeof(svanderweele.Core.Pieces.Selection.Components.SelectionDownComponent),
+        typeof(svanderweele.Core.Pieces.Selection.Components.SelectionOutComponent),
+        typeof(svanderweele.Core.Pieces.Selection.Components.SelectionOverComponent),
+        typeof(svanderweele.Core.Pieces.Selection.Components.SelectionUpComponent),
+        typeof(svanderweele.Core.Pieces.Spatial.PositionComponent),
+        typeof(svanderweele.Core.Pieces.Sprite.SpriteColorComponent),
+        typeof(svanderweele.Core.Pieces.Sprite.SpriteComponent),
+        typeof(svanderweele.Core.Pieces.Tick.Components.TickComponent),
+        typeof(svanderweele.Core.Pieces.Tick.Components.TickDelayComponent),
+        typeof(svanderweele.Core.Pieces.Visible.VisibleComponent),
         typeof(svanderweele.Mine.Core.Pieces.Destroy.DestroyedComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridLayerComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridPositionComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Components.GridTileTypeComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Grid.GridEditor.Components.GridTileEditorComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Id.IdComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Selection.Components.SelectionColorComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Selection.Components.SelectionDownComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Selection.Components.SelectionOutComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Selection.Components.SelectionOverComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Selection.Components.SelectionUpComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Spatial.PositionComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Sprite.SpriteColorComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Sprite.SpriteComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Tick.Components.TickComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Tick.Components.TickDelayComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Visible.VisibleComponent),
         typeof(VisibleListenerComponent)
     };
 }

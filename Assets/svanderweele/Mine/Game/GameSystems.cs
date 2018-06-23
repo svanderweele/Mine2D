@@ -1,12 +1,11 @@
 ﻿using Entitas;
+using svanderweele.Core.Pieces;
+using svanderweele.Core.Pieces.Actions.Systems;
+using svanderweele.Core.Pieces.Grid.Core.Actions.AddEntityToGrid;
+using svanderweele.Core.Pieces.Selection.Systems;
+using svanderweele.Core.Pieces.Tick.Systems;
 using svanderweele.Mine.Core.Pieces;
-using svanderweele.Mine.Core.Pieces.Commands.Systems;
 using svanderweele.Mine.Core.Pieces.Destroy;
-using svanderweele.Mine.Core.Pieces.Grid.Core.Commands.AddEntityToGrid;
-using svanderweele.Mine.Core.Pieces.Selection.Systems;
-using svanderweele.Mine.Core.Pieces.Tick.Systems;
-using svanderweele.Mine.Core.Services;
-using svanderweele.Mine.Game.Services;
 using svanderweele.Mine.GameEditor;
 using UnityEngine;
 
@@ -21,21 +20,21 @@ namespace svanderweele.Mine.Game
             Add(new RegisterServicesSystem(contexts, coreServices, gameServices, editorServices));
 
             //Remove
-            Add(new RemoveCommandSystem(contexts));
+            Add(new RemoveActionSystem(contexts));
 
-            //Command Requests
-            Add(new CommandRequestAddEntityToGridSystem(contexts));
+            //Action Requests
+            Add(new ActionRequestAddEntityToGridSystem(contexts));
 
-            //Commands
-            Add(new CommandAddEntityToGridSystem(contexts));
+            //Actions
+            Add(new ActionAddEntityToGridSystem(contexts));
 
             //Update
-            Add(new UpdateCommandDelaySystem(contexts));
+            Add(new UpdateActionDelaySystem(contexts));
             Add(new UpdateSelectionColorSystem(contexts));
             Add(new UpdateTickSystem(contexts));
 
             //Events
-            Add(new CommandEventSystems(contexts));
+            Add(new ActionEventSystems(contexts));
             Add(new GameEventSystems(contexts));
             Add(new MapEditorEventSystems(contexts));
             Add(new InputEventSystems(contexts));

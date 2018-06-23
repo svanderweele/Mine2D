@@ -1,5 +1,5 @@
-﻿using svanderweele.Mine.Core.Services.Input.Controller;
-using svanderweele.Mine.Core.Services.Input.Service;
+﻿using svanderweele.Core.Pieces.Input.Controller;
+using svanderweele.Core.Pieces.Input.Service;
 using svanderweele.Mine.Game.Utils;
 using UnityEngine;
 

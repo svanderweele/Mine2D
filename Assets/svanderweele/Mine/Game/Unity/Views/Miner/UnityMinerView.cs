@@ -1,5 +1,4 @@
 ﻿using Entitas;
-using svanderweele.Mine.Core.Services.Events;
 using UnityEngine;
 
 namespace svanderweele.Mine.Game.Unity.Views.Miner

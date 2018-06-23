@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
-using svanderweele.Mine.Core.Pieces.Grid.GridEditor.Interfaces;
-using svanderweele.Mine.Engine.Unity.MapEditor;
+using svanderweele.Core.Pieces.GridEditor.Interfaces;
 using svanderweele.Mine.GameEditor.Unity.Data;
 using UnityEngine;
 

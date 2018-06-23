@@ -8,42 +8,42 @@
 //------------------------------------------------------------------------------
 public static class MetaComponentsLookup {
 
-    public const int GridService = 0;
-    public const int GridEditorService = 1;
-    public const int Id = 2;
-    public const int TickService = 3;
-    public const int CollisionService = 4;
-    public const int InputController = 5;
-    public const int InputService = 6;
-    public const int SelectionService = 7;
+    public const int CollisionService = 0;
+    public const int GridService = 1;
+    public const int GridEditorService = 2;
+    public const int Id = 3;
+    public const int InputController = 4;
+    public const int InputService = 5;
+    public const int SelectionService = 6;
+    public const int TickService = 7;
     public const int TimeService = 8;
     public const int ViewService = 9;
 
     public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
+        "CollisionService",
         "GridService",
         "GridEditorService",
         "Id",
-        "TickService",
-        "CollisionService",
         "InputController",
         "InputService",
         "SelectionService",
+        "TickService",
         "TimeService",
         "ViewService"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(svanderweele.Mine.Core.Pieces.Grid.Core.Service.GridServiceComponent),
-        typeof(svanderweele.Mine.Core.Pieces.GridEditor.Service.GridEditorServiceComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Id.IdComponent),
-        typeof(svanderweele.Mine.Core.Pieces.Tick.Services.TickServiceComponent),
-        typeof(svanderweele.Mine.Core.Services.Collision.CollisionServiceComponent),
-        typeof(svanderweele.Mine.Core.Services.Input.Controller.InputControllerComponent),
-        typeof(svanderweele.Mine.Core.Services.Input.Service.InputServiceComponent),
-        typeof(svanderweele.Mine.Core.Services.Selection.SelectionServiceComponent),
-        typeof(svanderweele.Mine.Core.Services.Time.TimeServiceComponent),
-        typeof(svanderweele.Mine.Core.Services.View.ViewServiceComponent)
+        typeof(svanderweele.Core.Pieces.Collision.Services.CollisionServiceComponent),
+        typeof(svanderweele.Core.Pieces.Grid.Core.Service.GridServiceComponent),
+        typeof(svanderweele.Core.Pieces.GridEditor.Service.Core.GridEditorServiceComponent),
+        typeof(svanderweele.Core.Pieces.Id.IdComponent),
+        typeof(svanderweele.Core.Pieces.Input.Controller.InputControllerComponent),
+        typeof(svanderweele.Core.Pieces.Input.Service.InputServiceComponent),
+        typeof(svanderweele.Core.Pieces.Selection.Services.SelectionServiceComponent),
+        typeof(svanderweele.Core.Pieces.Tick.Services.TickServiceComponent),
+        typeof(svanderweele.Core.Pieces.Time.TimeServiceComponent),
+        typeof(svanderweele.Core.Pieces.View.ViewServiceComponent)
     };
 }

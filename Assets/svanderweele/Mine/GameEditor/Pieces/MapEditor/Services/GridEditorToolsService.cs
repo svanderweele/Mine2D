@@ -1,6 +1,6 @@
-﻿using svanderweele.Mine.Core.Pieces.Grid.GridEditor.Service;
+﻿using svanderweele.Core.Pieces.GridEditor.Service.Core;
 
-namespace svanderweele.Mine.Core.Pieces.GridEditor.Service
+namespace svanderweele.Mine.GameEditor.Pieces.MapEditor.Services
 {
     public class GridEditorToolsService : IGridEditorToolService
     {

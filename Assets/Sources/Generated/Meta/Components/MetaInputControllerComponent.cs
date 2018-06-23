@@ -9,12 +9,12 @@
 public partial class MetaContext {
 
     public MetaEntity inputControllerEntity { get { return GetGroup(MetaMatcher.InputController).GetSingleEntity(); } }
-    public svanderweele.Mine.Core.Services.Input.Controller.InputControllerComponent inputController { get { return inputControllerEntity.inputController; } }
+    public svanderweele.Core.Pieces.Input.Controller.InputControllerComponent inputController { get { return inputControllerEntity.inputController; } }
     public bool hasInputController { get { return inputControllerEntity != null; } }
 
-    public MetaEntity SetInputController(svanderweele.Mine.Core.Services.Input.Controller.IInputController newInstance) {
+    public MetaEntity SetInputController(svanderweele.Core.Pieces.Input.Controller.IInputController newInstance) {
         if (hasInputController) {
-            throw new Entitas.EntitasException("Could not set InputController!\n" + this + " already has an entity with svanderweele.Mine.Core.Services.Input.Controller.InputControllerComponent!",
+            throw new Entitas.EntitasException("Could not set InputController!\n" + this + " already has an entity with svanderweele.Core.Pieces.Input.Controller.InputControllerComponent!",
                 "You should check if the context already has a inputControllerEntity before setting it or use context.ReplaceInputController().");
         }
         var entity = CreateEntity();
@@ -22,7 +22,7 @@ public partial class MetaContext {
         return entity;
     }
 
-    public void ReplaceInputController(svanderweele.Mine.Core.Services.Input.Controller.IInputController newInstance) {
+    public void ReplaceInputController(svanderweele.Core.Pieces.Input.Controller.IInputController newInstance) {
         var entity = inputControllerEntity;
         if (entity == null) {
             entity = SetInputController(newInstance);
@@ -46,19 +46,19 @@ public partial class MetaContext {
 //------------------------------------------------------------------------------
 public partial class MetaEntity {
 
-    public svanderweele.Mine.Core.Services.Input.Controller.InputControllerComponent inputController { get { return (svanderweele.Mine.Core.Services.Input.Controller.InputControllerComponent)GetComponent(MetaComponentsLookup.InputController); } }
+    public svanderweele.Core.Pieces.Input.Controller.InputControllerComponent inputController { get { return (svanderweele.Core.Pieces.Input.Controller.InputControllerComponent)GetComponent(MetaComponentsLookup.InputController); } }
     public bool hasInputController { get { return HasComponent(MetaComponentsLookup.InputController); } }
 
-    public void AddInputController(svanderweele.Mine.Core.Services.Input.Controller.IInputController newInstance) {
+    public void AddInputController(svanderweele.Core.Pieces.Input.Controller.IInputController newInstance) {
         var index = MetaComponentsLookup.InputController;
-        var component = CreateComponent<svanderweele.Mine.Core.Services.Input.Controller.InputControllerComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Input.Controller.InputControllerComponent>(index);
         component.instance = newInstance;
         AddComponent(index, component);
     }
 
-    public void ReplaceInputController(svanderweele.Mine.Core.Services.Input.Controller.IInputController newInstance) {
+    public void ReplaceInputController(svanderweele.Core.Pieces.Input.Controller.IInputController newInstance) {
         var index = MetaComponentsLookup.InputController;
-        var component = CreateComponent<svanderweele.Mine.Core.Services.Input.Controller.InputControllerComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Input.Controller.InputControllerComponent>(index);
         component.instance = newInstance;
         ReplaceComponent(index, component);
     }

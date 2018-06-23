@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class MetaEntity {
 
-    public svanderweele.Mine.Core.Pieces.Id.IdComponent id { get { return (svanderweele.Mine.Core.Pieces.Id.IdComponent)GetComponent(MetaComponentsLookup.Id); } }
+    public svanderweele.Core.Pieces.Id.IdComponent id { get { return (svanderweele.Core.Pieces.Id.IdComponent)GetComponent(MetaComponentsLookup.Id); } }
     public bool hasId { get { return HasComponent(MetaComponentsLookup.Id); } }
 
     public void AddId(int newValue) {
         var index = MetaComponentsLookup.Id;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Id.IdComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Id.IdComponent>(index);
         component.value = newValue;
         AddComponent(index, component);
     }
 
     public void ReplaceId(int newValue) {
         var index = MetaComponentsLookup.Id;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Id.IdComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Id.IdComponent>(index);
         component.value = newValue;
         ReplaceComponent(index, component);
     }

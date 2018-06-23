@@ -9,12 +9,12 @@
 public partial class MetaContext {
 
     public MetaEntity timeServiceEntity { get { return GetGroup(MetaMatcher.TimeService).GetSingleEntity(); } }
-    public svanderweele.Mine.Core.Services.Time.TimeServiceComponent timeService { get { return timeServiceEntity.timeService; } }
+    public svanderweele.Core.Pieces.Time.TimeServiceComponent timeService { get { return timeServiceEntity.timeService; } }
     public bool hasTimeService { get { return timeServiceEntity != null; } }
 
-    public MetaEntity SetTimeService(svanderweele.Mine.Core.Pieces.Time.ITimeService newTime) {
+    public MetaEntity SetTimeService(svanderweele.Core.Pieces.Time.ITimeService newTime) {
         if (hasTimeService) {
-            throw new Entitas.EntitasException("Could not set TimeService!\n" + this + " already has an entity with svanderweele.Mine.Core.Services.Time.TimeServiceComponent!",
+            throw new Entitas.EntitasException("Could not set TimeService!\n" + this + " already has an entity with svanderweele.Core.Pieces.Time.TimeServiceComponent!",
                 "You should check if the context already has a timeServiceEntity before setting it or use context.ReplaceTimeService().");
         }
         var entity = CreateEntity();
@@ -22,7 +22,7 @@ public partial class MetaContext {
         return entity;
     }
 
-    public void ReplaceTimeService(svanderweele.Mine.Core.Pieces.Time.ITimeService newTime) {
+    public void ReplaceTimeService(svanderweele.Core.Pieces.Time.ITimeService newTime) {
         var entity = timeServiceEntity;
         if (entity == null) {
             entity = SetTimeService(newTime);
@@ -46,19 +46,19 @@ public partial class MetaContext {
 //------------------------------------------------------------------------------
 public partial class MetaEntity {
 
-    public svanderweele.Mine.Core.Services.Time.TimeServiceComponent timeService { get { return (svanderweele.Mine.Core.Services.Time.TimeServiceComponent)GetComponent(MetaComponentsLookup.TimeService); } }
+    public svanderweele.Core.Pieces.Time.TimeServiceComponent timeService { get { return (svanderweele.Core.Pieces.Time.TimeServiceComponent)GetComponent(MetaComponentsLookup.TimeService); } }
     public bool hasTimeService { get { return HasComponent(MetaComponentsLookup.TimeService); } }
 
-    public void AddTimeService(svanderweele.Mine.Core.Pieces.Time.ITimeService newTime) {
+    public void AddTimeService(svanderweele.Core.Pieces.Time.ITimeService newTime) {
         var index = MetaComponentsLookup.TimeService;
-        var component = CreateComponent<svanderweele.Mine.Core.Services.Time.TimeServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Time.TimeServiceComponent>(index);
         component.time = newTime;
         AddComponent(index, component);
     }
 
-    public void ReplaceTimeService(svanderweele.Mine.Core.Pieces.Time.ITimeService newTime) {
+    public void ReplaceTimeService(svanderweele.Core.Pieces.Time.ITimeService newTime) {
         var index = MetaComponentsLookup.TimeService;
-        var component = CreateComponent<svanderweele.Mine.Core.Services.Time.TimeServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Time.TimeServiceComponent>(index);
         component.time = newTime;
         ReplaceComponent(index, component);
     }

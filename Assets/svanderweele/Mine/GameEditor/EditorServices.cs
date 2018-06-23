@@ -1,4 +1,4 @@
-﻿using svanderweele.Mine.Core.Pieces.GridEditor.Service;
+﻿using svanderweele.Core.Pieces.GridEditor.Service.Core;
 
 namespace svanderweele.Mine.GameEditor
 {

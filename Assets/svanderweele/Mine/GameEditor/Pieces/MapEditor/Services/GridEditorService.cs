@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
-using svanderweele.Mine.Core.Pieces.Grid.GridEditor.Interfaces;
-using svanderweele.Mine.Core.Pieces.Grid.GridEditor.Service;
-using svanderweele.Mine.Core.Pieces.GridEditor.Interfaces;
-using svanderweele.Mine.Core.Pieces.GridEditor.Service;
+using svanderweele.Core.Pieces.GridEditor.Interfaces;
+using svanderweele.Core.Pieces.GridEditor.Service.Core;
 using svanderweele.Mine.GameEditor.Unity.Data;
 
 namespace svanderweele.Mine.GameEditor.Pieces.MapEditor.Services

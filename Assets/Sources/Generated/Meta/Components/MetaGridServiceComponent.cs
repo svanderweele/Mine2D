@@ -9,12 +9,12 @@
 public partial class MetaContext {
 
     public MetaEntity gridServiceEntity { get { return GetGroup(MetaMatcher.GridService).GetSingleEntity(); } }
-    public svanderweele.Mine.Core.Pieces.Grid.Core.Service.GridServiceComponent gridService { get { return gridServiceEntity.gridService; } }
+    public svanderweele.Core.Pieces.Grid.Core.Service.GridServiceComponent gridService { get { return gridServiceEntity.gridService; } }
     public bool hasGridService { get { return gridServiceEntity != null; } }
 
-    public MetaEntity SetGridService(svanderweele.Mine.Core.Pieces.Grid.Core.Service.IGridService newService) {
+    public MetaEntity SetGridService(svanderweele.Core.Pieces.Grid.Core.Service.IGridService newService) {
         if (hasGridService) {
-            throw new Entitas.EntitasException("Could not set GridService!\n" + this + " already has an entity with svanderweele.Mine.Core.Pieces.Grid.Core.Service.GridServiceComponent!",
+            throw new Entitas.EntitasException("Could not set GridService!\n" + this + " already has an entity with svanderweele.Core.Pieces.Grid.Core.Service.GridServiceComponent!",
                 "You should check if the context already has a gridServiceEntity before setting it or use context.ReplaceGridService().");
         }
         var entity = CreateEntity();
@@ -22,7 +22,7 @@ public partial class MetaContext {
         return entity;
     }
 
-    public void ReplaceGridService(svanderweele.Mine.Core.Pieces.Grid.Core.Service.IGridService newService) {
+    public void ReplaceGridService(svanderweele.Core.Pieces.Grid.Core.Service.IGridService newService) {
         var entity = gridServiceEntity;
         if (entity == null) {
             entity = SetGridService(newService);
@@ -46,19 +46,19 @@ public partial class MetaContext {
 //------------------------------------------------------------------------------
 public partial class MetaEntity {
 
-    public svanderweele.Mine.Core.Pieces.Grid.Core.Service.GridServiceComponent gridService { get { return (svanderweele.Mine.Core.Pieces.Grid.Core.Service.GridServiceComponent)GetComponent(MetaComponentsLookup.GridService); } }
+    public svanderweele.Core.Pieces.Grid.Core.Service.GridServiceComponent gridService { get { return (svanderweele.Core.Pieces.Grid.Core.Service.GridServiceComponent)GetComponent(MetaComponentsLookup.GridService); } }
     public bool hasGridService { get { return HasComponent(MetaComponentsLookup.GridService); } }
 
-    public void AddGridService(svanderweele.Mine.Core.Pieces.Grid.Core.Service.IGridService newService) {
+    public void AddGridService(svanderweele.Core.Pieces.Grid.Core.Service.IGridService newService) {
         var index = MetaComponentsLookup.GridService;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.Core.Service.GridServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Grid.Core.Service.GridServiceComponent>(index);
         component.service = newService;
         AddComponent(index, component);
     }
 
-    public void ReplaceGridService(svanderweele.Mine.Core.Pieces.Grid.Core.Service.IGridService newService) {
+    public void ReplaceGridService(svanderweele.Core.Pieces.Grid.Core.Service.IGridService newService) {
         var index = MetaComponentsLookup.GridService;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Grid.Core.Service.GridServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Grid.Core.Service.GridServiceComponent>(index);
         component.service = newService;
         ReplaceComponent(index, component);
     }

@@ -9,12 +9,12 @@
 public partial class MetaContext {
 
     public MetaEntity selectionServiceEntity { get { return GetGroup(MetaMatcher.SelectionService).GetSingleEntity(); } }
-    public svanderweele.Mine.Core.Services.Selection.SelectionServiceComponent selectionService { get { return selectionServiceEntity.selectionService; } }
+    public svanderweele.Core.Pieces.Selection.Services.SelectionServiceComponent selectionService { get { return selectionServiceEntity.selectionService; } }
     public bool hasSelectionService { get { return selectionServiceEntity != null; } }
 
-    public MetaEntity SetSelectionService(svanderweele.Mine.Core.Services.Selection.ISelectionService newSelection) {
+    public MetaEntity SetSelectionService(svanderweele.Core.Pieces.Selection.Services.ISelectionService newSelection) {
         if (hasSelectionService) {
-            throw new Entitas.EntitasException("Could not set SelectionService!\n" + this + " already has an entity with svanderweele.Mine.Core.Services.Selection.SelectionServiceComponent!",
+            throw new Entitas.EntitasException("Could not set SelectionService!\n" + this + " already has an entity with svanderweele.Core.Pieces.Selection.Services.SelectionServiceComponent!",
                 "You should check if the context already has a selectionServiceEntity before setting it or use context.ReplaceSelectionService().");
         }
         var entity = CreateEntity();
@@ -22,7 +22,7 @@ public partial class MetaContext {
         return entity;
     }
 
-    public void ReplaceSelectionService(svanderweele.Mine.Core.Services.Selection.ISelectionService newSelection) {
+    public void ReplaceSelectionService(svanderweele.Core.Pieces.Selection.Services.ISelectionService newSelection) {
         var entity = selectionServiceEntity;
         if (entity == null) {
             entity = SetSelectionService(newSelection);
@@ -46,19 +46,19 @@ public partial class MetaContext {
 //------------------------------------------------------------------------------
 public partial class MetaEntity {
 
-    public svanderweele.Mine.Core.Services.Selection.SelectionServiceComponent selectionService { get { return (svanderweele.Mine.Core.Services.Selection.SelectionServiceComponent)GetComponent(MetaComponentsLookup.SelectionService); } }
+    public svanderweele.Core.Pieces.Selection.Services.SelectionServiceComponent selectionService { get { return (svanderweele.Core.Pieces.Selection.Services.SelectionServiceComponent)GetComponent(MetaComponentsLookup.SelectionService); } }
     public bool hasSelectionService { get { return HasComponent(MetaComponentsLookup.SelectionService); } }
 
-    public void AddSelectionService(svanderweele.Mine.Core.Services.Selection.ISelectionService newSelection) {
+    public void AddSelectionService(svanderweele.Core.Pieces.Selection.Services.ISelectionService newSelection) {
         var index = MetaComponentsLookup.SelectionService;
-        var component = CreateComponent<svanderweele.Mine.Core.Services.Selection.SelectionServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Selection.Services.SelectionServiceComponent>(index);
         component.selection = newSelection;
         AddComponent(index, component);
     }
 
-    public void ReplaceSelectionService(svanderweele.Mine.Core.Services.Selection.ISelectionService newSelection) {
+    public void ReplaceSelectionService(svanderweele.Core.Pieces.Selection.Services.ISelectionService newSelection) {
         var index = MetaComponentsLookup.SelectionService;
-        var component = CreateComponent<svanderweele.Mine.Core.Services.Selection.SelectionServiceComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Selection.Services.SelectionServiceComponent>(index);
         component.selection = newSelection;
         ReplaceComponent(index, component);
     }

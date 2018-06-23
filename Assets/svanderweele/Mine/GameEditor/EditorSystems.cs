@@ -1,4 +1,5 @@
-﻿using svanderweele.Mine.GameEditor.Pieces.MapEditor.Command.CreateMapEditor;
+﻿using svanderweele.Mine.GameEditor.Pieces.MapEditor.Action.CreateMapEditor;
+using svanderweele.Mine.GameEditor.Pieces.MapEditor.Actions.CreateMapEditor;
 using svanderweele.Mine.GameEditor.Pieces.MapEditor.Systems;
 
 namespace svanderweele.Mine.GameEditor

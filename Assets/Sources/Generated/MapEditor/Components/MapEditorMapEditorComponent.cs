@@ -11,14 +11,14 @@ public partial class MapEditorEntity {
     public svanderweele.Mine.GameEditor.Pieces.MapEditor.Components.MapEditorComponent mapEditor { get { return (svanderweele.Mine.GameEditor.Pieces.MapEditor.Components.MapEditorComponent)GetComponent(MapEditorComponentsLookup.MapEditor); } }
     public bool hasMapEditor { get { return HasComponent(MapEditorComponentsLookup.MapEditor); } }
 
-    public void AddMapEditor(svanderweele.Mine.Core.Pieces.GridEditor.Interfaces.IGridEditorView newView) {
+    public void AddMapEditor(svanderweele.Core.Pieces.GridEditor.Interfaces.IGridEditorView newView) {
         var index = MapEditorComponentsLookup.MapEditor;
         var component = CreateComponent<svanderweele.Mine.GameEditor.Pieces.MapEditor.Components.MapEditorComponent>(index);
         component.view = newView;
         AddComponent(index, component);
     }
 
-    public void ReplaceMapEditor(svanderweele.Mine.Core.Pieces.GridEditor.Interfaces.IGridEditorView newView) {
+    public void ReplaceMapEditor(svanderweele.Core.Pieces.GridEditor.Interfaces.IGridEditorView newView) {
         var index = MapEditorComponentsLookup.MapEditor;
         var component = CreateComponent<svanderweele.Mine.GameEditor.Pieces.MapEditor.Components.MapEditorComponent>(index);
         component.view = newView;

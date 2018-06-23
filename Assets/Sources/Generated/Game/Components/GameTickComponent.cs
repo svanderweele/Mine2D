@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public svanderweele.Mine.Core.Pieces.Tick.Components.TickComponent tick { get { return (svanderweele.Mine.Core.Pieces.Tick.Components.TickComponent)GetComponent(GameComponentsLookup.Tick); } }
+    public svanderweele.Core.Pieces.Tick.Components.TickComponent tick { get { return (svanderweele.Core.Pieces.Tick.Components.TickComponent)GetComponent(GameComponentsLookup.Tick); } }
     public bool hasTick { get { return HasComponent(GameComponentsLookup.Tick); } }
 
-    public void AddTick(System.Collections.Generic.Dictionary<TickEnum, svanderweele.Mine.Core.Pieces.Tick.Components.Tick> newTicks) {
+    public void AddTick(System.Collections.Generic.Dictionary<svanderweele.Core.Pieces.Tick.Components.TickEnum, svanderweele.Core.Pieces.Tick.Components.Tick> newTicks) {
         var index = GameComponentsLookup.Tick;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Tick.Components.TickComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Tick.Components.TickComponent>(index);
         component.ticks = newTicks;
         AddComponent(index, component);
     }
 
-    public void ReplaceTick(System.Collections.Generic.Dictionary<TickEnum, svanderweele.Mine.Core.Pieces.Tick.Components.Tick> newTicks) {
+    public void ReplaceTick(System.Collections.Generic.Dictionary<svanderweele.Core.Pieces.Tick.Components.TickEnum, svanderweele.Core.Pieces.Tick.Components.Tick> newTicks) {
         var index = GameComponentsLookup.Tick;
-        var component = CreateComponent<svanderweele.Mine.Core.Pieces.Tick.Components.TickComponent>(index);
+        var component = CreateComponent<svanderweele.Core.Pieces.Tick.Components.TickComponent>(index);
         component.ticks = newTicks;
         ReplaceComponent(index, component);
     }

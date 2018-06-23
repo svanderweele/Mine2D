@@ -1,15 +1,16 @@
 using System.Collections.Generic;
 using Entitas;
+using svanderweele.Core.Pieces;
+using svanderweele.Core.Pieces.Collision.Services;
+using svanderweele.Core.Pieces.Actions;
+using svanderweele.Core.Pieces.Grid.Core;
+using svanderweele.Core.Pieces.Grid.Core.Service;
+using svanderweele.Core.Pieces.Id;
+using svanderweele.Core.Pieces.Input.Service;
+using svanderweele.Core.Pieces.Selection.Services;
+using svanderweele.Core.Pieces.Tick.Components;
+using svanderweele.Core.Pieces.Tick.Services;
 using svanderweele.Mine.Core.Pieces;
-using svanderweele.Mine.Core.Pieces.Commands;
-using svanderweele.Mine.Core.Pieces.Grid.Core;
-using svanderweele.Mine.Core.Pieces.Grid.Core.Service;
-using svanderweele.Mine.Core.Pieces.GridEditor;
-using svanderweele.Mine.Core.Pieces.GridEditor.Service;
-using svanderweele.Mine.Core.Pieces.Id;
-using svanderweele.Mine.Core.Pieces.Tick.Components;
-using svanderweele.Mine.Core.Pieces.Tick.Services;
-using svanderweele.Mine.Game.Services;
 using svanderweele.Mine.Game.Unity;
 using svanderweele.Mine.Game.Utils;
 using svanderweele.Mine.GameEditor;
@@ -59,8 +60,8 @@ namespace svanderweele.Mine.Game
                 newSelectionHoverSelect: new Color(), newSelectionUp: new Color());
 
 
-            var createGridEditorReq = _contexts.command.CreateCommandRequest(0);
-            createGridEditorReq.AddCommandRequestCreateMapEditor(grid.id.value);
+            var createGridEditorReq = _contexts.action.CreateActionRequest(0);
+            createGridEditorReq.AddRequestCreateMapEditor(grid.id.value);
 
             var tick = _contexts.game.CreateEntity();
             var newTick = new Tick() {delayValue = 0.05f, delay = 1, multiplier = 1f};
@@ -93,8 +94,8 @@ namespace svanderweele.Mine.Game
                 objectB.AddGridTileType(GlobalVariables.ObjectType.JoinTypes(ObjectType.OBJECT_CATEGORY_DEBUG,
                     ObjectType.OBJECT_CATEGORY_TILE));
 
-                var reqB = _contexts.command.CreateCommandRequest(0);
-                reqB.AddCommandRequestAddEntityToGrid(objectB.id.value, _contexts.grid.GetEntityWithId(0).id.value,
+                var reqB = _contexts.action.CreateActionRequest(0);
+                reqB.AddActionRequestAddEntityToGrid(objectB.id.value, _contexts.grid.GetEntityWithId(0).id.value,
                     Random.Range(0, 5));
             }
 

@@ -1,5 +1,5 @@
 ﻿using Entitas;
-using svanderweele.Mine.Core.Pieces.GridEditor.Interfaces;
+using svanderweele.Core.Pieces.GridEditor.Interfaces;
 
 namespace svanderweele.Mine.GameEditor.Pieces.MapEditor.Components
 {
