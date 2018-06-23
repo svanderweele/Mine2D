@@ -1,7 +1,6 @@
 using Entitas;
-using svanderweele.Mine.Game.Utils.Math;
 
-namespace svanderweele.Mine.Core.Services.View
+namespace svanderweele.Mine.Core.Pieces.View
 {
     public interface IViewController
     {

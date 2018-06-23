@@ -1,4 +1,5 @@
 using Entitas;
+using svanderweele.Mine.Core.Pieces.View;
 using svanderweele.Mine.Core.Services.Collision;
 using svanderweele.Mine.Core.Services.Events;
 using svanderweele.Mine.Core.Services.Selection;

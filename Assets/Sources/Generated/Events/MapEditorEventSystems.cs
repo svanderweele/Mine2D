@@ -11,5 +11,6 @@ public sealed class MapEditorEventSystems : Feature {
     public MapEditorEventSystems(Contexts contexts) {
         Add(new AssetBayAssetsEventSystem(contexts)); // priority: 0
         Add(new AssetDataEventSystem(contexts)); // priority: 0
+        Add(new MapEditorDestroyedEventSystem(contexts)); // priority: 0
     }
 }

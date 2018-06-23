@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace svanderweele.Mine.GameEditor.Unity.Views
 {
-    public class UnityGridEditorObjectView : UnityMapEditorBaseView, IGridEditorObjectViewController, IAssetDataListener, IEventListener
+    public class UnityGridEditorObjectView : UnityMapEditorBaseView, IGridEditorObjectViewController, IAssetDataListener
     {
         private Image _renderer;
 
@@ -23,8 +23,9 @@ namespace svanderweele.Mine.GameEditor.Unity.Views
             _renderer.sprite = Resources.Load<Sprite>(assetData.GetDisplaySpritePath());
         }
 
-        public void RegisterEvents(Contexts contexts, IEntity entity)
+        public override void RegisterEvents(Contexts contexts, IEntity entity)
         {
+            base.RegisterEvents(contexts, entity);
             Entity.AddAssetDataListener(this);
         }
     }

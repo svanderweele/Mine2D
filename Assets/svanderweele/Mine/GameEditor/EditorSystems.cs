@@ -10,7 +10,6 @@ namespace svanderweele.Mine.GameEditor
             Add(new RequestCreateMapEditorSystem(contexts));
             Add(new CreateMapEditorSystem(contexts));
             Add(new UpdateAssetBayAssetsSystem(contexts));
-            Add(new MapEditorEventSystems(contexts));
         }
     }
 }

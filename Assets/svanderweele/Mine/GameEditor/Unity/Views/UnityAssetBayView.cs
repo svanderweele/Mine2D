@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Entitas;
 using svanderweele.Mine.Core.Pieces.GridEditor.Interfaces;
 using svanderweele.Mine.Core.Services.Events;
@@ -25,5 +26,11 @@ namespace svanderweele.Mine.GameEditor.Unity.Views
 
             return list;
         }
+
+        public List<IGridEditorObjectViewController> GetCurrentViews()
+        {
+            return _assetContainerTransform.GetComponentsInChildren<IGridEditorObjectViewController>().ToList();
+        }
+
     }
 }

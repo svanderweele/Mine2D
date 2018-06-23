@@ -1,4 +1,5 @@
-﻿using svanderweele.Mine.Core.Services.View;
+﻿using svanderweele.Mine.Core.Pieces.View;
+using svanderweele.Mine.Core.Services.View;
 
 namespace svanderweele.Mine.Core.Pieces.GridEditor.Interfaces
 {

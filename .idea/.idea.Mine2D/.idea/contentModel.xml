@@ -49,6 +49,7 @@
                 <e p="GameDestroyedListenerComponent.cs" t="Include" />
                 <e p="GridDestroyedListenerComponent.cs" t="Include" />
                 <e p="InputDestroyedListenerComponent.cs" t="Include" />
+                <e p="MapEditorDestroyedListenerComponent.cs" t="Include" />
                 <e p="PositionListenerComponent.cs" t="Include" />
                 <e p="SpriteColorListenerComponent.cs" t="Include" />
                 <e p="SpriteListenerComponent.cs" t="Include" />
@@ -64,6 +65,7 @@
                 <e p="IGameDestroyedListener.cs" t="Include" />
                 <e p="IGridDestroyedListener.cs" t="Include" />
                 <e p="IInputDestroyedListener.cs" t="Include" />
+                <e p="IMapEditorDestroyedListener.cs" t="Include" />
                 <e p="IPositionListener.cs" t="Include" />
                 <e p="ISpriteColorListener.cs" t="Include" />
                 <e p="ISpriteListener.cs" t="Include" />
@@ -77,6 +79,7 @@
                 <e p="GameDestroyedEventSystem.cs" t="Include" />
                 <e p="GridDestroyedEventSystem.cs" t="Include" />
                 <e p="InputDestroyedEventSystem.cs" t="Include" />
+                <e p="MapEditorDestroyedEventSystem.cs" t="Include" />
                 <e p="PositionEventSystem.cs" t="Include" />
                 <e p="SpriteColorEventSystem.cs" t="Include" />
                 <e p="SpriteEventSystem.cs" t="Include" />
@@ -155,8 +158,10 @@
                 <e p="MapEditorAssetBayComponent.cs" t="Include" />
                 <e p="MapEditorAssetDataComponent.cs" t="Include" />
                 <e p="MapEditorAssetDataListenerComponent.cs" t="Include" />
+                <e p="MapEditorDestroyedComponent.cs" t="Include" />
                 <e p="MapEditorIdComponent.cs" t="Include" />
                 <e p="MapEditorMapEditorComponent.cs" t="Include" />
+                <e p="MapEditorMapEditorDestroyedListenerComponent.cs" t="Include" />
                 <e p="MapEditorTickComponent.cs" t="Include" />
               </e>
               <e p="MapEditorAttribute.cs" t="Include" />

@@ -37,6 +37,7 @@ namespace svanderweele.Mine.Game
             //Events
             Add(new CommandEventSystems(contexts));
             Add(new GameEventSystems(contexts));
+            Add(new MapEditorEventSystems(contexts));
             Add(new InputEventSystems(contexts));
 
             //Cleanup

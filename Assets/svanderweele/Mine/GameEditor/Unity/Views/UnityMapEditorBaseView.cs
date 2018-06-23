@@ -1,5 +1,6 @@
 ﻿using Entitas;
 using svanderweele.Mine.Core.Pieces.GridEditor.Interfaces;
+using svanderweele.Mine.Core.Pieces.View;
 using svanderweele.Mine.Core.Services.Collision;
 using svanderweele.Mine.Core.Services.Events;
 using svanderweele.Mine.Core.Services.Selection;
@@ -8,7 +9,8 @@ using UnityEngine;
 
 namespace svanderweele.Mine.GameEditor.Unity.Views
 {
-    public abstract class UnityMapEditorBaseView : MonoBehaviour, IViewController
+    public abstract class UnityMapEditorBaseView : MonoBehaviour, IViewController, IMapEditorDestroyedListener,
+        IEventListener
     {
         protected Contexts Contexts;
         protected MapEditorEntity Entity;
@@ -54,7 +56,23 @@ namespace svanderweele.Mine.GameEditor.Unity.Views
 
         public int GetEntityId()
         {
+            if (Entity == null)
+            {
+                return -1;
+            }
             return Entity.id.value;
+        }
+
+        public void OnDestroyed(MapEditorEntity entity)
+        {
+            Debug.Log("Destroy gameobject");
+            Destroy(gameObject);
+        }
+
+        public virtual void RegisterEvents(Contexts contexts, IEntity entity)
+        {
+            Debug.Log("Reigster event");
+            Entity.AddMapEditorDestroyedListener(this);
         }
     }
 }

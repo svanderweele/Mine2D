@@ -19,7 +19,8 @@ namespace svanderweele.Mine.Core.Pieces.Destroy
                 contexts.game.CreateCollector(GameMatcher.Destroyed),
                 contexts.input.CreateCollector(InputMatcher.Destroyed),
                 contexts.grid.CreateCollector(GridMatcher.Destroyed),
-                contexts.command.CreateCollector(CommandMatcher.Destroyed)
+                contexts.command.CreateCollector(CommandMatcher.Destroyed),
+                contexts.mapEditor.CreateCollector(MapEditorMatcher.Destroyed)
             };
         }
 
@@ -56,5 +57,9 @@ public partial class GridEntity : IDestroyEntity
 }
 
 public partial class CommandEntity : IDestroyEntity
+{
+}
+
+public partial class MapEditorEntity : IDestroyEntity
 {
 }
