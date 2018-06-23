@@ -1,10 +1,8 @@
-﻿using svanderweele.Mine.Game.Utils;
-
-namespace svanderweele.Core.Factories.Tile.Data
+﻿namespace svanderweele.Mine.Game.Factories.Tile.Data
 {
-    public class TileCreationData : ITileCreationData
+    public class TileCreationData
     {
-        public int Type { get; set; }
+        public TileType Type { get; set; }
         public float Health { get; set; }
     }
 

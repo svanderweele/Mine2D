@@ -33,15 +33,6 @@ namespace svanderweele.Mine.Game.Utils
         Escape
     }
 
-    public enum TileType
-    {
-        Tile,
-        Object,
-        Wire,
-        Debug
-    }
-
-
     public class ObjectType
     {
         private const char DELIMITER = '-';

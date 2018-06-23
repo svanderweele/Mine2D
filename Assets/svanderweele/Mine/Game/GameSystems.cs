@@ -6,7 +6,9 @@ using svanderweele.Core.Pieces.Selection.Systems;
 using svanderweele.Core.Pieces.Tick.Systems;
 using svanderweele.Mine.Core.Pieces;
 using svanderweele.Mine.Core.Pieces.Destroy;
+using svanderweele.Mine.Game.Factories;
 using svanderweele.Mine.GameEditor;
+using svanderweele.Mine.MapEditor.Pieces.MapEditor.Actions.CreateMap;
 using UnityEngine;
 
 namespace svanderweele.Mine.Game
@@ -14,10 +16,11 @@ namespace svanderweele.Mine.Game
     public class GameSystems : Feature
     {
         public GameSystems(Contexts contexts, CoreServices coreServices, GameServices gameServices,
-            EditorServices editorServices)
+            EditorServices editorServices, GameFactories gameFactories)
         {
             //Initialize
             Add(new RegisterServicesSystem(contexts, coreServices, gameServices, editorServices));
+            Add(new RegisterFactoriesSystem(contexts, gameFactories));
 
             //Remove
             Add(new RemoveActionSystem(contexts));
@@ -27,6 +30,7 @@ namespace svanderweele.Mine.Game
 
             //Actions
             Add(new ActionAddEntityToGridSystem(contexts));
+            Add(new ActionCreateMapSystem(contexts));
 
             //Update
             Add(new UpdateActionDelaySystem(contexts));

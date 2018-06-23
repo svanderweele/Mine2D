@@ -18,21 +18,28 @@ public static class GameComponentsLookup {
     public const int GridTileType = 7;
     public const int GridTileEditor = 8;
     public const int Id = 9;
-    public const int SelectionColor = 10;
-    public const int SelectionDown = 11;
-    public const int SelectionOut = 12;
-    public const int SelectionOver = 13;
-    public const int SelectionUp = 14;
-    public const int Position = 15;
-    public const int SpriteColor = 16;
-    public const int Sprite = 17;
-    public const int Tick = 18;
-    public const int TickDelay = 19;
-    public const int Visible = 20;
-    public const int Destroyed = 21;
-    public const int VisibleListener = 22;
+    public const int Map = 10;
+    public const int MapData = 11;
+    public const int MapObjects = 12;
+    public const int MapTiles = 13;
+    public const int SelectionColor = 14;
+    public const int SelectionDown = 15;
+    public const int SelectionOut = 16;
+    public const int SelectionOver = 17;
+    public const int SelectionUp = 18;
+    public const int Position = 19;
+    public const int SnapToGrid = 20;
+    public const int SpriteColor = 21;
+    public const int Sprite = 22;
+    public const int Tick = 23;
+    public const int TickDelay = 24;
+    public const int Tile = 25;
+    public const int TileLayer = 26;
+    public const int Visible = 27;
+    public const int Destroyed = 28;
+    public const int VisibleListener = 29;
 
-    public const int TotalComponents = 23;
+    public const int TotalComponents = 30;
 
     public static readonly string[] componentNames = {
         "GameDestroyedListener",
@@ -45,16 +52,23 @@ public static class GameComponentsLookup {
         "GridTileType",
         "GridTileEditor",
         "Id",
+        "Map",
+        "MapData",
+        "MapObjects",
+        "MapTiles",
         "SelectionColor",
         "SelectionDown",
         "SelectionOut",
         "SelectionOver",
         "SelectionUp",
         "Position",
+        "SnapToGrid",
         "SpriteColor",
         "Sprite",
         "Tick",
         "TickDelay",
+        "Tile",
+        "TileLayer",
         "Visible",
         "Destroyed",
         "VisibleListener"
@@ -71,16 +85,23 @@ public static class GameComponentsLookup {
         typeof(svanderweele.Core.Pieces.Grid.Core.Components.GridTileTypeComponent),
         typeof(svanderweele.Core.Pieces.GridEditor.Components.GridTileEditorComponent),
         typeof(svanderweele.Core.Pieces.Id.IdComponent),
+        typeof(svanderweele.Core.Pieces.Map.Components.MapComponent),
+        typeof(svanderweele.Core.Pieces.Map.Components.MapDataComponent),
+        typeof(svanderweele.Core.Pieces.Map.Components.MapObjectsComponent),
+        typeof(svanderweele.Core.Pieces.Map.Components.MapTilesComponent),
         typeof(svanderweele.Core.Pieces.Selection.Components.SelectionColorComponent),
         typeof(svanderweele.Core.Pieces.Selection.Components.SelectionDownComponent),
         typeof(svanderweele.Core.Pieces.Selection.Components.SelectionOutComponent),
         typeof(svanderweele.Core.Pieces.Selection.Components.SelectionOverComponent),
         typeof(svanderweele.Core.Pieces.Selection.Components.SelectionUpComponent),
         typeof(svanderweele.Core.Pieces.Spatial.PositionComponent),
+        typeof(svanderweele.Core.Pieces.Spatial.SnapToGridComponent),
         typeof(svanderweele.Core.Pieces.Sprite.SpriteColorComponent),
         typeof(svanderweele.Core.Pieces.Sprite.SpriteComponent),
         typeof(svanderweele.Core.Pieces.Tick.Components.TickComponent),
         typeof(svanderweele.Core.Pieces.Tick.Components.TickDelayComponent),
+        typeof(svanderweele.Core.Pieces.Tile.Components.TileComponent),
+        typeof(svanderweele.Core.Pieces.Tile.Components.TileLayerComponent),
         typeof(svanderweele.Core.Pieces.Visible.VisibleComponent),
         typeof(svanderweele.Mine.Core.Pieces.Destroy.DestroyedComponent),
         typeof(VisibleListenerComponent)

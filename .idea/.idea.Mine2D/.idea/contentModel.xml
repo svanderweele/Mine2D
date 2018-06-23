@@ -20,6 +20,7 @@
               <e p="Components" t="Include">
                 <e p="ActionActionAddEntityToGridComponent.cs" t="Include" />
                 <e p="ActionActionComponent.cs" t="Include" />
+                <e p="ActionActionCreateMapComponent.cs" t="Include" />
                 <e p="ActionActionCreateMapEditorComponent.cs" t="Include" />
                 <e p="ActionActionDestroyedListenerComponent.cs" t="Include" />
                 <e p="ActionActionRequestAddEntityToGridComponent.cs" t="Include" />
@@ -107,6 +108,10 @@
                 <e p="GameGridTileEditorComponent.cs" t="Include" />
                 <e p="GameGridTileTypeComponent.cs" t="Include" />
                 <e p="GameIdComponent.cs" t="Include" />
+                <e p="GameMapComponent.cs" t="Include" />
+                <e p="GameMapDataComponent.cs" t="Include" />
+                <e p="GameMapObjectsComponent.cs" t="Include" />
+                <e p="GameMapTilesComponent.cs" t="Include" />
                 <e p="GamePositionComponent.cs" t="Include" />
                 <e p="GamePositionListenerComponent.cs" t="Include" />
                 <e p="GameSelectionColorComponent.cs" t="Include" />
@@ -114,12 +119,15 @@
                 <e p="GameSelectionOutComponent.cs" t="Include" />
                 <e p="GameSelectionOverComponent.cs" t="Include" />
                 <e p="GameSelectionUpComponent.cs" t="Include" />
+                <e p="GameSnapToGridComponent.cs" t="Include" />
                 <e p="GameSpriteColorComponent.cs" t="Include" />
                 <e p="GameSpriteColorListenerComponent.cs" t="Include" />
                 <e p="GameSpriteComponent.cs" t="Include" />
                 <e p="GameSpriteListenerComponent.cs" t="Include" />
                 <e p="GameTickComponent.cs" t="Include" />
                 <e p="GameTickDelayComponent.cs" t="Include" />
+                <e p="GameTileComponent.cs" t="Include" />
+                <e p="GameTileLayerComponent.cs" t="Include" />
                 <e p="GameVisibleComponent.cs" t="Include" />
                 <e p="GameVisibleListenerComponent.cs" t="Include" />
               </e>
@@ -336,12 +344,16 @@
                 </e>
               </e>
               <e p="Map" t="Include">
+                <e p="Components" t="Include">
+                  <e p="MapComponent.cs" t="Include" />
+                  <e p="MapDataComponent.cs" t="Include" />
+                  <e p="MapObjectsComponent.cs" t="Include" />
+                  <e p="MapTilesComponent.cs" t="Include" />
+                </e>
                 <e p="Data" t="Include">
-                  <e p="MapCreationData.cs" t="Include" />
+                  <e p="MapData.cs" t="Include" />
                 </e>
-                <e p="Services" t="Include">
-                  <e p="IMapFactory.cs" t="Include" />
-                </e>
+                <e p="MapCreationData.cs" t="Include" />
               </e>
               <e p="RegisterServicesSystem.cs" t="Include" />
               <e p="Selection" t="Include">
@@ -367,6 +379,7 @@
               </e>
               <e p="Spatial" t="Include">
                 <e p="PositionComponent.cs" t="Include" />
+                <e p="SnapToGridComponent.cs" t="Include" />
               </e>
               <e p="Sprite" t="Include">
                 <e p="SpriteColorComponent.cs" t="Include" />
@@ -387,6 +400,12 @@
                 </e>
                 <e p="Systems" t="Include">
                   <e p="UpdateTickSystem.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Tile" t="Include">
+                <e p="Components" t="Include">
+                  <e p="TileComponent.cs" t="Include" />
+                  <e p="TileLayerComponent.cs" t="Include" />
                 </e>
               </e>
               <e p="Time" t="Include">
@@ -413,7 +432,6 @@
                 <e p="RegisterFactoriesSystem.cs" t="Include" />
                 <e p="Tile" t="Include">
                   <e p="Data" t="Include">
-                    <e p="ITileCreationData.cs" t="Include" />
                     <e p="TileCreationData.cs" t="Include" />
                   </e>
                   <e p="ITileFactory.cs" t="Include" />
@@ -457,6 +475,7 @@
                 <e p="GlobalVariables.cs" t="Include" />
                 <e p="Math" t="Include">
                   <e p="Vector2.cs" t="Include" />
+                  <e p="Vector2Int.cs" t="Include" />
                 </e>
               </e>
             </e>
@@ -466,9 +485,13 @@
               <e p="Pieces" t="Include">
                 <e p="MapEditor" t="Include">
                   <e p="Actions" t="Include">
+                    <e p="CreateMap" t="Include">
+                      <e p="ActionCreateMapComponent.cs" t="Include" />
+                      <e p="ActionCreateMapSystem.cs" t="Include" />
+                    </e>
                     <e p="CreateMapEditor" t="Include">
                       <e p="ActionCreateMapEditorComponent.cs" t="Include" />
-                      <e p="CreateMapEditorSystem.cs" t="Include" />
+                      <e p="ActionCreateMapEditorSystem.cs" t="Include" />
                       <e p="RequestCreateMapEditorComponent.cs" t="Include" />
                       <e p="RequestCreateMapEditorSystem.cs" t="Include" />
                     </e>

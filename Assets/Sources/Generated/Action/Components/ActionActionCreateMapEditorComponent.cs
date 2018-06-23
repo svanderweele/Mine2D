@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class ActionEntity {
 
-    public svanderweele.Mine.GameEditor.Pieces.MapEditor.Action.CreateMapEditor.ActionCreateMapEditorComponent actionCreateMapEditor { get { return (svanderweele.Mine.GameEditor.Pieces.MapEditor.Action.CreateMapEditor.ActionCreateMapEditorComponent)GetComponent(ActionComponentsLookup.ActionCreateMapEditor); } }
+    public svanderweele.Mine.MapEditor.Pieces.MapEditor.Actions.CreateMapEditor.ActionCreateMapEditorComponent actionCreateMapEditor { get { return (svanderweele.Mine.MapEditor.Pieces.MapEditor.Actions.CreateMapEditor.ActionCreateMapEditorComponent)GetComponent(ActionComponentsLookup.ActionCreateMapEditor); } }
     public bool hasActionCreateMapEditor { get { return HasComponent(ActionComponentsLookup.ActionCreateMapEditor); } }
 
     public void AddActionCreateMapEditor(int newGridId) {
         var index = ActionComponentsLookup.ActionCreateMapEditor;
-        var component = CreateComponent<svanderweele.Mine.GameEditor.Pieces.MapEditor.Action.CreateMapEditor.ActionCreateMapEditorComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.MapEditor.Pieces.MapEditor.Actions.CreateMapEditor.ActionCreateMapEditorComponent>(index);
         component.gridId = newGridId;
         AddComponent(index, component);
     }
 
     public void ReplaceActionCreateMapEditor(int newGridId) {
         var index = ActionComponentsLookup.ActionCreateMapEditor;
-        var component = CreateComponent<svanderweele.Mine.GameEditor.Pieces.MapEditor.Action.CreateMapEditor.ActionCreateMapEditorComponent>(index);
+        var component = CreateComponent<svanderweele.Mine.MapEditor.Pieces.MapEditor.Actions.CreateMapEditor.ActionCreateMapEditorComponent>(index);
         component.gridId = newGridId;
         ReplaceComponent(index, component);
     }

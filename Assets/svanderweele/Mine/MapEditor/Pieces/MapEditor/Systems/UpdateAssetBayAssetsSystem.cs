@@ -36,10 +36,17 @@ namespace svanderweele.Mine.GameEditor.Pieces.MapEditor.Systems
                     return;
                 }
 
-                var gameEntity = _contexts.mapEditor.GetEntities(MapEditorMatcher.AssetBay).Single();
+                var assetBays = _contexts.mapEditor.GetEntities(MapEditorMatcher.AssetBay);
+
+                if (assetBays.Length == 0)
+                {
+                    return;
+                }
+
+                var assetBay = assetBays.Single();
                 var assets = _contexts.meta.gridEditorService.service.GetAssets();
 
-                var mapEditor = _contexts.mapEditor.GetEntityWithAssetBay(gameEntity.assetBay.id);
+                var mapEditor = _contexts.mapEditor.GetEntityWithAssetBay(assetBay.assetBay.id);
                 var mapEditorView = mapEditor.mapEditor.view;
 
                 var views = mapEditorView.AssetBay.GetCurrentViews();

@@ -2,13 +2,13 @@
 using Entitas;
 using svanderweele.Mine.Game.Utils;
 
-namespace svanderweele.Mine.GameEditor.Pieces.MapEditor.Actions.CreateMapEditor
+namespace svanderweele.Mine.MapEditor.Pieces.MapEditor.Actions.CreateMapEditor
 {
-    public class CreateMapEditorSystem : ReactiveSystem<ActionEntity>
+    public class ActionCreateMapEditorSystem : ReactiveSystem<ActionEntity>
     {
         private readonly Contexts _contexts;
 
-        public CreateMapEditorSystem(Contexts contexts) : base(contexts.action)
+        public ActionCreateMapEditorSystem(Contexts contexts) : base(contexts.action)
         {
             _contexts = contexts;
         }

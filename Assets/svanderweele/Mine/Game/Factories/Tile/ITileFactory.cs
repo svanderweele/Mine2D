@@ -1,11 +1,11 @@
 ﻿using Entitas;
-using svanderweele.Core.Factories.Tile.Data;
+using svanderweele.Mine.Game.Factories.Tile.Data;
 
 namespace svanderweele.Mine.Game.Factories.Tile
 {
     public interface ITileFactory
     {
-        T CreateTile<T>(ITileCreationData data) where T : IEntity;
+        GameEntity CreateTile(TileCreationData data);
     }
     
 }

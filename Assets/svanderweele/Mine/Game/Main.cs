@@ -1,11 +1,8 @@
 using System.Collections.Generic;
 using Entitas;
-using svanderweele.Core.Factories.Tile;
-using svanderweele.Core.Factories.Tile.Data;
 using svanderweele.Core.Pieces;
 using svanderweele.Core.Pieces.Collision.Services;
 using svanderweele.Core.Pieces.Actions;
-using svanderweele.Core.Pieces.Command;
 using svanderweele.Core.Pieces.Grid.Core;
 using svanderweele.Core.Pieces.Grid.Core.Service;
 using svanderweele.Core.Pieces.Id;
@@ -18,13 +15,12 @@ using svanderweele.Mine.Game.Factories.Tile;
 using svanderweele.Mine.Game.Unity;
 using svanderweele.Mine.Game.Utils;
 using svanderweele.Mine.GameEditor;
-using svanderweele.Mine.GameEditor.Pieces.MapEditor.Action.CreateMapEditor;
 using svanderweele.Mine.GameEditor.Pieces.MapEditor.Services;
 using svanderweele.Mine.GameEditor.Unity;
 using UnityEngine;
-using Color = svanderweele.Mine.Game.Utils.Containers.Color;
-using TileType = svanderweele.Mine.Game.Factories.Tile.TileType;
 using Vector2 = svanderweele.Mine.Game.Utils.Math.Vector2;
+using Vector2Int = svanderweele.Mine.Game.Utils.Math.Vector2Int;
+using Color = svanderweele.Mine.Game.Utils.Containers.Color;
 
 namespace svanderweele.Mine.Game
 {
@@ -53,7 +49,7 @@ namespace svanderweele.Mine.Game
                 new GridEditorToolsService(), new GridEditorNavigationService(), new GridEditorObjectService()));
 
             _gameFactories = new GameFactories(new TileFactory(_contexts));
-            
+
 
             _systems = CreateSystems();
             _systems.Initialize();
@@ -70,9 +66,11 @@ namespace svanderweele.Mine.Game
                 newSelectionHoverSelect: new Color(), newSelectionUp: new Color());
 
 
-            var command = new CommandCreateMapEditor(_contexts, grid.id.value);
-            command.DoCommand();
-//
+            var action = _contexts.action.CreateEntity();
+            action.AddActionCreateMap(new Vector2Int(10, 10), TileType.Stone, TileType.Stone);
+//            var command = new CommandCreateMapEditor(_contexts, grid.id.value);
+//            command.DoCommand();
+
             var tick = _contexts.game.CreateEntity();
             var newTick = new Tick() {delayValue = 0.05f, delay = 1, multiplier = 1f};
             tick.AddTick(new Dictionary<TickEnum, Tick>()
@@ -81,14 +79,13 @@ namespace svanderweele.Mine.Game
                     TickEnum.MapEditor_AssetLoading, newTick
                 }
             });
-
         }
 
         private Systems CreateSystems()
         {
             return new Systems()
                 .Add(new DebugSystems(_contexts))
-                .Add(new GameSystems(_contexts, _coreServices, _gameServices, _editorServices))
+                .Add(new GameSystems(_contexts, _coreServices, _gameServices, _editorServices, _gameFactories))
                 .Add(new EditorSystems(_contexts));
         }
 

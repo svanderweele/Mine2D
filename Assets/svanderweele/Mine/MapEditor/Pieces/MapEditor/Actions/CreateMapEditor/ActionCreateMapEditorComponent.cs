@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-namespace svanderweele.Mine.GameEditor.Pieces.MapEditor.Action.CreateMapEditor
+namespace svanderweele.Mine.MapEditor.Pieces.MapEditor.Actions.CreateMapEditor
 {
     [Action]
     public class ActionCreateMapEditorComponent : IComponent

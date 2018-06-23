@@ -16,9 +16,10 @@ public static class ActionComponentsLookup {
     public const int ActionRequestAddEntityToGrid = 5;
     public const int Id = 6;
     public const int Destroyed = 7;
-    public const int ActionCreateMapEditor = 8;
+    public const int ActionCreateMap = 8;
+    public const int ActionCreateMapEditor = 9;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
         "ActionDestroyedListener",
@@ -29,6 +30,7 @@ public static class ActionComponentsLookup {
         "ActionRequestAddEntityToGrid",
         "Id",
         "Destroyed",
+        "ActionCreateMap",
         "ActionCreateMapEditor"
     };
 
@@ -41,6 +43,7 @@ public static class ActionComponentsLookup {
         typeof(svanderweele.Core.Pieces.Grid.Core.Actions.AddEntityToGrid.ActionRequestAddEntityToGridComponent),
         typeof(svanderweele.Core.Pieces.Id.IdComponent),
         typeof(svanderweele.Mine.Core.Pieces.Destroy.DestroyedComponent),
-        typeof(svanderweele.Mine.GameEditor.Pieces.MapEditor.Action.CreateMapEditor.ActionCreateMapEditorComponent)
+        typeof(svanderweele.Mine.MapEditor.Pieces.MapEditor.Actions.CreateMap.ActionCreateMapComponent),
+        typeof(svanderweele.Mine.MapEditor.Pieces.MapEditor.Actions.CreateMapEditor.ActionCreateMapEditorComponent)
     };
 }
