@@ -20,19 +20,19 @@
               <e p="Components" t="Include">
                 <e p="ActionActionAddEntityToGridComponent.cs" t="Include" />
                 <e p="ActionActionComponent.cs" t="Include" />
-                <e p="ActionActionConsumedComponent.cs" t="Include" />
                 <e p="ActionActionCreateMapEditorComponent.cs" t="Include" />
-                <e p="ActionActionDelayComponent.cs" t="Include" />
                 <e p="ActionActionDestroyedListenerComponent.cs" t="Include" />
                 <e p="ActionActionRequestAddEntityToGridComponent.cs" t="Include" />
-                <e p="ActionActionRequestComponent.cs" t="Include" />
+                <e p="ActionConsumedComponent.cs" t="Include" />
+                <e p="ActionDelayComponent.cs" t="Include" />
                 <e p="ActionDestroyedComponent.cs" t="Include" />
                 <e p="ActionIdComponent.cs" t="Include" />
-                <e p="ActionRequestCreateMapEditorComponent.cs" t="Include" />
               </e>
             </e>
             <e p="Components" t="Include">
               <e p="Interfaces" t="Include">
+                <e p="IConsumedEntity.cs" t="Include" />
+                <e p="IDelayEntity.cs" t="Include" />
                 <e p="IDestroyedEntity.cs" t="Include" />
                 <e p="IGridTileTypeEntity.cs" t="Include" />
                 <e p="IIdEntity.cs" t="Include" />
@@ -85,6 +85,16 @@
                 <e p="SpriteEventSystem.cs" t="Include" />
                 <e p="VisibleEventSystem.cs" t="Include" />
               </e>
+            </e>
+            <e p="Factory" t="Include">
+              <e p="Components" t="Include">
+                <e p="FactoryTileFactoryComponent.cs" t="Include" />
+              </e>
+              <e p="FactoryAttribute.cs" t="Include" />
+              <e p="FactoryComponentsLookup.cs" t="Include" />
+              <e p="FactoryContext.cs" t="Include" />
+              <e p="FactoryEntity.cs" t="Include" />
+              <e p="FactoryMatcher.cs" t="Include" />
             </e>
             <e p="Feature.cs" t="Include" />
             <e p="Game" t="Include">
@@ -189,6 +199,18 @@
               <e p="MetaEntity.cs" t="Include" />
               <e p="MetaMatcher.cs" t="Include" />
             </e>
+            <e p="Request" t="Include">
+              <e p="Components" t="Include">
+                <e p="RequestConsumedComponent.cs" t="Include" />
+                <e p="RequestDelayComponent.cs" t="Include" />
+                <e p="RequestRequestCreateMapEditorComponent.cs" t="Include" />
+              </e>
+              <e p="RequestAttribute.cs" t="Include" />
+              <e p="RequestComponentsLookup.cs" t="Include" />
+              <e p="RequestContext.cs" t="Include" />
+              <e p="RequestEntity.cs" t="Include" />
+              <e p="RequestMatcher.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="svanderweele" t="Include">
@@ -198,9 +220,8 @@
                 <e p="ActionContextExtension.cs" t="Include" />
                 <e p="Components" t="Include">
                   <e p="ActionComponent.cs" t="Include" />
-                  <e p="ActionConsumedComponent.cs" t="Include" />
-                  <e p="ActionDelayComponent.cs" t="Include" />
-                  <e p="ActionRequestComponent.cs" t="Include" />
+                  <e p="ConsumedComponent.cs" t="Include" />
+                  <e p="DelayComponent.cs" t="Include" />
                 </e>
                 <e p="Systems" t="Include">
                   <e p="ActionRequestSystems.cs" t="Include" />
@@ -220,6 +241,11 @@
                   <e p="ICollisionService.cs" t="Include" />
                   <e p="RegisterCollisionServiceSystem.cs" t="Include" />
                 </e>
+              </e>
+              <e p="Command" t="Include">
+                <e p="BaseCommand.cs" t="Include" />
+                <e p="CommandCreateMapEditor.cs" t="Include" />
+                <e p="ICommand.cs" t="Include" />
               </e>
               <e p="CoreServiceCleanupSystems.cs" t="Include" />
               <e p="CoreServices.cs" t="Include" />
@@ -309,6 +335,14 @@
                   <e p="RegisterInputServiceSystem.cs" t="Include" />
                 </e>
               </e>
+              <e p="Map" t="Include">
+                <e p="Data" t="Include">
+                  <e p="MapCreationData.cs" t="Include" />
+                </e>
+                <e p="Services" t="Include">
+                  <e p="IMapFactory.cs" t="Include" />
+                </e>
+              </e>
               <e p="RegisterServicesSystem.cs" t="Include" />
               <e p="Selection" t="Include">
                 <e p="Components" t="Include">
@@ -374,6 +408,20 @@
           <e p="Mine" t="Include">
             <e p="Game" t="Include">
               <e p="DebugSystems.cs" t="Include" />
+              <e p="Factories" t="Include">
+                <e p="GameFactories.cs" t="Include" />
+                <e p="RegisterFactoriesSystem.cs" t="Include" />
+                <e p="Tile" t="Include">
+                  <e p="Data" t="Include">
+                    <e p="ITileCreationData.cs" t="Include" />
+                    <e p="TileCreationData.cs" t="Include" />
+                  </e>
+                  <e p="ITileFactory.cs" t="Include" />
+                  <e p="RegisterTileFactorySystem.cs" t="Include" />
+                  <e p="TileFactory.cs" t="Include" />
+                  <e p="TileFactoryComponent.cs" t="Include" />
+                </e>
+              </e>
               <e p="GameServices.cs" t="Include" />
               <e p="GameSystems.cs" t="Include" />
               <e p="Main.cs" t="Include" />
@@ -412,7 +460,7 @@
                 </e>
               </e>
             </e>
-            <e p="GameEditor" t="Include">
+            <e p="MapEditor" t="Include">
               <e p="EditorServices.cs" t="Include" />
               <e p="EditorSystems.cs" t="Include" />
               <e p="Pieces" t="Include">
@@ -421,8 +469,8 @@
                     <e p="CreateMapEditor" t="Include">
                       <e p="ActionCreateMapEditorComponent.cs" t="Include" />
                       <e p="CreateMapEditorSystem.cs" t="Include" />
-                      <e p="ReqCreateMapEditorComponent.cs" t="Include" />
-                      <e p="ReqCreateMapEditorSystem.cs" t="Include" />
+                      <e p="RequestCreateMapEditorComponent.cs" t="Include" />
+                      <e p="RequestCreateMapEditorSystem.cs" t="Include" />
                     </e>
                   </e>
                   <e p="Components" t="Include">
@@ -448,7 +496,7 @@
                   <e p="IMapEditorAssetData.cs" t="Include" />
                   <e p="UnityMapEditorAssetData.cs" t="Include" />
                 </e>
-                <e p="UnityGridEditorAssetLoader.cs" t="Include" />
+                <e p="UnityMapEditorAssetLoader.cs" t="Include" />
                 <e p="Views" t="Include">
                   <e p="UnityAssetBayView.cs" t="Include" />
                   <e p="UnityGridEditorObjectView.cs" t="Include" />

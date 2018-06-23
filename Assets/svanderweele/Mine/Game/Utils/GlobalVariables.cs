@@ -17,6 +17,8 @@ namespace svanderweele.Mine.Game.Utils
             Background = 0,
             Foreground = 1,
         }
+        public static string MapEditorAssetDataPath = "data/map-editor-asset-data";
+        public static string ResourcesAssetsPath = "assets/";
     }
 
 

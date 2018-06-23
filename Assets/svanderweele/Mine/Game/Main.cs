@@ -1,8 +1,11 @@
 using System.Collections.Generic;
 using Entitas;
+using svanderweele.Core.Factories.Tile;
+using svanderweele.Core.Factories.Tile.Data;
 using svanderweele.Core.Pieces;
 using svanderweele.Core.Pieces.Collision.Services;
 using svanderweele.Core.Pieces.Actions;
+using svanderweele.Core.Pieces.Command;
 using svanderweele.Core.Pieces.Grid.Core;
 using svanderweele.Core.Pieces.Grid.Core.Service;
 using svanderweele.Core.Pieces.Id;
@@ -10,25 +13,29 @@ using svanderweele.Core.Pieces.Input.Service;
 using svanderweele.Core.Pieces.Selection.Services;
 using svanderweele.Core.Pieces.Tick.Components;
 using svanderweele.Core.Pieces.Tick.Services;
-using svanderweele.Mine.Core.Pieces;
+using svanderweele.Mine.Game.Factories;
+using svanderweele.Mine.Game.Factories.Tile;
 using svanderweele.Mine.Game.Unity;
 using svanderweele.Mine.Game.Utils;
 using svanderweele.Mine.GameEditor;
+using svanderweele.Mine.GameEditor.Pieces.MapEditor.Action.CreateMapEditor;
 using svanderweele.Mine.GameEditor.Pieces.MapEditor.Services;
 using svanderweele.Mine.GameEditor.Unity;
 using UnityEngine;
 using Color = svanderweele.Mine.Game.Utils.Containers.Color;
+using TileType = svanderweele.Mine.Game.Factories.Tile.TileType;
 using Vector2 = svanderweele.Mine.Game.Utils.Math.Vector2;
 
 namespace svanderweele.Mine.Game
 {
-    public class Main : UnityEngine.MonoBehaviour
+    public class Main : MonoBehaviour
     {
         private Contexts _contexts;
         private Systems _systems;
         private CoreServices _coreServices;
         private GameServices _gameServices;
         private EditorServices _editorServices;
+        private GameFactories _gameFactories;
 
         void Awake()
         {
@@ -42,8 +49,11 @@ namespace svanderweele.Mine.Game
 
             _gameServices = new GameServices(new GridService(_contexts));
 
-            _editorServices = new EditorServices(new GridEditorService(_contexts, new UnityGridEditorAssetLoader(),
+            _editorServices = new EditorServices(new GridEditorService(_contexts, new UnityMapEditorAssetLoader(),
                 new GridEditorToolsService(), new GridEditorNavigationService(), new GridEditorObjectService()));
+
+            _gameFactories = new GameFactories(new TileFactory(_contexts));
+            
 
             _systems = CreateSystems();
             _systems.Initialize();
@@ -52,7 +62,7 @@ namespace svanderweele.Mine.Game
 
 
             var e = _contexts.game.CreateEntity();
-            _coreServices.View.LoadAsset(_contexts, e, "prefabs/miner");
+            _coreServices.View.LoadAsset(_contexts, e, GlobalVariables.ResourcesAssetsPath + "prefabs/miner");
             e.AddPosition(-3, 3);
             e.AddVisible(true);
             e.AddSelectionColor(newSelectionDown: new Color(0.0f, 1.0f, 0.0f, 1.0f), newSelectionHeld: new Color(),
@@ -60,12 +70,18 @@ namespace svanderweele.Mine.Game
                 newSelectionHoverSelect: new Color(), newSelectionUp: new Color());
 
 
-            var createGridEditorReq = _contexts.action.CreateActionRequest(0);
-            createGridEditorReq.AddRequestCreateMapEditor(grid.id.value);
-
+            var command = new CommandCreateMapEditor(_contexts, grid.id.value);
+            command.DoCommand();
+//
             var tick = _contexts.game.CreateEntity();
             var newTick = new Tick() {delayValue = 0.05f, delay = 1, multiplier = 1f};
-            tick.AddTick(new Dictionary<TickEnum, Tick>() {{TickEnum.MapEditor_AssetLoading, newTick}});
+            tick.AddTick(new Dictionary<TickEnum, Tick>()
+            {
+                {
+                    TickEnum.MapEditor_AssetLoading, newTick
+                }
+            });
+
         }
 
         private Systems CreateSystems()
@@ -77,6 +93,7 @@ namespace svanderweele.Mine.Game
         }
 
         void Update()
+
         {
             if (_coreServices.InputController.IsKeyDown(KeyId.D))
             {
@@ -93,7 +110,6 @@ namespace svanderweele.Mine.Game
                 objectB.AddGridPosition(new Vector2(2, 3));
                 objectB.AddGridTileType(GlobalVariables.ObjectType.JoinTypes(ObjectType.OBJECT_CATEGORY_DEBUG,
                     ObjectType.OBJECT_CATEGORY_TILE));
-
                 var reqB = _contexts.action.CreateActionRequest(0);
                 reqB.AddActionRequestAddEntityToGrid(objectB.id.value, _contexts.grid.GetEntityWithId(0).id.value,
                     Random.Range(0, 5));

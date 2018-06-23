@@ -22,21 +22,25 @@ public partial class Contexts : Entitas.IContexts {
     static Contexts _sharedInstance;
 
     public ActionContext action { get; set; }
+    public FactoryContext factory { get; set; }
     public GameContext game { get; set; }
     public GridContext grid { get; set; }
     public InputContext input { get; set; }
     public MapEditorContext mapEditor { get; set; }
     public MetaContext meta { get; set; }
+    public RequestContext request { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { action, game, grid, input, mapEditor, meta }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { action, factory, game, grid, input, mapEditor, meta, request }; } }
 
     public Contexts() {
         action = new ActionContext();
+        factory = new FactoryContext();
         game = new GameContext();
         grid = new GridContext();
         input = new InputContext();
         mapEditor = new MapEditorContext();
         meta = new MetaContext();
+        request = new RequestContext();
 
         var postConstructors = System.Linq.Enumerable.Where(
             GetType().GetMethods(),
@@ -187,11 +191,13 @@ public partial class Contexts {
     public void InitializeContexObservers() {
         try {
             CreateContextObserver(action);
+            CreateContextObserver(factory);
             CreateContextObserver(game);
             CreateContextObserver(grid);
             CreateContextObserver(input);
             CreateContextObserver(mapEditor);
             CreateContextObserver(meta);
+            CreateContextObserver(request);
         } catch(System.Exception) {
         }
     }

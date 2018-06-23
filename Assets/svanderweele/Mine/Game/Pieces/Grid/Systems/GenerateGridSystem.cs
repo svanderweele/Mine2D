@@ -2,8 +2,6 @@
 using Entitas;
 using svanderweele.Core.Pieces.Grid.Core.Components;
 using svanderweele.Mine.Game.Utils;
-using UnityEngine;
-using UnityEngine.WSA;
 
 namespace svanderweele.Mine.Game.Pieces.Grid.Systems
 {

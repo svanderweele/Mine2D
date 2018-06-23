@@ -14,12 +14,12 @@ namespace svanderweele.Core.Pieces.Actions.Systems
 
         protected override ICollector<ActionEntity> GetTrigger(IContext<ActionEntity> context)
         {
-            return context.CreateCollector(ActionMatcher.AllOf(ActionMatcher.Action, ActionMatcher.ActionConsumed));
+            return context.CreateCollector(ActionMatcher.AllOf(ActionMatcher.Action, ActionMatcher.Consumed));
         }
 
         protected override bool Filter(ActionEntity entity)
         {
-            return entity.isAction && entity.isActionConsumed;
+            return entity.isAction && entity.isConsumed;
         }
 
         protected override void Execute(List<ActionEntity> entities)

@@ -8,7 +8,7 @@ namespace svanderweele.Mine.Testing.InputBindTest
 
         private void Awake()
         {
-            var assetLoader = new UnityGridEditorAssetLoader();
+            var assetLoader = new UnityMapEditorAssetLoader();
             var assets = assetLoader.GetAssets();
         }
     }

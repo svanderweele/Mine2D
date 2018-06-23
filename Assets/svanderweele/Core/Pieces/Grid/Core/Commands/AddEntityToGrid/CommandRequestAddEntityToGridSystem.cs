@@ -18,15 +18,14 @@ namespace svanderweele.Core.Pieces.Grid.Core.Actions.AddEntityToGrid
         protected override ICollector<ActionEntity> GetTrigger(IContext<ActionEntity> context)
         {
             return context.CreateCollector(ActionMatcher
-                .AllOf(ActionMatcher.Action, ActionMatcher.ActionRequest,
+                .AllOf(ActionMatcher.Action,
                     ActionMatcher.ActionRequestAddEntityToGrid)
-                .NoneOf(ActionMatcher.ActionDelay, ActionMatcher.ActionConsumed));
+                .NoneOf(ActionMatcher.Delay, ActionMatcher.Consumed));
         }
 
         protected override bool Filter(ActionEntity entity)
         {
-            return entity.isAction && entity.isDestroyed == false && entity.isActionConsumed == false &&
-                   entity.isActionRequest;
+            return entity.isAction && entity.isDestroyed == false && entity.isConsumed == false;
         }
 
         protected override void Execute(List<ActionEntity> entities)
@@ -46,7 +45,7 @@ namespace svanderweele.Core.Pieces.Grid.Core.Actions.AddEntityToGrid
                 if (GlobalVariables.ObjectType.Matches(entityType, gridType) == false)
                 {
                     Debug.Log("Can't place tile on grid - Wrong Category " + entityType);
-                    actionEntity.isActionConsumed = true;
+                    actionEntity.isConsumed = true;
                     return;
                 }
 
@@ -67,12 +66,12 @@ namespace svanderweele.Core.Pieces.Grid.Core.Actions.AddEntityToGrid
                 {
                     var cmd = _contexts.action.CreateAction(0);
                     cmd.AddActionAddEntityToGrid(entityId, gridId, layer);
-                    actionEntity.isActionConsumed = true;
+                    actionEntity.isConsumed = true;
                 }
                 else
                 {
                     Debug.Log("Can't place Entity");
-                    actionEntity.isActionConsumed = true;
+                    actionEntity.isConsumed = true;
                 }
             }
         }

@@ -17,12 +17,12 @@ namespace svanderweele.Core.Pieces.Grid.Core.Actions.AddEntityToGrid
             return context.CreateCollector(ActionMatcher
                 .AllOf(ActionMatcher.Action,
                     ActionMatcher.ActionAddEntityToGrid)
-                .NoneOf(ActionMatcher.ActionDelay, ActionMatcher.ActionConsumed));
+                .NoneOf(ActionMatcher.Delay, ActionMatcher.Consumed));
         }
 
         protected override bool Filter(ActionEntity entity)
         {
-            return entity.isAction && entity.isDestroyed == false && entity.isActionConsumed == false;
+            return entity.isAction && entity.isDestroyed == false && entity.isConsumed == false;
         }
 
         protected override void Execute(List<ActionEntity> entities)
@@ -32,7 +32,7 @@ namespace svanderweele.Core.Pieces.Grid.Core.Actions.AddEntityToGrid
                 var layer = actionEntity.actionAddEntityToGrid.layer;
                 var entity = _contexts.game.GetEntityWithId(actionEntity.actionAddEntityToGrid.entityId);
                 entity.AddGridLayer(layer);
-                actionEntity.isActionConsumed = true;
+                actionEntity.isConsumed = true;
             }
         }
     }

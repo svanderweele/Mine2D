@@ -10,43 +10,37 @@ public static class ActionComponentsLookup {
 
     public const int ActionDestroyedListener = 0;
     public const int Action = 1;
-    public const int ActionConsumed = 2;
-    public const int ActionDelay = 3;
-    public const int ActionRequest = 4;
-    public const int ActionAddEntityToGrid = 5;
-    public const int ActionRequestAddEntityToGrid = 6;
-    public const int Id = 7;
-    public const int Destroyed = 8;
-    public const int ActionCreateMapEditor = 9;
-    public const int RequestCreateMapEditor = 10;
+    public const int Consumed = 2;
+    public const int Delay = 3;
+    public const int ActionAddEntityToGrid = 4;
+    public const int ActionRequestAddEntityToGrid = 5;
+    public const int Id = 6;
+    public const int Destroyed = 7;
+    public const int ActionCreateMapEditor = 8;
 
-    public const int TotalComponents = 11;
+    public const int TotalComponents = 9;
 
     public static readonly string[] componentNames = {
         "ActionDestroyedListener",
         "Action",
-        "ActionConsumed",
-        "ActionDelay",
-        "ActionRequest",
+        "Consumed",
+        "Delay",
         "ActionAddEntityToGrid",
         "ActionRequestAddEntityToGrid",
         "Id",
         "Destroyed",
-        "ActionCreateMapEditor",
-        "RequestCreateMapEditor"
+        "ActionCreateMapEditor"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(ActionDestroyedListenerComponent),
         typeof(svanderweele.Core.Pieces.Actions.Components.ActionComponent),
-        typeof(svanderweele.Core.Pieces.Actions.Components.ActionConsumedComponent),
-        typeof(svanderweele.Core.Pieces.Actions.Components.ActionDelayComponent),
-        typeof(svanderweele.Core.Pieces.Actions.Components.ActionRequestComponent),
+        typeof(svanderweele.Core.Pieces.Actions.Components.ConsumedComponent),
+        typeof(svanderweele.Core.Pieces.Actions.Components.DelayComponent),
         typeof(svanderweele.Core.Pieces.Grid.Core.Actions.AddEntityToGrid.ActionAddEntityToGridComponent),
         typeof(svanderweele.Core.Pieces.Grid.Core.Actions.AddEntityToGrid.ActionRequestAddEntityToGridComponent),
         typeof(svanderweele.Core.Pieces.Id.IdComponent),
         typeof(svanderweele.Mine.Core.Pieces.Destroy.DestroyedComponent),
-        typeof(svanderweele.Mine.GameEditor.Pieces.MapEditor.Action.CreateMapEditor.ActionCreateMapEditorComponent),
-        typeof(svanderweele.Mine.GameEditor.Pieces.MapEditor.Action.CreateMapEditor.RequestCreateMapEditorComponent)
+        typeof(svanderweele.Mine.GameEditor.Pieces.MapEditor.Action.CreateMapEditor.ActionCreateMapEditorComponent)
     };
 }

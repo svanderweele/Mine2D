@@ -14,25 +14,25 @@ namespace svanderweele.Core.Pieces.Actions.Systems
 
         protected override ICollector<ActionEntity> GetTrigger(IContext<ActionEntity> context)
         {
-            return context.CreateCollector(ActionMatcher.ActionDelay);
+            return context.CreateCollector(ActionMatcher.Delay);
         }
 
         protected override bool Filter(ActionEntity entity)
         {
-            return entity.hasActionDelay;
+            return entity.hasDelay;
         }
 
         protected override void Execute(List<ActionEntity> entities)
         {
             foreach (var actionEntity in entities)
             {
-                var delay = actionEntity.actionDelay.delay;
+                var delay = actionEntity.delay.value;
 
                 delay -= _contexts.meta.timeService.time.GetDeltaTime();
-                actionEntity.ReplaceActionDelay(delay);
+                actionEntity.ReplaceDelay(delay);
                 if (delay <= 0)
                 {
-                    actionEntity.RemoveActionDelay();
+                    actionEntity.RemoveDelay();
                 }
             }
         }
